@@ -65,7 +65,7 @@ example1 is at <code>./example/grep_like/main.rb</code> from the root
 directory of sheep_ast repository. The exampe1 is application like linux
 grep command. To execute example program, please do like:</p>
 
-<pre class="code ruby"><code class="ruby">sheep_ast$ make example1</code></pre>
+<pre class="code ruby"><code class="ruby">sheep_ast$ rake example1</code></pre>
 
 <p>After executing the command, it should be seen same output as grep command
 result. In the following, how to construct the application is shown step by
@@ -288,7 +288,7 @@ in this case, expression is processed by <code>default.main</code> and by
 <code>always.continue</code>. Strategy of finding expression in sheep_ast
 is to evaluate all the Ast in registered ordere, and if they could not
 match expression, then raise <code>NotFound</code> exception. If you
-execute <code>make example1_fail</code>, then you will see the sheep_ast
+execute <code>rake example1_fail</code>, then you will see the sheep_ast
 sends <code>NotFound error</code>. The failed version does not have this
 &#39;any&#39; block and since the some expression does not match,
 &#39;NotFound&#39; error will be occured.</p>
@@ -308,7 +308,7 @@ exception. If raise is true, core.report sends another exception.</p>
 </div></div>
 
       <div id="footer">
-  Generated on Fri Dec 11 15:29:46 2020 by
+  Generated on Fri Dec 11 15:33:26 2020 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.25 (ruby-2.4.1).
 </div>
