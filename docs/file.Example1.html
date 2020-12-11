@@ -95,7 +95,7 @@ step. Please see follwoing with example code and example test file.</p>
 <span class='id identifier rubyid_input_expr'>input_expr</span> <span class='op'>=</span> <span class='const'>ARGV</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span>
 <span class='id identifier rubyid_input_files'>input_files</span> <span class='op'>=</span> <span class='const'>ARGV</span><span class='lbracket'>[</span><span class='int'>1</span><span class='op'>..</span><span class='op'>-</span><span class='int'>1</span><span class='rbracket'>]</span>
 
-<span class='id identifier rubyid_core'>core</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="Sheep.html" title="Sheep (module)">Sheep</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Sheep/AnalyzerCore.html" title="Sheep::AnalyzerCore (class)">AnalyzerCore</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="Sheep/AnalyzerCore.html#initialize-instance_method" title="Sheep::AnalyzerCore#initialize (method)">new</a></span></span>
+<span class='id identifier rubyid_core'>core</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="SheepAst.html" title="SheepAst (module)">SheepAst</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="SheepAst/AnalyzerCore.html" title="SheepAst::AnalyzerCore (class)">AnalyzerCore</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="SheepAst/AnalyzerCore.html#initialize-instance_method" title="SheepAst::AnalyzerCore#initialize (method)">new</a></span></span>
 
 <span class='id identifier rubyid_core'>core</span><span class='period'>.</span><span class='id identifier rubyid_config_tok'>config_tok</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_tok'>tok</span><span class='op'>|</span>
   <span class='id identifier rubyid_tok'>tok</span><span class='period'>.</span><span class='id identifier rubyid_add_token'>add_token</span> <span class='id identifier rubyid_tok'>tok</span><span class='period'>.</span><span class='id identifier rubyid_cmp'>cmp</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>#</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>include</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
@@ -147,7 +147,7 @@ step. Please see follwoing with example code and example test file.</p>
 <p>The analyzer_core object is designed to aggregate the external interfaces.
 So, you should create the object.</p>
 
-<pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_core'>core</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="Sheep.html" title="Sheep (module)">Sheep</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Sheep/AnalyzerCore.html" title="Sheep::AnalyzerCore (class)">AnalyzerCore</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="Sheep/AnalyzerCore.html#initialize-instance_method" title="Sheep::AnalyzerCore#initialize (method)">new</a></span></span>
+<pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_core'>core</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="SheepAst.html" title="SheepAst (module)">SheepAst</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="SheepAst/AnalyzerCore.html" title="SheepAst::AnalyzerCore (class)">AnalyzerCore</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="SheepAst/AnalyzerCore.html#initialize-instance_method" title="SheepAst::AnalyzerCore#initialize (method)">new</a></span></span>
 </code></pre>
 
 <h1 id="label-Tokenize">Tokenize</h1>
@@ -253,15 +253,15 @@ function and it is defined in the 2nd code block.</p>
   <span class='rbrace'>}</span>
 </code></pre>
 
-<p>core.let returns Sheep::Let class and <code>within</code> is entering the
-scope (class_eval). In side the class, grep function is defined. To see the
-signiture of the function, you find key, datastore, options are passed from
-the framework. But in this grep application, it is no need to use key and
-datastore, so they are not used inside the function. To see what kind of
-information passed from the framework, you can utilise :show function. It
-is kind of debug function to inspect what the passed data is. If you edit
-:disable =&gt; false, then you will see them. Please check it and you can
-see beter understanding about framework.</p>
+<p>core.let returns SheepAst::Let class and <code>within</code> is entering
+the scope (class_eval). In side the class, grep function is defined. To see
+the signiture of the function, you find key, datastore, options are passed
+from the framework. But in this grep application, it is no need to use key
+and datastore, so they are not used inside the function. To see what kind
+of information passed from the framework, you can utilise :show function.
+It is kind of debug function to inspect what the passed data is. If you
+edit :disable =&gt; false, then you will see them. Please check it and you
+can see beter understanding about framework.</p>
 
 <h2 id="label-3rd+code+block">3rd code block</h2>
 
@@ -308,7 +308,7 @@ exception. If raise is true, core.report sends another exception.</p>
 </div></div>
 
       <div id="footer">
-  Generated on Fri Dec 11 15:37:57 2020 by
+  Generated on Fri Dec 11 19:14:49 2020 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.25 (ruby-2.4.1).
 </div>
