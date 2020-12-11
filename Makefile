@@ -1,2 +1,2 @@
 push:
-	  git add -u && git commit --amend --no-edit && git push origin main -f 
+	  git add -u && git commit -m "Document update" && git push origin main
