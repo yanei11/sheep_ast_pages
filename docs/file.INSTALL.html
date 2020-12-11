@@ -64,21 +64,21 @@
 2. install ruby. The version in the development is &gt;= 2.4.1p111. You can use rbenv to install the ruby version you want
 3. execute `rbenv exec bundle install`
 4. export RBENV_COM=&quot;rbenv exec&quot;
-5. make srbinit</code></pre>
+5. rake srbinit</code></pre>
 
-<p>If you use rbenv command, procedure 3 and 4 are required. <code>make
+<p>If you use rbenv command, procedure 3 and 4 are required. <code>rake
 srbinit</code> initialize sorbet.</p>
 
-<p>After steps 1 ~ 5, then you can use <code>make xxx</code> commands.<br> The
+<p>After steps 1 ~ 5, then you can use <code>rake xxx</code> commands.<br> The
 well using command will be:</p>
 
-<pre class="code ruby"><code class="ruby">make -&gt; execute rspec command
-make tc -&gt; execute type check using sorbet
-make exampleX -&gt; execute example no X program</code></pre>
+<pre class="code ruby"><code class="ruby">rake -&gt; execute rspec command
+rake tc -&gt; execute type check using sorbet
+rake exampleX -&gt; execute example no X program</code></pre>
 </div></div>
 
       <div id="footer">
-  Generated on Fri Dec 11 15:18:30 2020 by
+  Generated on Fri Dec 11 15:29:46 2020 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.25 (ruby-2.4.1).
 </div>
