@@ -1,1 +1,5 @@
 copy/
+.yardoc
+Makefile
+Gemfile.lock
+.ruby-version
