@@ -24,7 +24,7 @@ end
 
 desc 'Init document repository'
 task 'init' do
-  sh "rm -rf docs && git add -A && git commit --amend --no-edit && git push origin main -f"
+  sh "echo 'Please push new commit with clearing everything'"
 end
 
 desc 'change ruby version by rbenv. Specify SHEEP_RV environment parameter for ruby version'

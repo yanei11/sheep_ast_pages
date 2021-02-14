@@ -1,0 +1,1854 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  Module: SheepAst::Log
+  
+    &mdash; Documentation by YARD 0.9.26
+  
+</title>
+
+  <link rel="stylesheet" href="../css/style.css" type="text/css" />
+
+  <link rel="stylesheet" href="../css/common.css" type="text/css" />
+
+<script type="text/javascript">
+  pathId = "SheepAst::Log";
+  relpath = '../';
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div class="nav_wrap">
+      <iframe id="nav" src="../class_list.html?1"></iframe>
+      <div id="resizer"></div>
+    </div>
+
+    <div id="main" tabindex="-1">
+      <div id="header">
+        <div id="menu">
+  
+    <a href="../_index.html">Index (L)</a> &raquo;
+    <span class='title'><span class='object_link'><a href="../SheepAst.html" title="SheepAst (module)">SheepAst</a></span></span>
+     &raquo; 
+    <span class="title">Log</span>
+  
+</div>
+
+        <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="../class_list.html">
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
+    </a>
+  
+</div>
+        <div class="clear"></div>
+      </div>
+
+      <div id="content"><h1>Module: SheepAst::Log
+  
+  
+  <span class="private note title">Private</span>
+</h1>
+<div class="box_info">
+  
+
+  
+  
+  <dl>
+      <dt>Extended by:</dt>
+      <dd>T::Sig</dd>
+  </dl>
+  
+  
+  
+  <dl>
+      <dt>Includes:</dt>
+      <dd>Kernel</dd>
+  </dl>
+  
+  
+
+  
+  <dl>
+    <dt>Included in:</dt>
+    <dd><span class='object_link'><a href="ActionBase.html" title="SheepAst::ActionBase (class)">ActionBase</a></span>, <span class='object_link'><a href="ActionFactory.html" title="SheepAst::ActionFactory (class)">ActionFactory</a></span>, <span class='object_link'><a href="ActionOperation.html" title="SheepAst::ActionOperation (module)">ActionOperation</a></span>, <span class='object_link'><a href="AnalyzerCore.html" title="SheepAst::AnalyzerCore (class)">AnalyzerCore</a></span>, <span class='object_link'><a href="AstManager.html" title="SheepAst::AstManager (class)">AstManager</a></span>, <span class='object_link'><a href="ConditionMatch.html" title="SheepAst::ConditionMatch (class)">ConditionMatch</a></span>, <span class='object_link'><a href="ConditionMatchUtil.html" title="SheepAst::ConditionMatchUtil (module)">ConditionMatchUtil</a></span>, <span class='object_link'><a href="DataHandle.html" title="SheepAst::DataHandle (module)">DataHandle</a></span>, <span class='object_link'><a href="DataIndexHandle.html" title="SheepAst::DataIndexHandle (module)">DataIndexHandle</a></span>, <span class='object_link'><a href="FactoryBase.html" title="SheepAst::FactoryBase (module)">FactoryBase</a></span>, <span class='object_link'><a href="FileInfo.html" title="SheepAst::FileInfo (class)">FileInfo</a></span>, <span class='object_link'><a href="FileManager.html" title="SheepAst::FileManager (class)">FileManager</a></span>, <span class='object_link'><a href="FoF.html" title="SheepAst::FoF (class)">FoF</a></span>, <span class='object_link'><a href="IndexCondition.html" title="SheepAst::IndexCondition (class)">IndexCondition</a></span>, <span class='object_link'><a href="Let.html" title="SheepAst::Let (class)">Let</a></span>, <span class='object_link'><a href="LetCompile.html" title="SheepAst::LetCompile (module)">LetCompile</a></span>, <span class='object_link'><a href="LetHelper.html" title="SheepAst::LetHelper (module)">LetHelper</a></span>, <span class='object_link'><a href="LetInclude.html" title="SheepAst::LetInclude (module)">LetInclude</a></span>, <span class='object_link'><a href="LetInspect.html" title="SheepAst::LetInspect (module)">LetInspect</a></span>, <span class='object_link'><a href="LetOperateBehavior.html" title="SheepAst::LetOperateBehavior (module)">LetOperateBehavior</a></span>, <span class='object_link'><a href="LetOperateNode.html" title="SheepAst::LetOperateNode (module)">LetOperateNode</a></span>, <span class='object_link'><a href="LetRecord.html" title="SheepAst::LetRecord (module)">LetRecord</a></span>, <span class='object_link'><a href="LetRedirect.html" title="SheepAst::LetRedirect (module)">LetRedirect</a></span>, <span class='object_link'><a href="MatchBase.html" title="SheepAst::MatchBase (class)">MatchBase</a></span>, <span class='object_link'><a href="MatchFactory.html" title="SheepAst::MatchFactory (class)">MatchFactory</a></span>, <span class='object_link'><a href="MatchKind.html" title="SheepAst::MatchKind (class)">MatchKind</a></span>, <span class='object_link'><a href="NextCommand.html" title="SheepAst::NextCommand (class)">NextCommand</a></span>, <span class='object_link'><a href="Node.html" title="SheepAst::Node (class)">Node</a></span>, <span class='object_link'><a href="NodeBuf.html" title="SheepAst::NodeBuf (class)">NodeBuf</a></span>, <span class='object_link'><a href="NodeFactory.html" title="SheepAst::NodeFactory (class)">NodeFactory</a></span>, <span class='object_link'><a href="NodeOperation.html" title="SheepAst::NodeOperation (module)">NodeOperation</a></span>, <span class='object_link'><a href="OperateNode.html" title="SheepAst::OperateNode (class)">OperateNode</a></span>, <span class='object_link'><a href="Qualifier.html" title="SheepAst::Qualifier (class)">Qualifier</a></span>, <span class='object_link'><a href="Stage.html" title="SheepAst::Stage (class)">Stage</a></span>, <span class='object_link'><a href="StageManager.html" title="SheepAst::StageManager (class)">StageManager</a></span>, <span class='object_link'><a href="StoreElement.html" title="SheepAst::StoreElement (class)">StoreElement</a></span>, <span class='object_link'><a href="StoreSubElement.html" title="SheepAst::StoreSubElement (class)">StoreSubElement</a></span>, <span class='object_link'><a href="Syntax.html" title="SheepAst::Syntax (class)">Syntax</a></span>, <span class='object_link'><a href="Tokenizer.html" title="SheepAst::Tokenizer (class)">Tokenizer</a></span></dd>
+  </dl>
+  
+
+  
+  <dl>
+    <dt>Defined in:</dt>
+    <dd>/home/r_yaginiwa/yang_try/sheep_ast/lib/sheep_ast/log.rb</dd>
+  </dl>
+  
+</div>
+
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    <p class="note private">
+  <strong>This module is part of a private API.</strong>
+  You should avoid using this module if possible, as it may be removed or be changed in the future.
+</p>
+
+<p>Logger Wrapper module</p>
+
+<p>rubocop:disable all</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+
+
+
+  <h2>Instance Attribute Summary <small><a href="#" class="summary_toggle">collapse</a></small></h2>
+  <ul class="summary">
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#logger-instance_method" title="#logger (instance method)">#<strong>logger</strong>  &#x21d2; Logger </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+    
+  
+  
+  
+  
+  <span class="private note title">private</span>
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+    
+  </ul>
+
+
+
+
+  
+    <h2>
+      Instance Method Summary
+      <small><a href="#" class="summary_toggle">collapse</a></small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#initialize-instance_method" title="#initialize (instance method)">#<strong>initialize</strong>  &#x21d2; void </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  <span class="private note title">private</span>
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#ldebug-instance_method" title="#ldebug (instance method)">#<strong>ldebug</strong>(msg = &#39;&#39;, color_ = :antiquewhite)  &#x21d2; void </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  <span class="private note title">private</span>
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#ldebug2-instance_method" title="#ldebug2 (instance method)">#<strong>ldebug2</strong>(msg = &#39;&#39;, color_ = :antiquewhite)  &#x21d2; void </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  <span class="private note title">private</span>
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#ldebug%3F-instance_method" title="#ldebug? (instance method)">#<strong>ldebug?</strong>  &#x21d2; Boolean </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  <span class="private note title">private</span>
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#ldump-instance_method" title="#ldump (instance method)">#<strong>ldump</strong>(msg = &#39;&#39;, color_ = :pink)  &#x21d2; void </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  <span class="private note title">private</span>
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#lerror-instance_method" title="#lerror (instance method)">#<strong>lerror</strong>(msg = &#39;&#39;, color_ = :antiquewhite)  &#x21d2; void </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  <span class="private note title">private</span>
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#lfatal-instance_method" title="#lfatal (instance method)">#<strong>lfatal</strong>(msg = &#39;&#39;, color_ = :antiquewhite)  &#x21d2; void </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  <span class="private note title">private</span>
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#linfo-instance_method" title="#linfo (instance method)">#<strong>linfo</strong>(msg = &#39;&#39;, color_ = :antiquewhite)  &#x21d2; void </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  <span class="private note title">private</span>
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#lprint-instance_method" title="#lprint (instance method)">#<strong>lprint</strong>(msg = &#39;&#39;, color_ = :yellow)  &#x21d2; void </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  <span class="private note title">private</span>
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#lprint%3F-instance_method" title="#lprint? (instance method)">#<strong>lprint?</strong>  &#x21d2; Boolean </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  <span class="private note title">private</span>
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#lwarn-instance_method" title="#lwarn (instance method)">#<strong>lwarn</strong>(msg = &#39;&#39;, color_ = :antiquewhite)  &#x21d2; void </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  <span class="private note title">private</span>
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#once-instance_method" title="#once (instance method)">#<strong>once</strong>(sym, &amp;blk)  &#x21d2; void </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  <span class="private note title">private</span>
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#pdebug-instance_method" title="#pdebug (instance method)">#<strong>pdebug</strong>(msg = &#39;&#39;, color_ = :antiquewhite)  &#x21d2; void </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  <span class="private note title">private</span>
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#pfatal-instance_method" title="#pfatal (instance method)">#<strong>pfatal</strong>(msg = &#39;&#39;, color_ = :antiquewhite)  &#x21d2; void </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  <span class="private note title">private</span>
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#pinfo-instance_method" title="#pinfo (instance method)">#<strong>pinfo</strong>(msg = &#39;&#39;, color_ = :antiquewhite)  &#x21d2; void </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  <span class="private note title">private</span>
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#pwarn-instance_method" title="#pwarn (instance method)">#<strong>pwarn</strong>(msg = &#39;&#39;, color_ = :antiquewhite)  &#x21d2; void </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  <span class="private note title">private</span>
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#set_logger-instance_method" title="#set_logger (instance method)">#<strong>set_logger</strong>(level, device = nil)  &#x21d2; void </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  <span class="private note title">private</span>
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+
+  
+  
+  <div id="instance_attr_details" class="attr_details">
+    <h2>Instance Attribute Details</h2>
+    
+      
+      <span id="logger=-instance_method"></span>
+      <div class="method_details first">
+  <h3 class="signature first" id="logger-instance_method">
+  
+    #<strong>logger</strong>  &#x21d2; <tt><span class='object_link'><a href="../Logger.html" title="Logger (class)">Logger</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p class="note private">
+  <strong>This method is part of a private API.</strong>
+  You should avoid using this method if possible, as it may be removed or be changed in the future.
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../Logger.html" title="Logger (class)">Logger</a></span></tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+30
+31
+32</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File '/home/r_yaginiwa/yang_try/sheep_ast/lib/sheep_ast/log.rb', line 30</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_logger'>logger</span>
+  <span class='ivar'>@logger</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="initialize-instance_method">
+  
+    #<strong>initialize</strong>  &#x21d2; <tt>void</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p class="note private">
+  <strong>This method is part of a private API.</strong>
+  You should avoid using this method if possible, as it may be removed or be changed in the future.
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+33
+34
+35
+36
+37
+38
+39
+40</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File '/home/r_yaginiwa/yang_try/sheep_ast/lib/sheep_ast/log.rb', line 33</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span>
+  <span class='ivar'>@loglevel</span> <span class='op'>=</span> <span class='int'>0</span>
+  <span class='id identifier rubyid_lev'>lev</span> <span class='op'>=</span> <span class='id identifier rubyid_level_get'>level_get</span>
+  <span class='id identifier rubyid_dev'>dev</span> <span class='op'>=</span> <span class='id identifier rubyid_device_get'>device_get</span>
+  <span class='ivar'>@stack_base</span> <span class='op'>=</span> <span class='id identifier rubyid_stack_base_get'>stack_base_get</span>
+  <span class='id identifier rubyid_set_logger'>set_logger</span><span class='lparen'>(</span><span class='id identifier rubyid_lev'>lev</span><span class='comma'>,</span> <span class='id identifier rubyid_dev'>dev</span><span class='rparen'>)</span>
+  <span class='kw'>super</span><span class='lparen'>(</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="ldebug-instance_method">
+  
+    #<strong>ldebug</strong>(msg = &#39;&#39;, color_ = :antiquewhite)  &#x21d2; <tt>void</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p class="note private">
+  <strong>This method is part of a private API.</strong>
+  You should avoid using this method if possible, as it may be removed or be changed in the future.
+</p>
+<p class="note returns_void">This method returns an undefined value.</p>
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>msg</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>&#39;&#39;</tt>)</em>
+      
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>color_</span>
+      
+      
+        <span class='type'>(<tt>Symbol</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>:antiquewhite</tt>)</em>
+      
+      
+    </li>
+  
+</ul>
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File '/home/r_yaginiwa/yang_try/sheep_ast/lib/sheep_ast/log.rb', line 116</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_ldebug'>ldebug</span><span class='lparen'>(</span><span class='id identifier rubyid_msg'>msg</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_color_'>color_</span> <span class='op'>=</span> <span class='symbol'>:antiquewhite</span><span class='rparen'>)</span>
+  <span class='kw'>if</span> <span class='op'>!</span><span class='const'>ENV</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>SHEEP_LOG_BT</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span>
+    <span class='id identifier rubyid_at'>at</span> <span class='op'>=</span> <span class='id identifier rubyid_caller'>caller</span><span class='lbracket'>[</span><span class='ivar'>@stack_base</span><span class='rbracket'>]</span>
+    <span class='kw'>if</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>^(.+?):(\d+)(?::in `(.*)&#39;)?</span><span class='regexp_end'>/</span></span> <span class='op'>=~</span> <span class='id identifier rubyid_at'>at</span>
+      <span class='id identifier rubyid_file'>file</span> <span class='op'>=</span> <span class='backref'>$1</span> <span class='comment'># rubocop: disable all
+</span>      <span class='id identifier rubyid_line'>line</span> <span class='op'>=</span> <span class='backref'>$2</span><span class='period'>.</span><span class='id identifier rubyid_to_i'>to_i</span> <span class='comment'># rubocop: disable all
+</span>    <span class='kw'>end</span>
+    <span class='ivar'>@logger</span><span class='period'>.</span><span class='id identifier rubyid_debug'>debug</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_say_class_name'>say_class_name</span><span class='embexpr_end'>}</span><span class='tstring_content'> </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_msg'>msg</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>\
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'> (at </span><span class='embexpr_beg'>#{</span><span class='const'>File</span><span class='period'>.</span><span class='id identifier rubyid_basename'>basename</span><span class='lparen'>(</span><span class='id identifier rubyid_file'>file</span><span class='rparen'>)</span><span class='embexpr_end'>}</span><span class='tstring_content'>:</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_line'>line</span><span class='embexpr_end'>}</span><span class='tstring_content'>)</span><span class='tstring_end'>&quot;</span></span><span class='period'>.</span><span class='id identifier rubyid_color'>color</span><span class='lparen'>(</span><span class='id identifier rubyid_color_'>color_</span><span class='rparen'>)</span>
+  <span class='kw'>else</span>
+    <span class='ivar'>@logger</span><span class='period'>.</span><span class='id identifier rubyid_debug'>debug</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_say_class_name'>say_class_name</span><span class='embexpr_end'>}</span><span class='tstring_content'> </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_msg'>msg</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='period'>.</span><span class='id identifier rubyid_color'>color</span><span class='lparen'>(</span><span class='id identifier rubyid_color_'>color_</span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="ldebug2-instance_method">
+  
+    #<strong>ldebug2</strong>(msg = &#39;&#39;, color_ = :antiquewhite)  &#x21d2; <tt>void</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p class="note private">
+  <strong>This method is part of a private API.</strong>
+  You should avoid using this method if possible, as it may be removed or be changed in the future.
+</p>
+<p class="note returns_void">This method returns an undefined value.</p>
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>msg</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>&#39;&#39;</tt>)</em>
+      
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>color_</span>
+      
+      
+        <span class='type'>(<tt>Symbol</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>:antiquewhite</tt>)</em>
+      
+      
+    </li>
+  
+</ul>
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+96
+97
+98
+99
+100
+101
+102
+103</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File '/home/r_yaginiwa/yang_try/sheep_ast/lib/sheep_ast/log.rb', line 96</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_ldebug2'>ldebug2</span><span class='lparen'>(</span><span class='id identifier rubyid_msg'>msg</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_color_'>color_</span> <span class='op'>=</span> <span class='symbol'>:antiquewhite</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_env'>env</span> <span class='op'>=</span> <span class='const'>ENV</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>SHEEP_LOG_LEVEL</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span>
+  <span class='kw'>return</span> <span class='kw'>if</span> <span class='id identifier rubyid_env'>env</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span>
+
+  <span class='kw'>if</span> <span class='id identifier rubyid_env'>env</span> <span class='op'>&gt;=</span> <span class='int'>2</span>
+    <span class='id identifier rubyid_ldebug'>ldebug</span> <span class='id identifier rubyid_msg'>msg</span><span class='period'>.</span><span class='id identifier rubyid_color'>color</span><span class='lparen'>(</span><span class='id identifier rubyid_color_'>color_</span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="ldebug?-instance_method">
+  
+    #<strong>ldebug?</strong>  &#x21d2; <tt>Boolean</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p class="note private">
+  <strong>This method is part of a private API.</strong>
+  You should avoid using this method if possible, as it may be removed or be changed in the future.
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+106
+107
+108</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File '/home/r_yaginiwa/yang_try/sheep_ast/lib/sheep_ast/log.rb', line 106</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_ldebug?'>ldebug?</span>
+  <span class='kw'>return</span> <span class='ivar'>@loglevel</span> <span class='op'>&gt;=</span> <span class='int'>2</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="ldump-instance_method">
+  
+    #<strong>ldump</strong>(msg = &#39;&#39;, color_ = :pink)  &#x21d2; <tt>void</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p class="note private">
+  <strong>This method is part of a private API.</strong>
+  You should avoid using this method if possible, as it may be removed or be changed in the future.
+</p>
+<p class="note returns_void">This method returns an undefined value.</p>
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>msg</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>&#39;&#39;</tt>)</em>
+      
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>color_</span>
+      
+      
+        <span class='type'>(<tt>Symbol</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>:pink</tt>)</em>
+      
+      
+    </li>
+  
+</ul>
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+65
+66
+67
+68</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File '/home/r_yaginiwa/yang_try/sheep_ast/lib/sheep_ast/log.rb', line 65</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_ldump'>ldump</span><span class='lparen'>(</span><span class='id identifier rubyid_msg'>msg</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_color_'>color_</span> <span class='op'>=</span> <span class='symbol'>:pink</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_str'>str</span> <span class='op'>=</span> <span class='id identifier rubyid_msg'>msg</span><span class='period'>.</span><span class='id identifier rubyid_color'>color</span><span class='lparen'>(</span><span class='id identifier rubyid_color_'>color_</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_puts'>puts</span> <span class='id identifier rubyid_str'>str</span><span class='period'>.</span><span class='id identifier rubyid_color'>color</span><span class='lparen'>(</span><span class='id identifier rubyid_color_'>color_</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="lerror-instance_method">
+  
+    #<strong>lerror</strong>(msg = &#39;&#39;, color_ = :antiquewhite)  &#x21d2; <tt>void</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p class="note private">
+  <strong>This method is part of a private API.</strong>
+  You should avoid using this method if possible, as it may be removed or be changed in the future.
+</p>
+<p class="note returns_void">This method returns an undefined value.</p>
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>msg</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>&#39;&#39;</tt>)</em>
+      
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>color_</span>
+      
+      
+        <span class='type'>(<tt>Symbol</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>:antiquewhite</tt>)</em>
+      
+      
+    </li>
+  
+</ul>
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+91
+92
+93</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File '/home/r_yaginiwa/yang_try/sheep_ast/lib/sheep_ast/log.rb', line 91</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_lerror'>lerror</span><span class='lparen'>(</span><span class='id identifier rubyid_msg'>msg</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_color_'>color_</span> <span class='op'>=</span> <span class='symbol'>:antiquewhite</span><span class='rparen'>)</span>
+  <span class='ivar'>@logger</span><span class='period'>.</span><span class='id identifier rubyid_error'>error</span> <span class='lparen'>(</span><span class='id identifier rubyid_say_class_name'>say_class_name</span> <span class='op'>+</span> <span class='id identifier rubyid_msg'>msg</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_color'>color</span><span class='lparen'>(</span><span class='id identifier rubyid_color_'>color_</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="lfatal-instance_method">
+  
+    #<strong>lfatal</strong>(msg = &#39;&#39;, color_ = :antiquewhite)  &#x21d2; <tt>void</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p class="note private">
+  <strong>This method is part of a private API.</strong>
+  You should avoid using this method if possible, as it may be removed or be changed in the future.
+</p>
+<p class="note returns_void">This method returns an undefined value.</p>
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>msg</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>&#39;&#39;</tt>)</em>
+      
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>color_</span>
+      
+      
+        <span class='type'>(<tt>Symbol</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>:antiquewhite</tt>)</em>
+      
+      
+    </li>
+  
+</ul>
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+86
+87
+88</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File '/home/r_yaginiwa/yang_try/sheep_ast/lib/sheep_ast/log.rb', line 86</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_lfatal'>lfatal</span><span class='lparen'>(</span><span class='id identifier rubyid_msg'>msg</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_color_'>color_</span> <span class='op'>=</span> <span class='symbol'>:antiquewhite</span><span class='rparen'>)</span>
+  <span class='ivar'>@logger</span><span class='period'>.</span><span class='id identifier rubyid_fatal'>fatal</span> <span class='lparen'>(</span><span class='id identifier rubyid_say_class_name'>say_class_name</span> <span class='op'>+</span> <span class='id identifier rubyid_msg'>msg</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_color'>color</span><span class='lparen'>(</span><span class='id identifier rubyid_color_'>color_</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="linfo-instance_method">
+  
+    #<strong>linfo</strong>(msg = &#39;&#39;, color_ = :antiquewhite)  &#x21d2; <tt>void</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p class="note private">
+  <strong>This method is part of a private API.</strong>
+  You should avoid using this method if possible, as it may be removed or be changed in the future.
+</p>
+<p class="note returns_void">This method returns an undefined value.</p>
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>msg</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>&#39;&#39;</tt>)</em>
+      
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>color_</span>
+      
+      
+        <span class='type'>(<tt>Symbol</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>:antiquewhite</tt>)</em>
+      
+      
+    </li>
+  
+</ul>
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+71
+72
+73</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File '/home/r_yaginiwa/yang_try/sheep_ast/lib/sheep_ast/log.rb', line 71</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_linfo'>linfo</span><span class='lparen'>(</span><span class='id identifier rubyid_msg'>msg</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_color_'>color_</span> <span class='op'>=</span> <span class='symbol'>:antiquewhite</span><span class='rparen'>)</span>
+  <span class='ivar'>@logger</span><span class='period'>.</span><span class='id identifier rubyid_info'>info</span> <span class='lparen'>(</span><span class='id identifier rubyid_say_class_name'>say_class_name</span> <span class='op'>+</span> <span class='id identifier rubyid_msg'>msg</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_color'>color</span><span class='lparen'>(</span><span class='id identifier rubyid_color_'>color_</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="lprint-instance_method">
+  
+    #<strong>lprint</strong>(msg = &#39;&#39;, color_ = :yellow)  &#x21d2; <tt>void</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p class="note private">
+  <strong>This method is part of a private API.</strong>
+  You should avoid using this method if possible, as it may be removed or be changed in the future.
+</p>
+<p class="note returns_void">This method returns an undefined value.</p>
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>msg</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>&#39;&#39;</tt>)</em>
+      
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>color_</span>
+      
+      
+        <span class='type'>(<tt>Symbol</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>:yellow</tt>)</em>
+      
+      
+    </li>
+  
+</ul>
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+58
+59
+60
+61
+62</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File '/home/r_yaginiwa/yang_try/sheep_ast/lib/sheep_ast/log.rb', line 58</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_lprint'>lprint</span><span class='lparen'>(</span><span class='id identifier rubyid_msg'>msg</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_color_'>color_</span> <span class='op'>=</span> <span class='symbol'>:yellow</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_str'>str</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>P: </span><span class='tstring_end'>&#39;</span></span>
+  <span class='id identifier rubyid_str'>str</span> <span class='op'>+=</span> <span class='id identifier rubyid_say_class_name'>say_class_name</span> <span class='op'>+</span> <span class='id identifier rubyid_msg'>msg</span>
+  <span class='id identifier rubyid_puts'>puts</span> <span class='id identifier rubyid_str'>str</span><span class='period'>.</span><span class='id identifier rubyid_color'>color</span><span class='lparen'>(</span><span class='id identifier rubyid_color_'>color_</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="lprint?-instance_method">
+  
+    #<strong>lprint?</strong>  &#x21d2; <tt>Boolean</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p class="note private">
+  <strong>This method is part of a private API.</strong>
+  You should avoid using this method if possible, as it may be removed or be changed in the future.
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+111
+112
+113</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File '/home/r_yaginiwa/yang_try/sheep_ast/lib/sheep_ast/log.rb', line 111</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_lprint?'>lprint?</span>
+  <span class='kw'>return</span> <span class='kw'>true</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="lwarn-instance_method">
+  
+    #<strong>lwarn</strong>(msg = &#39;&#39;, color_ = :antiquewhite)  &#x21d2; <tt>void</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p class="note private">
+  <strong>This method is part of a private API.</strong>
+  You should avoid using this method if possible, as it may be removed or be changed in the future.
+</p>
+<p class="note returns_void">This method returns an undefined value.</p>
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>msg</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>&#39;&#39;</tt>)</em>
+      
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>color_</span>
+      
+      
+        <span class='type'>(<tt>Symbol</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>:antiquewhite</tt>)</em>
+      
+      
+    </li>
+  
+</ul>
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+81
+82
+83</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File '/home/r_yaginiwa/yang_try/sheep_ast/lib/sheep_ast/log.rb', line 81</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_lwarn'>lwarn</span><span class='lparen'>(</span><span class='id identifier rubyid_msg'>msg</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_color_'>color_</span> <span class='op'>=</span> <span class='symbol'>:antiquewhite</span><span class='rparen'>)</span>
+  <span class='ivar'>@logger</span><span class='period'>.</span><span class='id identifier rubyid_warn'>warn</span> <span class='lparen'>(</span><span class='id identifier rubyid_say_class_name'>say_class_name</span> <span class='op'>+</span> <span class='id identifier rubyid_msg'>msg</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_color'>color</span><span class='lparen'>(</span><span class='id identifier rubyid_color_'>color_</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="once-instance_method">
+  
+    #<strong>once</strong>(sym, &amp;blk)  &#x21d2; <tt>void</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p class="note private">
+  <strong>This method is part of a private API.</strong>
+  You should avoid using this method if possible, as it may be removed or be changed in the future.
+</p>
+<p class="note returns_void">This method returns an undefined value.</p>
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>sym</span>
+      
+      
+        <span class='type'>(<tt>Symbol</tt>)</span>
+      
+      
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>blk</span>
+      
+      
+        <span class='type'>(<tt>T.proc.void</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+140
+141
+142
+143
+144
+145</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File '/home/r_yaginiwa/yang_try/sheep_ast/lib/sheep_ast/log.rb', line 140</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_once'>once</span><span class='lparen'>(</span><span class='id identifier rubyid_sym'>sym</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_blk'>blk</span><span class='rparen'>)</span>
+  <span class='kw'>if</span> <span class='op'>!</span><span class='id identifier rubyid_instance_variable_defined?'>instance_variable_defined?</span> <span class='id identifier rubyid_sym'>sym</span>
+    <span class='id identifier rubyid_blk'>blk</span><span class='period'>.</span><span class='id identifier rubyid_call'>call</span>
+    <span class='id identifier rubyid_instance_variable_set'>instance_variable_set</span> <span class='id identifier rubyid_sym'>sym</span><span class='comma'>,</span> <span class='kw'>true</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="pdebug-instance_method">
+  
+    #<strong>pdebug</strong>(msg = &#39;&#39;, color_ = :antiquewhite)  &#x21d2; <tt>void</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p class="note private">
+  <strong>This method is part of a private API.</strong>
+  You should avoid using this method if possible, as it may be removed or be changed in the future.
+</p>
+<p class="note returns_void">This method returns an undefined value.</p>
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>msg</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>&#39;&#39;</tt>)</em>
+      
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>color_</span>
+      
+      
+        <span class='type'>(<tt>Symbol</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>:antiquewhite</tt>)</em>
+      
+      
+    </li>
+  
+</ul>
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+53
+54
+55</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File '/home/r_yaginiwa/yang_try/sheep_ast/lib/sheep_ast/log.rb', line 53</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_pdebug'>pdebug</span><span class='lparen'>(</span><span class='id identifier rubyid_msg'>msg</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_color_'>color_</span> <span class='op'>=</span> <span class='symbol'>:antiquewhite</span><span class='rparen'>)</span>
+  <span class='ivar'>@logger</span><span class='period'>.</span><span class='id identifier rubyid_debug'>debug</span> <span class='id identifier rubyid_msg'>msg</span><span class='period'>.</span><span class='id identifier rubyid_color'>color</span><span class='lparen'>(</span><span class='id identifier rubyid_color_'>color_</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="pfatal-instance_method">
+  
+    #<strong>pfatal</strong>(msg = &#39;&#39;, color_ = :antiquewhite)  &#x21d2; <tt>void</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p class="note private">
+  <strong>This method is part of a private API.</strong>
+  You should avoid using this method if possible, as it may be removed or be changed in the future.
+</p>
+<p class="note returns_void">This method returns an undefined value.</p>
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>msg</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>&#39;&#39;</tt>)</em>
+      
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>color_</span>
+      
+      
+        <span class='type'>(<tt>Symbol</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>:antiquewhite</tt>)</em>
+      
+      
+    </li>
+  
+</ul>
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+48
+49
+50</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File '/home/r_yaginiwa/yang_try/sheep_ast/lib/sheep_ast/log.rb', line 48</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_pfatal'>pfatal</span><span class='lparen'>(</span><span class='id identifier rubyid_msg'>msg</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_color_'>color_</span> <span class='op'>=</span> <span class='symbol'>:antiquewhite</span><span class='rparen'>)</span>
+  <span class='ivar'>@logger</span><span class='period'>.</span><span class='id identifier rubyid_fatal'>fatal</span> <span class='id identifier rubyid_msg'>msg</span><span class='period'>.</span><span class='id identifier rubyid_color'>color</span><span class='lparen'>(</span><span class='id identifier rubyid_color_'>color_</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="pinfo-instance_method">
+  
+    #<strong>pinfo</strong>(msg = &#39;&#39;, color_ = :antiquewhite)  &#x21d2; <tt>void</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p class="note private">
+  <strong>This method is part of a private API.</strong>
+  You should avoid using this method if possible, as it may be removed or be changed in the future.
+</p>
+<p class="note returns_void">This method returns an undefined value.</p>
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>msg</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>&#39;&#39;</tt>)</em>
+      
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>color_</span>
+      
+      
+        <span class='type'>(<tt>Symbol</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>:antiquewhite</tt>)</em>
+      
+      
+    </li>
+  
+</ul>
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+43
+44
+45</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File '/home/r_yaginiwa/yang_try/sheep_ast/lib/sheep_ast/log.rb', line 43</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_pinfo'>pinfo</span><span class='lparen'>(</span><span class='id identifier rubyid_msg'>msg</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_color_'>color_</span> <span class='op'>=</span> <span class='symbol'>:antiquewhite</span><span class='rparen'>)</span>
+  <span class='ivar'>@logger</span><span class='period'>.</span><span class='id identifier rubyid_info'>info</span> <span class='id identifier rubyid_msg'>msg</span><span class='period'>.</span><span class='id identifier rubyid_color'>color</span><span class='lparen'>(</span><span class='id identifier rubyid_color_'>color_</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="pwarn-instance_method">
+  
+    #<strong>pwarn</strong>(msg = &#39;&#39;, color_ = :antiquewhite)  &#x21d2; <tt>void</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p class="note private">
+  <strong>This method is part of a private API.</strong>
+  You should avoid using this method if possible, as it may be removed or be changed in the future.
+</p>
+<p class="note returns_void">This method returns an undefined value.</p>
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>msg</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>&#39;&#39;</tt>)</em>
+      
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>color_</span>
+      
+      
+        <span class='type'>(<tt>Symbol</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>:antiquewhite</tt>)</em>
+      
+      
+    </li>
+  
+</ul>
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+76
+77
+78</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File '/home/r_yaginiwa/yang_try/sheep_ast/lib/sheep_ast/log.rb', line 76</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_pwarn'>pwarn</span><span class='lparen'>(</span><span class='id identifier rubyid_msg'>msg</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_color_'>color_</span> <span class='op'>=</span> <span class='symbol'>:antiquewhite</span><span class='rparen'>)</span>
+  <span class='ivar'>@logger</span><span class='period'>.</span><span class='id identifier rubyid_warn'>warn</span> <span class='id identifier rubyid_msg'>msg</span><span class='period'>.</span><span class='id identifier rubyid_color'>color</span><span class='lparen'>(</span><span class='id identifier rubyid_color_'>color_</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="set_logger-instance_method">
+  
+    #<strong>set_logger</strong>(level, device = nil)  &#x21d2; <tt>void</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p class="note private">
+  <strong>This method is part of a private API.</strong>
+  You should avoid using this method if possible, as it may be removed or be changed in the future.
+</p>
+<p class="note returns_void">This method returns an undefined value.</p>
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>level</span>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>device</span>
+      
+      
+        <span class='type'>(<tt>nil</tt>, <tt>IO</tt>, <tt>String</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>nil</tt>)</em>
+      
+      
+    </li>
+  
+</ul>
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+131
+132
+133
+134
+135
+136
+137</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File '/home/r_yaginiwa/yang_try/sheep_ast/lib/sheep_ast/log.rb', line 131</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_set_logger'>set_logger</span><span class='lparen'>(</span><span class='id identifier rubyid_level'>level</span><span class='comma'>,</span> <span class='id identifier rubyid_device'>device</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_device'>device</span> <span class='op'>=</span> <span class='gvar'>$stdout</span> <span class='kw'>if</span> <span class='id identifier rubyid_device'>device</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span>
+  <span class='id identifier rubyid_dev'>dev</span> <span class='op'>=</span> <span class='const'>T</span><span class='period'>.</span><span class='id identifier rubyid_cast'>cast</span><span class='lparen'>(</span><span class='id identifier rubyid_device'>device</span><span class='comma'>,</span> <span class='const'>T</span><span class='period'>.</span><span class='id identifier rubyid_any'>any</span><span class='lparen'>(</span><span class='const'>IO</span><span class='comma'>,</span> <span class='const'>String</span><span class='rparen'>)</span><span class='rparen'>)</span>
+  <span class='ivar'>@logger</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../Logger.html" title="Logger (class)">Logger</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_dev'>dev</span><span class='rparen'>)</span>
+  <span class='ivar'>@logger</span><span class='period'>.</span><span class='id identifier rubyid_level'>level</span> <span class='op'>=</span> <span class='id identifier rubyid_level'>level</span>
+  <span class='ivar'>@logger</span><span class='period'>.</span><span class='id identifier rubyid_formatter'>formatter</span> <span class='op'>=</span> <span class='id identifier rubyid_logformatter'>logformatter</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+
+      <div id="footer">
+  Generated on Wed Jul 14 07:22:02 2021 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.9.26 (ruby-3.0.1).
+</div>
+
+    </div>
+  </body>
+</html>

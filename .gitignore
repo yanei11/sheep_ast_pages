@@ -3,3 +3,4 @@ copy/
 Makefile
 Gemfile.lock
 .ruby-version
+README.md

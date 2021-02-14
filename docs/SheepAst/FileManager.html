@@ -1,0 +1,3271 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  Class: SheepAst::FileManager
+  
+    &mdash; Documentation by YARD 0.9.26
+  
+</title>
+
+  <link rel="stylesheet" href="../css/style.css" type="text/css" />
+
+  <link rel="stylesheet" href="../css/common.css" type="text/css" />
+
+<script type="text/javascript">
+  pathId = "SheepAst::FileManager";
+  relpath = '../';
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div class="nav_wrap">
+      <iframe id="nav" src="../class_list.html?1"></iframe>
+      <div id="resizer"></div>
+    </div>
+
+    <div id="main" tabindex="-1">
+      <div id="header">
+        <div id="menu">
+  
+    <a href="../_index.html">Index (F)</a> &raquo;
+    <span class='title'><span class='object_link'><a href="../SheepAst.html" title="SheepAst (module)">SheepAst</a></span></span>
+     &raquo; 
+    <span class="title">FileManager</span>
+  
+</div>
+
+        <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="../class_list.html">
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
+    </a>
+  
+</div>
+        <div class="clear"></div>
+      </div>
+
+      <div id="content"><h1>Class: SheepAst::FileManager
+  
+  
+  <span class="private note title">Private</span>
+</h1>
+<div class="box_info">
+  
+  <dl>
+    <dt>Inherits:</dt>
+    <dd>
+      <span class="inheritName">Object</span>
+      
+        <ul class="fullTree">
+          <li>Object</li>
+          
+            <li class="next">SheepAst::FileManager</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+    </dd>
+  </dl>
+  
+
+  
+  
+  <dl>
+      <dt>Extended by:</dt>
+      <dd>T::Sig</dd>
+  </dl>
+  
+  
+  
+  <dl>
+      <dt>Includes:</dt>
+      <dd><span class='object_link'><a href="Exception.html" title="SheepAst::Exception (module)">Exception</a></span>, <span class='object_link'><a href="Log.html" title="SheepAst::Log (module)">Log</a></span></dd>
+  </dl>
+  
+  
+
+  
+
+  
+  <dl>
+    <dt>Defined in:</dt>
+    <dd>/home/r_yaginiwa/yang_try/sheep_ast/lib/sheep_ast/file_manager.rb</dd>
+  </dl>
+  
+</div>
+
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    <p class="note private">
+  <strong>This class is part of a private API.</strong>
+  You should avoid using this class if possible, as it may be removed or be changed in the future.
+</p>
+
+<p>This object handles input of syntax element after parsing by tokenizer. It holds stack of processing info and provide functionality of saving data and resume data</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+
+
+
+  <h2>Instance Attribute Summary <small><a href="#" class="summary_toggle">collapse</a></small></h2>
+  <ul class="summary">
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#last_word_check-instance_method" title="#last_word_check (instance method)">#<strong>last_word_check</strong>  &#x21d2; String </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+    
+  
+  
+  
+  
+  <span class="private note title">private</span>
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#processed_file_list-instance_method" title="#processed_file_list (instance method)">#<strong>processed_file_list</strong>  &#x21d2; Set&lt;String&gt; </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+    
+  
+  
+  
+  
+  <span class="private note title">private</span>
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+    
+  </ul>
+
+
+
+  
+  
+  <h3 class="inherited">Attributes included from <span class='object_link'><a href="Log.html" title="SheepAst::Log (module)">Log</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="Log.html#logger-instance_method" title="SheepAst::Log#logger (method)">#logger</a></span></p>
+
+
+  
+    <h2>
+      Instance Method Summary
+      <small><a href="#" class="summary_toggle">collapse</a></small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#analyze-instance_method" title="#analyze (instance method)">#<strong>analyze</strong>(&amp;blk)  &#x21d2; void </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  <span class="private note title">private</span>
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#ast_exclude_set-instance_method" title="#ast_exclude_set (instance method)">#<strong>ast_exclude_set</strong>(exc)  &#x21d2; void </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  <span class="private note title">private</span>
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#ast_include_set-instance_method" title="#ast_include_set (instance method)">#<strong>ast_include_set</strong>(inc)  &#x21d2; void </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  <span class="private note title">private</span>
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#consume_file-instance_method" title="#consume_file (instance method)">#<strong>consume_file</strong>  &#x21d2; Boolean </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  <span class="private note title">private</span>
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#enter_cb_invoke-instance_method" title="#enter_cb_invoke (instance method)">#<strong>enter_cb_invoke</strong>(callback)  &#x21d2; void </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  <span class="private note title">private</span>
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#exit_cb_set-instance_method" title="#exit_cb_set (instance method)">#<strong>exit_cb_set</strong>(callback)  &#x21d2; void </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  <span class="private note title">private</span>
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#feed_expr-instance_method" title="#feed_expr (instance method)">#<strong>feed_expr</strong>(line, rec = false)  &#x21d2; Array([String, nil], Boolean) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  <span class="private note title">private</span>
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#feed_line-instance_method" title="#feed_line (instance method)">#<strong>feed_line</strong>  &#x21d2; Array&lt;String&gt;<sup>?</sup> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  <span class="private note title">private</span>
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#get_func_arg-instance_method" title="#get_func_arg (instance method)">#<strong>get_func_arg</strong>(callback)  &#x21d2; Array(Symbol, [String, nil]) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  <span class="private note title">private</span>
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#initialize-instance_method" title="#initialize (instance method)">#<strong>initialize</strong>(stage_manager, tokenizer, datastore)  &#x21d2; void </a>
+    
+
+    
+  </span>
+  
+  
+    <span class="note title constructor">constructor</span>
+  
+  
+  
+  
+  
+  <span class="private note title">private</span>
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#inspect-instance_method" title="#inspect (instance method)">#<strong>inspect</strong>  &#x21d2; String </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  <span class="private note title">private</span>
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#invoke_cb-instance_method" title="#invoke_cb (instance method)">#<strong>invoke_cb</strong>(callback, datastore)  &#x21d2; void </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  <span class="private note title">private</span>
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#marc_process_indirect-instance_method" title="#marc_process_indirect (instance method)">#<strong>marc_process_indirect</strong>(file)  &#x21d2; Boolean<sup>?</sup> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  <span class="private note title">private</span>
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#marc_process_main-instance_method" title="#marc_process_main (instance method)">#<strong>marc_process_main</strong>(file)  &#x21d2; Boolean </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  <span class="private note title">private</span>
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#next_data-instance_method" title="#next_data (instance method)">#<strong>next_data</strong>  &#x21d2; AnalyzeData </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  <span class="private note title">private</span>
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#print_eof-instance_method" title="#print_eof (instance method)">#<strong>print_eof</strong>(file)  &#x21d2; void </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  <span class="private note title">private</span>
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#process_indirect_again%3F-instance_method" title="#process_indirect_again? (instance method)">#<strong>process_indirect_again?</strong>  &#x21d2; Boolean </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  <span class="private note title">private</span>
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#processed%3F-instance_method" title="#processed? (instance method)">#<strong>processed?</strong>(file)  &#x21d2; Set&lt;String&gt;<sup>?</sup> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  <span class="private note title">private</span>
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#put_meta1-instance_method" title="#put_meta1 (instance method)">#<strong>put_meta1</strong>(meta1)  &#x21d2; void </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  <span class="private note title">private</span>
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#put_meta2-instance_method" title="#put_meta2 (instance method)">#<strong>put_meta2</strong>(meta2)  &#x21d2; void </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  <span class="private note title">private</span>
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#put_meta3-instance_method" title="#put_meta3 (instance method)">#<strong>put_meta3</strong>(meta3)  &#x21d2; void </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  <span class="private note title">private</span>
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#put_namespace-instance_method" title="#put_namespace (instance method)">#<strong>put_namespace</strong>(namespace)  &#x21d2; void </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  <span class="private note title">private</span>
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#register_files-instance_method" title="#register_files (instance method)">#<strong>register_files</strong>(files)  &#x21d2; void </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  <span class="private note title">private</span>
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#register_next_chunk-instance_method" title="#register_next_chunk (instance method)">#<strong>register_next_chunk</strong>(chunk)  &#x21d2; void </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  <span class="private note title">private</span>
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#register_next_expr-instance_method" title="#register_next_expr (instance method)">#<strong>register_next_expr</strong>(expr)  &#x21d2; void </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  <span class="private note title">private</span>
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#register_next_file-instance_method" title="#register_next_file (instance method)">#<strong>register_next_file</strong>(file)  &#x21d2; void </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  <span class="private note title">private</span>
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#restore_info-instance_method" title="#restore_info (instance method)">#<strong>restore_info</strong>  &#x21d2; FileInfo<sup>?</sup> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  <span class="private note title">private</span>
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#resume_data-instance_method" title="#resume_data (instance method)">#<strong>resume_data</strong>  &#x21d2; Array&lt;FileInfo&gt;<sup>?</sup> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  <span class="private note title">private</span>
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#save_info-instance_method" title="#save_info (instance method)">#<strong>save_info</strong>  &#x21d2; void </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  <span class="private note title">private</span>
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods included from <span class='object_link'><a href="Log.html" title="SheepAst::Log (module)">Log</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="Log.html#ldebug-instance_method" title="SheepAst::Log#ldebug (method)">#ldebug</a></span>, <span class='object_link'><a href="Log.html#ldebug2-instance_method" title="SheepAst::Log#ldebug2 (method)">#ldebug2</a></span>, <span class='object_link'><a href="Log.html#ldebug%3F-instance_method" title="SheepAst::Log#ldebug? (method)">#ldebug?</a></span>, <span class='object_link'><a href="Log.html#ldump-instance_method" title="SheepAst::Log#ldump (method)">#ldump</a></span>, <span class='object_link'><a href="Log.html#lerror-instance_method" title="SheepAst::Log#lerror (method)">#lerror</a></span>, <span class='object_link'><a href="Log.html#lfatal-instance_method" title="SheepAst::Log#lfatal (method)">#lfatal</a></span>, <span class='object_link'><a href="Log.html#linfo-instance_method" title="SheepAst::Log#linfo (method)">#linfo</a></span>, <span class='object_link'><a href="Log.html#lprint-instance_method" title="SheepAst::Log#lprint (method)">#lprint</a></span>, <span class='object_link'><a href="Log.html#lprint%3F-instance_method" title="SheepAst::Log#lprint? (method)">#lprint?</a></span>, <span class='object_link'><a href="Log.html#lwarn-instance_method" title="SheepAst::Log#lwarn (method)">#lwarn</a></span>, <span class='object_link'><a href="Log.html#once-instance_method" title="SheepAst::Log#once (method)">#once</a></span>, <span class='object_link'><a href="Log.html#pdebug-instance_method" title="SheepAst::Log#pdebug (method)">#pdebug</a></span>, <span class='object_link'><a href="Log.html#pfatal-instance_method" title="SheepAst::Log#pfatal (method)">#pfatal</a></span>, <span class='object_link'><a href="Log.html#pinfo-instance_method" title="SheepAst::Log#pinfo (method)">#pinfo</a></span>, <span class='object_link'><a href="Log.html#pwarn-instance_method" title="SheepAst::Log#pwarn (method)">#pwarn</a></span>, <span class='object_link'><a href="Log.html#set_logger-instance_method" title="SheepAst::Log#set_logger (method)">#set_logger</a></span></p>
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods included from <span class='object_link'><a href="Exception.html" title="SheepAst::Exception (module)">Exception</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="Exception.html#application_error-instance_method" title="SheepAst::Exception#application_error (method)">#application_error</a></span>, <span class='object_link'><a href="Exception.html#expression_not_found-instance_method" title="SheepAst::Exception#expression_not_found (method)">#expression_not_found</a></span>, <span class='object_link'><a href="Exception.html#missing_impl-instance_method" title="SheepAst::Exception#missing_impl (method)">#missing_impl</a></span></p>
+
+  
+  <div id="constructor_details" class="method_details_list">
+  <h2>Constructor Details</h2>
+  
+    <div class="method_details first">
+  <h3 class="signature first" id="initialize-instance_method">
+  
+    #<strong>initialize</strong>(stage_manager, tokenizer, datastore)  &#x21d2; <tt>void</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p class="note private">
+  <strong>This method is part of a private API.</strong>
+  You should avoid using this method if possible, as it may be removed or be changed in the future.
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>stage_manager</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="StageManager.html" title="SheepAst::StageManager (class)">StageManager</a></span></tt>)</span>
+      
+      
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>tokenizer</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="Tokenizer.html" title="SheepAst::Tokenizer (class)">Tokenizer</a></span></tt>)</span>
+      
+      
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>datastore</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="DataStore.html" title="SheepAst::DataStore (class)">DataStore</a></span></tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File '/home/r_yaginiwa/yang_try/sheep_ast/lib/sheep_ast/file_manager.rb', line 31</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_stage_manager'>stage_manager</span><span class='comma'>,</span> <span class='id identifier rubyid_tokenizer'>tokenizer</span><span class='comma'>,</span> <span class='id identifier rubyid_datastore'>datastore</span><span class='rparen'>)</span>
+  <span class='kw'>super</span><span class='lparen'>(</span><span class='rparen'>)</span>
+  <span class='ivar'>@processed_file_list</span> <span class='op'>=</span> <span class='const'>Set</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
+  <span class='ivar'>@current_file</span> <span class='op'>=</span> <span class='kw'>nil</span>
+  <span class='ivar'>@file_info</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="FileInfo.html" title="SheepAst::FileInfo (class)">FileInfo</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="FileInfo.html#initialize-instance_method" title="SheepAst::FileInfo#initialize (method)">new</a></span></span>
+  <span class='ivar'>@resume_info</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
+  <span class='ivar'>@reg_files</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
+  <span class='ivar'>@scheduled_next_file</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
+  <span class='ivar'>@scheduled_next_chunk</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
+  <span class='ivar'>@analyze_data</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="AnalyzeData.html" title="SheepAst::AnalyzeData (class)">AnalyzeData</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="AnalyzeData.html#initialize-instance_method" title="SheepAst::AnalyzeData#initialize (method)">new</a></span></span>
+  <span class='ivar'>@stage_manager</span> <span class='op'>=</span> <span class='id identifier rubyid_stage_manager'>stage_manager</span>
+  <span class='ivar'>@tokenizer</span> <span class='op'>=</span> <span class='id identifier rubyid_tokenizer'>tokenizer</span>
+  <span class='ivar'>@datastore</span> <span class='op'>=</span> <span class='id identifier rubyid_datastore'>datastore</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+  
+</div>
+
+  <div id="instance_attr_details" class="attr_details">
+    <h2>Instance Attribute Details</h2>
+    
+      
+      <span id="last_word_check=-instance_method"></span>
+      <div class="method_details first">
+  <h3 class="signature first" id="last_word_check-instance_method">
+  
+    #<strong>last_word_check</strong>  &#x21d2; <tt>String</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p class="note private">
+  <strong>This method is part of a private API.</strong>
+  You should avoid using this method if possible, as it may be removed or be changed in the future.
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+28
+29
+30</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File '/home/r_yaginiwa/yang_try/sheep_ast/lib/sheep_ast/file_manager.rb', line 28</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_last_word_check'>last_word_check</span>
+  <span class='ivar'>@last_word_check</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id="processed_file_list=-instance_method"></span>
+      <div class="method_details ">
+  <h3 class="signature " id="processed_file_list-instance_method">
+  
+    #<strong>processed_file_list</strong>  &#x21d2; <tt>Set&lt;String&gt;</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p class="note private">
+  <strong>This method is part of a private API.</strong>
+  You should avoid using this method if possible, as it may be removed or be changed in the future.
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Set&lt;String&gt;</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+25
+26
+27</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File '/home/r_yaginiwa/yang_try/sheep_ast/lib/sheep_ast/file_manager.rb', line 25</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_processed_file_list'>processed_file_list</span>
+  <span class='ivar'>@processed_file_list</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="analyze-instance_method">
+  
+    #<strong>analyze</strong>(&amp;blk)  &#x21d2; <tt>void</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p class="note private">
+  <strong>This method is part of a private API.</strong>
+  You should avoid using this method if possible, as it may be removed or be changed in the future.
+</p>
+<p class="note returns_void">This method returns an undefined value.</p>
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>blk</span>
+      
+      
+        <span class='type'>(<tt>T.proc.params(arg0: <span class='object_link'><a href="AnalyzeData.html" title="SheepAst::AnalyzeData (class)">AnalyzeData</a></span>).void</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File '/home/r_yaginiwa/yang_try/sheep_ast/lib/sheep_ast/file_manager.rb', line 58</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_analyze'>analyze</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='id identifier rubyid_blk'>blk</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_loop'>loop</span> <span class='kw'>do</span>
+    <span class='id identifier rubyid_data'>data</span> <span class='op'>=</span> <span class='id identifier rubyid_next_data'>next_data</span>
+
+    <span class='kw'>if</span> <span class='id identifier rubyid_data'>data</span><span class='period'>.</span><span class='id identifier rubyid_expr'>expr</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span>
+      <span class='id identifier rubyid_linfo'>linfo</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>Finish analyzing.</span><span class='tstring_end'>&#39;</span></span>
+      <span class='kw'>break</span>
+    <span class='kw'>end</span>
+
+    <span class='id identifier rubyid_blk'>blk</span><span class='period'>.</span><span class='id identifier rubyid_call'>call</span><span class='lparen'>(</span><span class='id identifier rubyid_data'>data</span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="ast_exclude_set-instance_method">
+  
+    #<strong>ast_exclude_set</strong>(exc)  &#x21d2; <tt>void</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p class="note private">
+  <strong>This method is part of a private API.</strong>
+  You should avoid using this method if possible, as it may be removed or be changed in the future.
+</p>
+<p class="note returns_void">This method returns an undefined value.</p>
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>exc</span>
+      
+      
+        <span class='type'>(<tt>String</tt>, <tt>Array&lt;String, Regexp&gt;</tt>, <tt>nil</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+377
+378
+379
+380</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File '/home/r_yaginiwa/yang_try/sheep_ast/lib/sheep_ast/file_manager.rb', line 377</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_ast_exclude_set'>ast_exclude_set</span><span class='lparen'>(</span><span class='id identifier rubyid_exc'>exc</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_exc'>exc</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='id identifier rubyid_exc'>exc</span><span class='rbracket'>]</span> <span class='kw'>if</span> <span class='id identifier rubyid_exc'>exc</span><span class='period'>.</span><span class='id identifier rubyid_instance_of?'>instance_of?</span> <span class='const'>String</span>
+  <span class='ivar'>@file_info</span><span class='period'>.</span><span class='id identifier rubyid_ast_exclude'>ast_exclude</span> <span class='op'>=</span> <span class='id identifier rubyid_exc'>exc</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="ast_include_set-instance_method">
+  
+    #<strong>ast_include_set</strong>(inc)  &#x21d2; <tt>void</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p class="note private">
+  <strong>This method is part of a private API.</strong>
+  You should avoid using this method if possible, as it may be removed or be changed in the future.
+</p>
+<p class="note returns_void">This method returns an undefined value.</p>
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>inc</span>
+      
+      
+        <span class='type'>(<tt>String</tt>, <tt>Array&lt;String, Regexp&gt;</tt>, <tt>nil</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+365
+366
+367
+368</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File '/home/r_yaginiwa/yang_try/sheep_ast/lib/sheep_ast/file_manager.rb', line 365</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_ast_include_set'>ast_include_set</span><span class='lparen'>(</span><span class='id identifier rubyid_inc'>inc</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_inc'>inc</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='id identifier rubyid_inc'>inc</span><span class='rbracket'>]</span> <span class='kw'>if</span> <span class='id identifier rubyid_inc'>inc</span><span class='period'>.</span><span class='id identifier rubyid_instance_of?'>instance_of?</span> <span class='const'>String</span>
+  <span class='ivar'>@file_info</span><span class='period'>.</span><span class='id identifier rubyid_ast_include'>ast_include</span> <span class='op'>=</span> <span class='id identifier rubyid_inc'>inc</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="consume_file-instance_method">
+  
+    #<strong>consume_file</strong>  &#x21d2; <tt>Boolean</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p class="note private">
+  <strong>This method is part of a private API.</strong>
+  You should avoid using this method if possible, as it may be removed or be changed in the future.
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203
+204
+205
+206
+207
+208
+209
+210
+211
+212</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File '/home/r_yaginiwa/yang_try/sheep_ast/lib/sheep_ast/file_manager.rb', line 183</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_consume_file'>consume_file</span>
+  <span class='id identifier rubyid_ldebug?'>ldebug?</span> <span class='kw'>and</span> <span class='id identifier rubyid_ldebug'>ldebug</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>consume file called</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='symbol'>:red</span>
+  <span class='id identifier rubyid_first_time'>first_time</span> <span class='op'>=</span> <span class='const'>T</span><span class='period'>.</span><span class='id identifier rubyid_let'>let</span><span class='lparen'>(</span><span class='kw'>true</span><span class='comma'>,</span> <span class='const'>T</span><span class='op'>::</span><span class='const'>Boolean</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_loop'>loop</span> <span class='kw'>do</span>
+    <span class='id identifier rubyid_file'>file</span> <span class='op'>=</span> <span class='ivar'>@reg_files</span><span class='period'>.</span><span class='id identifier rubyid_shift'>shift</span>
+    <span class='kw'>return</span> <span class='kw'>false</span> <span class='kw'>if</span> <span class='id identifier rubyid_file'>file</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span>
+
+    <span class='id identifier rubyid_ret'>ret</span> <span class='op'>=</span> <span class='id identifier rubyid_marc_process_main'>marc_process_main</span><span class='lparen'>(</span><span class='id identifier rubyid_file'>file</span><span class='rparen'>)</span>
+    <span class='kw'>next</span> <span class='kw'>if</span> <span class='op'>!</span><span class='id identifier rubyid_ret'>ret</span>
+
+    <span class='id identifier rubyid_tokenized'>tokenized</span><span class='comma'>,</span> <span class='id identifier rubyid_line_count'>line_count</span><span class='comma'>,</span> <span class='id identifier rubyid_raw_lines'>raw_lines</span> <span class='op'>=</span> <span class='ivar'>@tokenizer</span><span class='period'>.</span><span class='id identifier rubyid_tokenize'>tokenize</span><span class='lparen'>(</span><span class='id identifier rubyid_file'>file</span><span class='rparen'>)</span>
+
+    <span class='comment'># strategy: when file is empty or something,
+</span>    <span class='comment'># the tokenized value will be nil
+</span>    <span class='comment'># In this case, we must get new file
+</span>    <span class='kw'>next</span> <span class='kw'>if</span> <span class='id identifier rubyid_tokenized'>tokenized</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span>
+
+    <span class='comment'># meaningful file is found. return it
+</span>    <span class='ivar'>@file_info</span><span class='period'>.</span><span class='id identifier rubyid_init'>init</span>
+    <span class='ivar'>@file_info</span><span class='period'>.</span><span class='id identifier rubyid_file'>file</span> <span class='op'>=</span> <span class='id identifier rubyid_file'>file</span>
+    <span class='ivar'>@file_info</span><span class='period'>.</span><span class='id identifier rubyid_raw_lines'>raw_lines</span> <span class='op'>=</span> <span class='id identifier rubyid_raw_lines'>raw_lines</span>
+    <span class='ivar'>@file_info</span><span class='period'>.</span><span class='id identifier rubyid_tokenized'>tokenized</span> <span class='op'>=</span> <span class='id identifier rubyid_tokenized'>tokenized</span>
+    <span class='ivar'>@file_info</span><span class='period'>.</span><span class='id identifier rubyid_max_line'>max_line</span> <span class='op'>=</span> <span class='id identifier rubyid_line_count'>line_count</span>
+    <span class='kw'>if</span> <span class='id identifier rubyid_first_time'>first_time</span>
+      <span class='id identifier rubyid_first_time'>first_time</span> <span class='op'>=</span> <span class='kw'>false</span>
+      <span class='ivar'>@file_info</span><span class='period'>.</span><span class='id identifier rubyid_new_file_validation'>new_file_validation</span> <span class='op'>=</span> <span class='kw'>true</span>
+    <span class='kw'>end</span>
+    <span class='kw'>return</span> <span class='kw'>true</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="enter_cb_invoke-instance_method">
+  
+    #<strong>enter_cb_invoke</strong>(callback)  &#x21d2; <tt>void</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p class="note private">
+  <strong>This method is part of a private API.</strong>
+  You should avoid using this method if possible, as it may be removed or be changed in the future.
+</p>
+<p class="note returns_void">This method returns an undefined value.</p>
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>callback</span>
+      
+      
+        <span class='type'>(<tt>Array&lt;Symbol, String&gt;</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+290
+291
+292</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File '/home/r_yaginiwa/yang_try/sheep_ast/lib/sheep_ast/file_manager.rb', line 290</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_enter_cb_invoke'>enter_cb_invoke</span><span class='lparen'>(</span><span class='id identifier rubyid_callback'>callback</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_invoke_cb'>invoke_cb</span><span class='lparen'>(</span><span class='id identifier rubyid_callback'>callback</span><span class='comma'>,</span> <span class='ivar'>@datastore</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="exit_cb_set-instance_method">
+  
+    #<strong>exit_cb_set</strong>(callback)  &#x21d2; <tt>void</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p class="note private">
+  <strong>This method is part of a private API.</strong>
+  You should avoid using this method if possible, as it may be removed or be changed in the future.
+</p>
+<p class="note returns_void">This method returns an undefined value.</p>
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>callback</span>
+      
+      
+        <span class='type'>(<tt>Array&lt;String, Symbol&gt;</tt>, <tt>nil</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+354
+355
+356</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File '/home/r_yaginiwa/yang_try/sheep_ast/lib/sheep_ast/file_manager.rb', line 354</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_exit_cb_set'>exit_cb_set</span><span class='lparen'>(</span><span class='id identifier rubyid_callback'>callback</span><span class='rparen'>)</span>
+  <span class='ivar'>@file_info</span><span class='period'>.</span><span class='id identifier rubyid_exit_cb'>exit_cb</span> <span class='op'>=</span> <span class='id identifier rubyid_callback'>callback</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="feed_expr-instance_method">
+  
+    #<strong>feed_expr</strong>(line, rec = false)  &#x21d2; <tt>Array([String, nil], Boolean)</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p class="note private">
+  <strong>This method is part of a private API.</strong>
+  You should avoid using this method if possible, as it may be removed or be changed in the future.
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>line</span>
+      
+      
+        <span class='type'>(<tt>Array&lt;String&gt;</tt>, <tt>nil</tt>)</span>
+      
+      
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>rec</span>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>false</tt>)</em>
+      
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Array([String, nil], Boolean)</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File '/home/r_yaginiwa/yang_try/sheep_ast/lib/sheep_ast/file_manager.rb', line 107</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_feed_expr'>feed_expr</span><span class='lparen'>(</span><span class='id identifier rubyid_line'>line</span><span class='comma'>,</span> <span class='id identifier rubyid_rec'>rec</span> <span class='op'>=</span> <span class='kw'>false</span><span class='rparen'>)</span> <span class='comment'># rubocop:disable all
+</span>  <span class='id identifier rubyid_expr'>expr</span> <span class='op'>=</span> <span class='id identifier rubyid_line'>line</span><span class='lbracket'>[</span><span class='ivar'>@file_info</span><span class='period'>.</span><span class='id identifier rubyid_index'>index</span><span class='rbracket'>]</span> <span class='kw'>unless</span> <span class='id identifier rubyid_line'>line</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span>
+  <span class='id identifier rubyid_is_eol'>is_eol</span> <span class='op'>=</span> <span class='kw'>false</span>
+
+  <span class='id identifier rubyid_ldebug?'>ldebug?</span> <span class='kw'>and</span> <span class='id identifier rubyid_ldebug'>ldebug</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>feed_expr expr = </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_expr'>expr</span><span class='period'>.</span><span class='id identifier rubyid_inspect'>inspect</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
+  <span class='id identifier rubyid_ldebug?'>ldebug?</span> <span class='kw'>and</span> <span class='id identifier rubyid_ldebug'>ldebug</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>feed_expr file_info = </span><span class='embexpr_beg'>#{</span><span class='ivar'>@file_info</span><span class='period'>.</span><span class='id identifier rubyid_inspect'>inspect</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
+
+  <span class='kw'>if</span> <span class='id identifier rubyid_expr'>expr</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span>
+    <span class='comment'># strategy1: expr = nil case is two,
+</span>    <span class='comment'># 1) line is new
+</span>    <span class='comment'># 2) end of file
+</span>    <span class='ivar'>@file_info</span><span class='period'>.</span><span class='id identifier rubyid_line'>line</span> <span class='op'>+=</span> <span class='int'>1</span>
+    <span class='kw'>if</span> <span class='ivar'>@file_info</span><span class='period'>.</span><span class='id identifier rubyid_line'>line</span> <span class='op'>&lt;</span> <span class='ivar'>@file_info</span><span class='period'>.</span><span class='id identifier rubyid_max_line'>max_line</span>
+      <span class='ivar'>@file_info</span><span class='period'>.</span><span class='id identifier rubyid_index'>index</span> <span class='op'>=</span> <span class='int'>0</span>
+      <span class='id identifier rubyid_ldebug?'>ldebug?</span> <span class='kw'>and</span> <span class='id identifier rubyid_ldebug'>ldebug</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>reached to the new line. get next line.</span><span class='tstring_end'>&#39;</span></span>
+      <span class='id identifier rubyid_expr'>expr</span><span class='comma'>,</span> <span class='id identifier rubyid_is_eol'>is_eol</span> <span class='op'>=</span> <span class='id identifier rubyid_feed_expr'>feed_expr</span><span class='lparen'>(</span><span class='id identifier rubyid_feed_line'>feed_line</span><span class='comma'>,</span> <span class='kw'>true</span><span class='rparen'>)</span>
+    <span class='kw'>elsif</span> <span class='ivar'>@file_info</span><span class='period'>.</span><span class='id identifier rubyid_line'>line</span> <span class='op'>==</span> <span class='ivar'>@file_info</span><span class='period'>.</span><span class='id identifier rubyid_max_line'>max_line</span>
+      <span class='kw'>if</span> <span class='ivar'>@file_info</span><span class='period'>.</span><span class='id identifier rubyid_file'>file</span> <span class='op'>&amp;&amp;</span> <span class='op'>!</span><span class='ivar'>@file_info</span><span class='period'>.</span><span class='id identifier rubyid_using_chunk'>using_chunk</span>
+        <span class='comment'># end of file
+</span>        <span class='id identifier rubyid_ldebug?'>ldebug?</span> <span class='kw'>and</span> <span class='id identifier rubyid_ldebug'>ldebug</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>EOF</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='symbol'>:red</span>
+        <span class='id identifier rubyid_expr'>expr</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>__sheep_eof__</span><span class='tstring_end'>&#39;</span></span>
+      <span class='kw'>elsif</span> <span class='ivar'>@file_info</span><span class='period'>.</span><span class='id identifier rubyid_using_chunk'>using_chunk</span>
+        <span class='comment'># end of chunk
+</span>        <span class='id identifier rubyid_ldebug?'>ldebug?</span> <span class='kw'>and</span> <span class='id identifier rubyid_ldebug'>ldebug</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>EOC</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='symbol'>:red</span>
+        <span class='id identifier rubyid_expr'>expr</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>__sheep_eoc__</span><span class='tstring_end'>&#39;</span></span>
+      <span class='kw'>end</span>
+    <span class='kw'>else</span>
+      <span class='id identifier rubyid_ldebug?'>ldebug?</span> <span class='kw'>and</span> <span class='id identifier rubyid_ldebug'>ldebug</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>Bug route?</span><span class='tstring_end'>&#39;</span></span>
+    <span class='kw'>end</span>
+  <span class='kw'>else</span>
+    <span class='ivar'>@file_info</span><span class='period'>.</span><span class='id identifier rubyid_index'>index</span> <span class='op'>+=</span> <span class='int'>1</span>
+    <span class='kw'>if</span> <span class='const'>T</span><span class='period'>.</span><span class='id identifier rubyid_must'>must</span><span class='lparen'>(</span><span class='id identifier rubyid_line'>line</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_size'>size</span> <span class='op'>==</span> <span class='ivar'>@file_info</span><span class='period'>.</span><span class='id identifier rubyid_index'>index</span>
+      <span class='id identifier rubyid_is_eol'>is_eol</span> <span class='op'>=</span> <span class='kw'>true</span>
+    <span class='kw'>else</span>
+      <span class='id identifier rubyid_is_eol'>is_eol</span> <span class='op'>=</span> <span class='kw'>false</span>
+    <span class='kw'>end</span>
+  <span class='kw'>end</span>
+
+  <span class='kw'>if</span> <span class='op'>!</span><span class='id identifier rubyid_rec'>rec</span>
+    <span class='id identifier rubyid_ldebug?'>ldebug?</span> <span class='kw'>and</span> <span class='id identifier rubyid_ldebug'>ldebug</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>index = </span><span class='embexpr_beg'>#{</span><span class='ivar'>@file_info</span><span class='period'>.</span><span class='id identifier rubyid_index'>index</span><span class='embexpr_end'>}</span><span class='tstring_content'> is input</span><span class='tstring_end'>&quot;</span></span>
+    <span class='id identifier rubyid_ldebug?'>ldebug?</span> <span class='kw'>and</span> <span class='id identifier rubyid_ldebug'>ldebug</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>feed expr returned </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_expr'>expr</span><span class='period'>.</span><span class='id identifier rubyid_inspect'>inspect</span><span class='embexpr_end'>}</span><span class='tstring_content'>, is_eol = </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_is_eol'>is_eol</span><span class='period'>.</span><span class='id identifier rubyid_inspect'>inspect</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>\
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'> at </span><span class='embexpr_beg'>#{</span><span class='ivar'>@file_info</span><span class='period'>.</span><span class='id identifier rubyid_line'>line</span><span class='embexpr_end'>}</span><span class='tstring_content'>:</span><span class='embexpr_beg'>#{</span><span class='ivar'>@file_info</span><span class='period'>.</span><span class='id identifier rubyid_index'>index</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='symbol'>:red</span>
+  <span class='kw'>end</span>
+
+  <span class='kw'>return</span> <span class='id identifier rubyid_expr'>expr</span><span class='comma'>,</span> <span class='id identifier rubyid_is_eol'>is_eol</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="feed_line-instance_method">
+  
+    #<strong>feed_line</strong>  &#x21d2; <tt>Array&lt;String&gt;</tt><sup>?</sup> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p class="note private">
+  <strong>This method is part of a private API.</strong>
+  You should avoid using this method if possible, as it may be removed or be changed in the future.
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Array&lt;String&gt;</tt>, <tt>nil</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File '/home/r_yaginiwa/yang_try/sheep_ast/lib/sheep_ast/file_manager.rb', line 72</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_feed_line'>feed_line</span>
+  <span class='id identifier rubyid_line'>line</span> <span class='op'>=</span> <span class='ivar'>@file_info</span><span class='period'>.</span><span class='id identifier rubyid_tokenized'>tokenized</span><span class='lbracket'>[</span><span class='ivar'>@file_info</span><span class='period'>.</span><span class='id identifier rubyid_line'>line</span><span class='rbracket'>]</span> <span class='kw'>unless</span> <span class='ivar'>@file_info</span><span class='period'>.</span><span class='id identifier rubyid_tokenized'>tokenized</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span>
+
+  <span class='comment'># line is no longer existed
+</span>  <span class='comment'># This is the end of file.
+</span>  <span class='kw'>if</span> <span class='id identifier rubyid_line'>line</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span>
+
+    <span class='comment'># strategy1: check if resume info is existed
+</span>    <span class='id identifier rubyid_restored'>restored</span> <span class='op'>=</span> <span class='id identifier rubyid_restore_info'>restore_info</span>
+    <span class='kw'>if</span> <span class='id identifier rubyid_restored'>restored</span>
+      <span class='id identifier rubyid_ldebug?'>ldebug?</span> <span class='kw'>and</span> <span class='id identifier rubyid_ldebug'>ldebug</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>resume info is existed</span><span class='tstring_end'>&#39;</span></span>
+      <span class='ivar'>@file_info</span><span class='period'>.</span><span class='id identifier rubyid_copy'>copy</span><span class='lparen'>(</span><span class='id identifier rubyid_restored'>restored</span><span class='rparen'>)</span>
+      <span class='id identifier rubyid_line'>line</span> <span class='op'>=</span> <span class='ivar'>@file_info</span><span class='period'>.</span><span class='id identifier rubyid_tokenized'>tokenized</span><span class='lbracket'>[</span><span class='ivar'>@file_info</span><span class='period'>.</span><span class='id identifier rubyid_line'>line</span><span class='rbracket'>]</span>
+    <span class='kw'>else</span>
+      <span class='comment'># strategy2: no resume info. Get next file
+</span>      <span class='kw'>if</span> <span class='id identifier rubyid_consume_file'>consume_file</span> <span class='comment'># rubocop: disable all
+</span>        <span class='id identifier rubyid_ldebug?'>ldebug?</span> <span class='kw'>and</span> <span class='id identifier rubyid_ldebug'>ldebug</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>Got another file</span><span class='tstring_end'>&#39;</span></span>
+        <span class='id identifier rubyid_line'>line</span> <span class='op'>=</span> <span class='ivar'>@file_info</span><span class='period'>.</span><span class='id identifier rubyid_tokenized'>tokenized</span><span class='lbracket'>[</span><span class='ivar'>@file_info</span><span class='period'>.</span><span class='id identifier rubyid_line'>line</span><span class='rbracket'>]</span>
+      <span class='kw'>else</span>
+        <span class='comment'># Strategy3: So, nothing to process. GIve up
+</span>        <span class='id identifier rubyid_ldebug?'>ldebug?</span> <span class='kw'>and</span> <span class='id identifier rubyid_ldebug'>ldebug</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>Give up!!</span><span class='tstring_end'>&#39;</span></span>
+        <span class='id identifier rubyid_line'>line</span> <span class='op'>=</span> <span class='kw'>nil</span>
+      <span class='kw'>end</span>
+    <span class='kw'>end</span>
+  <span class='kw'>end</span>
+
+  <span class='id identifier rubyid_ldebug?'>ldebug?</span> <span class='kw'>and</span> <span class='id identifier rubyid_ldebug'>ldebug</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>feed line returned </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_line'>line</span><span class='period'>.</span><span class='id identifier rubyid_inspect'>inspect</span><span class='embexpr_end'>}</span><span class='tstring_content'>, line_no = </span><span class='embexpr_beg'>#{</span><span class='ivar'>@file_info</span><span class='period'>.</span><span class='id identifier rubyid_line'>line</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='symbol'>:red</span>
+  <span class='kw'>return</span> <span class='id identifier rubyid_line'>line</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="get_func_arg-instance_method">
+  
+    #<strong>get_func_arg</strong>(callback)  &#x21d2; <tt>Array(Symbol, [String, nil])</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p class="note private">
+  <strong>This method is part of a private API.</strong>
+  You should avoid using this method if possible, as it may be removed or be changed in the future.
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>callback</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Array(Symbol, [String, nil])</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+312
+313
+314
+315
+316
+317
+318
+319
+320
+321
+322
+323</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File '/home/r_yaginiwa/yang_try/sheep_ast/lib/sheep_ast/file_manager.rb', line 312</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_get_func_arg'>get_func_arg</span><span class='lparen'>(</span><span class='id identifier rubyid_callback'>callback</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_first'>first</span> <span class='op'>=</span> <span class='id identifier rubyid_callback'>callback</span><span class='period'>.</span><span class='id identifier rubyid_index'>index</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>(</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_last'>last</span>  <span class='op'>=</span> <span class='id identifier rubyid_callback'>callback</span><span class='period'>.</span><span class='id identifier rubyid_index'>index</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>)</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
+
+  <span class='kw'>if</span> <span class='id identifier rubyid_first'>first</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span> <span class='op'>||</span> <span class='id identifier rubyid_last'>last</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span> <span class='op'>||</span> <span class='id identifier rubyid_last'>last</span> <span class='op'>&lt;</span> <span class='id identifier rubyid_first'>first</span>
+    <span class='kw'>return</span> <span class='id identifier rubyid_callback'>callback</span><span class='comma'>,</span> <span class='kw'>nil</span>
+  <span class='kw'>end</span>
+
+  <span class='id identifier rubyid_func'>func</span>  <span class='op'>=</span> <span class='id identifier rubyid_callback'>callback</span><span class='lbracket'>[</span><span class='int'>0</span><span class='op'>..</span><span class='id identifier rubyid_first'>first</span> <span class='op'>-</span> <span class='int'>1</span><span class='rbracket'>]</span>
+  <span class='id identifier rubyid_arg'>arg</span>   <span class='op'>=</span> <span class='id identifier rubyid_callback'>callback</span><span class='lbracket'>[</span><span class='id identifier rubyid_first'>first</span> <span class='op'>+</span> <span class='int'>1</span><span class='op'>..</span><span class='id identifier rubyid_last'>last</span> <span class='op'>-</span> <span class='int'>1</span><span class='rbracket'>]</span>
+  <span class='kw'>return</span> <span class='id identifier rubyid_func'>func</span><span class='period'>.</span><span class='id identifier rubyid_to_sym'>to_sym</span><span class='comma'>,</span> <span class='id identifier rubyid_arg'>arg</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="inspect-instance_method">
+  
+    #<strong>inspect</strong>  &#x21d2; <tt>String</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p class="note private">
+  <strong>This method is part of a private API.</strong>
+  You should avoid using this method if possible, as it may be removed or be changed in the future.
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+53
+54
+55</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File '/home/r_yaginiwa/yang_try/sheep_ast/lib/sheep_ast/file_manager.rb', line 53</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_inspect'>inspect</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>&lt;</span><span class='embexpr_beg'>#{</span><span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_class'>class</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span><span class='embexpr_end'>}</span><span class='tstring_content'> object_id = </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_object_id'>object_id</span><span class='embexpr_end'>}</span><span class='tstring_content'>&gt;</span><span class='tstring_end'>&quot;</span></span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="invoke_cb-instance_method">
+  
+    #<strong>invoke_cb</strong>(callback, datastore)  &#x21d2; <tt>void</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p class="note private">
+  <strong>This method is part of a private API.</strong>
+  You should avoid using this method if possible, as it may be removed or be changed in the future.
+</p>
+<p class="note returns_void">This method returns an undefined value.</p>
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>callback</span>
+      
+      
+        <span class='type'>(<tt>Array&lt;Symbol, String&gt;</tt>)</span>
+      
+      
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>datastore</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="DataStore.html" title="SheepAst::DataStore (class)">DataStore</a></span></tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+295
+296
+297
+298
+299
+300
+301
+302
+303
+304
+305
+306
+307
+308
+309</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File '/home/r_yaginiwa/yang_try/sheep_ast/lib/sheep_ast/file_manager.rb', line 295</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_invoke_cb'>invoke_cb</span><span class='lparen'>(</span><span class='id identifier rubyid_callback'>callback</span><span class='comma'>,</span> <span class='id identifier rubyid_datastore'>datastore</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_callback'>callback</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_cb'>cb</span><span class='op'>|</span>
+    <span class='id identifier rubyid_t_cb'>t_cb</span> <span class='op'>=</span> <span class='id identifier rubyid_cb'>cb</span>
+    <span class='id identifier rubyid_arg'>arg</span> <span class='op'>=</span> <span class='kw'>nil</span>
+    <span class='kw'>if</span> <span class='id identifier rubyid_t_cb'>t_cb</span><span class='period'>.</span><span class='id identifier rubyid_is_a?'>is_a?</span> <span class='const'>String</span>
+      <span class='id identifier rubyid_t_cb'>t_cb</span><span class='comma'>,</span> <span class='id identifier rubyid_arg'>arg</span> <span class='op'>=</span> <span class='id identifier rubyid_get_func_arg'>get_func_arg</span><span class='lparen'>(</span><span class='id identifier rubyid_cb'>cb</span><span class='rparen'>)</span>
+    <span class='kw'>end</span>
+    <span class='id identifier rubyid_let'>let</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="Let.html" title="SheepAst::Let (class)">Let</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="Let.html#new-instance_method" title="SheepAst::Let#new (method)">new</a></span></span>
+    <span class='kw'>if</span> <span class='id identifier rubyid_arg'>arg</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span>
+      <span class='id identifier rubyid_let'>let</span><span class='period'>.</span><span class='id identifier rubyid_cb_action'>cb_action</span><span class='lparen'>(</span><span class='id identifier rubyid_t_cb'>t_cb</span><span class='comma'>,</span> <span class='id identifier rubyid_datastore'>datastore</span><span class='rparen'>)</span>
+    <span class='kw'>else</span>
+      <span class='id identifier rubyid_let'>let</span><span class='period'>.</span><span class='id identifier rubyid_cb_action'>cb_action</span><span class='lparen'>(</span><span class='id identifier rubyid_t_cb'>t_cb</span><span class='comma'>,</span> <span class='id identifier rubyid_datastore'>datastore</span><span class='comma'>,</span> <span class='id identifier rubyid_arg'>arg</span><span class='rparen'>)</span>
+    <span class='kw'>end</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="marc_process_indirect-instance_method">
+  
+    #<strong>marc_process_indirect</strong>(file)  &#x21d2; <tt>Boolean</tt><sup>?</sup> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p class="note private">
+  <strong>This method is part of a private API.</strong>
+  You should avoid using this method if possible, as it may be removed or be changed in the future.
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>file</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>, <tt>nil</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+412
+413
+414
+415
+416
+417
+418
+419
+420
+421
+422
+423
+424
+425
+426
+427
+428
+429
+430</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File '/home/r_yaginiwa/yang_try/sheep_ast/lib/sheep_ast/file_manager.rb', line 412</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_marc_process_indirect'>marc_process_indirect</span><span class='lparen'>(</span><span class='id identifier rubyid_file'>file</span><span class='rparen'>)</span>
+  <span class='kw'>if</span> <span class='const'>File</span><span class='period'>.</span><span class='id identifier rubyid_exist?'>exist?</span><span class='lparen'>(</span><span class='id identifier rubyid_file'>file</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_fpath'>fpath</span> <span class='op'>=</span> <span class='const'>File</span><span class='period'>.</span><span class='id identifier rubyid_expand_path'>expand_path</span><span class='lparen'>(</span><span class='id identifier rubyid_file'>file</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_db'>db</span> <span class='op'>=</span> <span class='ivar'>@datastore</span><span class='period'>.</span><span class='id identifier rubyid_assign'>assign</span><span class='lparen'>(</span><span class='symbol'>:_sheep_processed_file_A</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_res'>res</span> <span class='op'>=</span> <span class='id identifier rubyid_db'>db</span><span class='op'>&amp;.</span><span class='id identifier rubyid_find'>find</span><span class='lparen'>(</span><span class='id identifier rubyid_fpath'>fpath</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_t_file'>t_file</span> <span class='op'>=</span> <span class='id identifier rubyid_file'>file</span><span class='period'>.</span><span class='id identifier rubyid_split'>split</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>/</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_last'>last</span>
+    <span class='kw'>if</span> <span class='op'>!</span><span class='id identifier rubyid_res'>res</span>
+      <span class='id identifier rubyid_db'>db</span><span class='period'>.</span><span class='id identifier rubyid_add'>add</span><span class='lparen'>(</span><span class='id identifier rubyid_fpath'>fpath</span><span class='rparen'>)</span>
+      <span class='id identifier rubyid_ldump'>ldump</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>[INCLUDE] </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_t_file'>t_file</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='symbol'>:green</span>
+      <span class='kw'>return</span> <span class='kw'>true</span>
+    <span class='kw'>elsif</span> <span class='id identifier rubyid_process_indirect_again?'>process_indirect_again?</span>
+      <span class='id identifier rubyid_ldump'>ldump</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>[AGAIN] </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_t_file'>t_file</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
+      <span class='kw'>return</span> <span class='kw'>true</span>
+    <span class='kw'>else</span>
+      <span class='id identifier rubyid_ldump'>ldump</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>[SKIPPED] </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_t_file'>t_file</span><span class='embexpr_end'>}</span><span class='tstring_content'> is already processed</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='symbol'>:yellow</span>
+      <span class='kw'>return</span> <span class='kw'>false</span>
+    <span class='kw'>end</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="marc_process_main-instance_method">
+  
+    #<strong>marc_process_main</strong>(file)  &#x21d2; <tt>Boolean</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p class="note private">
+  <strong>This method is part of a private API.</strong>
+  You should avoid using this method if possible, as it may be removed or be changed in the future.
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>file</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+388
+389
+390
+391
+392
+393
+394
+395
+396
+397
+398
+399
+400
+401
+402
+403</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File '/home/r_yaginiwa/yang_try/sheep_ast/lib/sheep_ast/file_manager.rb', line 388</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_marc_process_main'>marc_process_main</span><span class='lparen'>(</span><span class='id identifier rubyid_file'>file</span><span class='rparen'>)</span>
+  <span class='kw'>if</span> <span class='const'>File</span><span class='period'>.</span><span class='id identifier rubyid_exist?'>exist?</span><span class='lparen'>(</span><span class='id identifier rubyid_file'>file</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_fpath'>fpath</span> <span class='op'>=</span> <span class='const'>File</span><span class='period'>.</span><span class='id identifier rubyid_expand_path'>expand_path</span><span class='lparen'>(</span><span class='id identifier rubyid_file'>file</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_db'>db</span> <span class='op'>=</span> <span class='ivar'>@datastore</span><span class='period'>.</span><span class='id identifier rubyid_assign'>assign</span><span class='lparen'>(</span><span class='symbol'>:_sheep_processed_file_A</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_res'>res</span> <span class='op'>=</span> <span class='id identifier rubyid_db'>db</span><span class='op'>&amp;.</span><span class='id identifier rubyid_find'>find</span><span class='lparen'>(</span><span class='id identifier rubyid_fpath'>fpath</span><span class='rparen'>)</span>
+    <span class='kw'>if</span> <span class='op'>!</span><span class='id identifier rubyid_res'>res</span>
+      <span class='id identifier rubyid_db'>db</span><span class='period'>.</span><span class='id identifier rubyid_add'>add</span><span class='lparen'>(</span><span class='id identifier rubyid_fpath'>fpath</span><span class='rparen'>)</span>
+      <span class='id identifier rubyid_ldump'>ldump</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>[PROCESS] </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_file'>file</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='symbol'>:cyan</span>
+      <span class='kw'>return</span> <span class='kw'>true</span>
+    <span class='kw'>else</span>
+      <span class='comment'># application_error &quot;Same file is entried -&gt; #{file}&quot;
+</span>      <span class='id identifier rubyid_ldump'>ldump</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>[SKIPPED] Main given file: </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_file'>file</span><span class='embexpr_end'>}</span><span class='tstring_content'> is already processed</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='symbol'>:red</span>
+      <span class='kw'>return</span> <span class='kw'>false</span>
+    <span class='kw'>end</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="next_data-instance_method">
+  
+    #<strong>next_data</strong>  &#x21d2; <tt><span class='object_link'><a href="AnalyzeData.html" title="SheepAst::AnalyzeData (class)">AnalyzeData</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p class="note private">
+  <strong>This method is part of a private API.</strong>
+  You should avoid using this method if possible, as it may be removed or be changed in the future.
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="AnalyzeData.html" title="SheepAst::AnalyzeData (class)">AnalyzeData</a></span></tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File '/home/r_yaginiwa/yang_try/sheep_ast/lib/sheep_ast/file_manager.rb', line 155</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_next_data'>next_data</span>
+  <span class='id identifier rubyid_line'>line</span> <span class='op'>=</span> <span class='id identifier rubyid_feed_line'>feed_line</span>
+  <span class='id identifier rubyid_expr'>expr</span><span class='comma'>,</span> <span class='id identifier rubyid_is_eol'>is_eol</span> <span class='op'>=</span> <span class='id identifier rubyid_feed_expr'>feed_expr</span><span class='lparen'>(</span><span class='id identifier rubyid_line'>line</span><span class='rparen'>)</span>
+  <span class='ivar'>@analyze_data</span><span class='period'>.</span><span class='id identifier rubyid_expr'>expr</span> <span class='op'>=</span> <span class='id identifier rubyid_expr'>expr</span>
+  <span class='ivar'>@analyze_data</span><span class='period'>.</span><span class='id identifier rubyid_is_eol'>is_eol</span> <span class='op'>=</span> <span class='id identifier rubyid_is_eol'>is_eol</span>
+  <span class='ivar'>@analyze_data</span><span class='period'>.</span><span class='id identifier rubyid_tokenized_line'>tokenized_line</span> <span class='op'>=</span> <span class='ivar'>@file_info</span><span class='period'>.</span><span class='id identifier rubyid_tokenized'>tokenized</span><span class='lbracket'>[</span><span class='ivar'>@file_info</span><span class='period'>.</span><span class='id identifier rubyid_line'>line</span><span class='rbracket'>]</span>
+  <span class='ivar'>@analyze_data</span><span class='period'>.</span><span class='id identifier rubyid_tokenized_line_prev'>tokenized_line_prev</span> <span class='op'>=</span> <span class='ivar'>@file_info</span><span class='period'>.</span><span class='id identifier rubyid_tokenized'>tokenized</span><span class='lbracket'>[</span><span class='ivar'>@file_info</span><span class='period'>.</span><span class='id identifier rubyid_line'>line</span> <span class='op'>-</span> <span class='int'>1</span><span class='rbracket'>]</span>
+  <span class='ivar'>@analyze_data</span><span class='period'>.</span><span class='id identifier rubyid_file_info'>file_info</span> <span class='op'>=</span> <span class='ivar'>@file_info</span>
+  <span class='ivar'>@analyze_data</span><span class='period'>.</span><span class='id identifier rubyid_file_manager'>file_manager</span> <span class='op'>=</span> <span class='kw'>self</span>
+  <span class='ivar'>@analyze_data</span><span class='period'>.</span><span class='id identifier rubyid_request_next_data'>request_next_data</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="RequestNextData.html" title="SheepAst::RequestNextData (class)">RequestNextData</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="RequestNextData.html#Next-constant" title="SheepAst::RequestNextData::Next (constant)">Next</a></span></span>
+  <span class='ivar'>@datastore</span><span class='period'>.</span><span class='id identifier rubyid_assign'>assign</span><span class='lparen'>(</span><span class='symbol'>:namespace_stack</span><span class='comma'>,</span> <span class='ivar'>@file_info</span><span class='period'>.</span><span class='id identifier rubyid_namespace_stack'>namespace_stack</span><span class='rparen'>)</span>
+  <span class='ivar'>@datastore</span><span class='period'>.</span><span class='id identifier rubyid_assign'>assign</span><span class='lparen'>(</span><span class='symbol'>:meta1_stack</span><span class='comma'>,</span> <span class='ivar'>@file_info</span><span class='period'>.</span><span class='id identifier rubyid_meta1_stack'>meta1_stack</span><span class='rparen'>)</span>
+  <span class='ivar'>@datastore</span><span class='period'>.</span><span class='id identifier rubyid_assign'>assign</span><span class='lparen'>(</span><span class='symbol'>:meta2_stack</span><span class='comma'>,</span> <span class='ivar'>@file_info</span><span class='period'>.</span><span class='id identifier rubyid_meta2_stack'>meta2_stack</span><span class='rparen'>)</span>
+  <span class='ivar'>@datastore</span><span class='period'>.</span><span class='id identifier rubyid_assign'>assign</span><span class='lparen'>(</span><span class='symbol'>:meta3_stack</span><span class='comma'>,</span> <span class='ivar'>@file_info</span><span class='period'>.</span><span class='id identifier rubyid_meta3_stack'>meta3_stack</span><span class='rparen'>)</span>
+  <span class='kw'>if</span> <span class='op'>!</span><span class='ivar'>@analyze_data</span><span class='period'>.</span><span class='id identifier rubyid_file_info'>file_info</span><span class='period'>.</span><span class='id identifier rubyid_line'>line</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span> <span class='op'>&amp;&amp;</span> <span class='op'>!</span><span class='ivar'>@analyze_data</span><span class='period'>.</span><span class='id identifier rubyid_file_info'>file_info</span><span class='period'>.</span><span class='id identifier rubyid_raw_lines'>raw_lines</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span>
+    <span class='ivar'>@analyze_data</span><span class='period'>.</span><span class='id identifier rubyid_raw_line'>raw_line</span> <span class='op'>=</span> <span class='ivar'>@file_info</span><span class='period'>.</span><span class='id identifier rubyid_raw_lines'>raw_lines</span><span class='lbracket'>[</span><span class='ivar'>@file_info</span><span class='period'>.</span><span class='id identifier rubyid_line'>line</span><span class='rbracket'>]</span>
+  <span class='kw'>else</span>
+    <span class='ivar'>@analyze_data</span><span class='period'>.</span><span class='id identifier rubyid_raw_line'>raw_line</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>Not supported. Maybe it is redirected case or it is bug.</span><span class='tstring_end'>&#39;</span></span>
+  <span class='kw'>end</span>
+  <span class='kw'>return</span> <span class='ivar'>@analyze_data</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="print_eof-instance_method">
+  
+    #<strong>print_eof</strong>(file)  &#x21d2; <tt>void</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p class="note private">
+  <strong>This method is part of a private API.</strong>
+  You should avoid using this method if possible, as it may be removed or be changed in the future.
+</p>
+<p class="note returns_void">This method returns an undefined value.</p>
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>file</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+406
+407
+408
+409</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File '/home/r_yaginiwa/yang_try/sheep_ast/lib/sheep_ast/file_manager.rb', line 406</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_print_eof'>print_eof</span><span class='lparen'>(</span><span class='id identifier rubyid_file'>file</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_t_file'>t_file</span> <span class='op'>=</span> <span class='id identifier rubyid_file'>file</span><span class='period'>.</span><span class='id identifier rubyid_split'>split</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>/</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_last'>last</span>
+  <span class='id identifier rubyid_ldump'>ldump</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>[FINISHD] </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_t_file'>t_file</span><span class='embexpr_end'>}</span><span class='tstring_content'> is finished</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='symbol'>:magenta</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="process_indirect_again?-instance_method">
+  
+    #<strong>process_indirect_again?</strong>  &#x21d2; <tt>Boolean</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p class="note private">
+  <strong>This method is part of a private API.</strong>
+  You should avoid using this method if possible, as it may be removed or be changed in the future.
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+433
+434
+435</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File '/home/r_yaginiwa/yang_try/sheep_ast/lib/sheep_ast/file_manager.rb', line 433</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_process_indirect_again?'>process_indirect_again?</span>
+  <span class='kw'>false</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="processed?-instance_method">
+  
+    #<strong>processed?</strong>(file)  &#x21d2; <tt>Set&lt;String&gt;</tt><sup>?</sup> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p class="note private">
+  <strong>This method is part of a private API.</strong>
+  You should avoid using this method if possible, as it may be removed or be changed in the future.
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>file</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Set&lt;String&gt;</tt>, <tt>nil</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+47
+48
+49
+50</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File '/home/r_yaginiwa/yang_try/sheep_ast/lib/sheep_ast/file_manager.rb', line 47</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_processed?'>processed?</span><span class='lparen'>(</span><span class='id identifier rubyid_file'>file</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_ldebug?'>ldebug?</span> <span class='kw'>and</span> <span class='id identifier rubyid_ldebug'>ldebug</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Mark processed =&gt; </span><span class='embexpr_beg'>#{</span><span class='const'>File</span><span class='period'>.</span><span class='id identifier rubyid_expand_path'>expand_path</span><span class='lparen'>(</span><span class='id identifier rubyid_file'>file</span><span class='rparen'>)</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='symbol'>:blue</span>
+  <span class='kw'>return</span> <span class='ivar'>@processed_file_list</span><span class='period'>.</span><span class='id identifier rubyid_add?'>add?</span><span class='lparen'>(</span><span class='const'>File</span><span class='period'>.</span><span class='id identifier rubyid_expand_path'>expand_path</span><span class='lparen'>(</span><span class='id identifier rubyid_file'>file</span><span class='rparen'>)</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="put_meta1-instance_method">
+  
+    #<strong>put_meta1</strong>(meta1)  &#x21d2; <tt>void</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p class="note private">
+  <strong>This method is part of a private API.</strong>
+  You should avoid using this method if possible, as it may be removed or be changed in the future.
+</p>
+<p class="note returns_void">This method returns an undefined value.</p>
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>meta1</span>
+      
+      
+        <span class='type'>(<tt>String</tt>, <tt>nil</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+333
+334
+335
+336
+337</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File '/home/r_yaginiwa/yang_try/sheep_ast/lib/sheep_ast/file_manager.rb', line 333</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_put_meta1'>put_meta1</span><span class='lparen'>(</span><span class='id identifier rubyid_meta1'>meta1</span><span class='rparen'>)</span>
+  <span class='ivar'>@file_info</span><span class='period'>.</span><span class='id identifier rubyid_meta1_stack'>meta1_stack</span> <span class='op'>=</span> <span class='ivar'>@resume_info</span><span class='period'>.</span><span class='id identifier rubyid_last'>last</span><span class='period'>.</span><span class='id identifier rubyid_meta1_stack'>meta1_stack</span><span class='period'>.</span><span class='id identifier rubyid_dup'>dup</span>
+  <span class='ivar'>@file_info</span><span class='period'>.</span><span class='id identifier rubyid_meta1_stack'>meta1_stack</span> <span class='op'>&lt;&lt;</span> <span class='id identifier rubyid_meta1'>meta1</span>
+  <span class='id identifier rubyid_ldebug?'>ldebug?</span> <span class='kw'>and</span> <span class='id identifier rubyid_ldebug'>ldebug</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>putting meta1 = </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_meta1'>meta1</span><span class='period'>.</span><span class='id identifier rubyid_inspect'>inspect</span><span class='embexpr_end'>}</span><span class='tstring_content'>, and stack is </span><span class='embexpr_beg'>#{</span><span class='ivar'>@file_info</span><span class='period'>.</span><span class='id identifier rubyid_meta1_stack'>meta1_stack</span><span class='period'>.</span><span class='id identifier rubyid_inspect'>inspect</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="put_meta2-instance_method">
+  
+    #<strong>put_meta2</strong>(meta2)  &#x21d2; <tt>void</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p class="note private">
+  <strong>This method is part of a private API.</strong>
+  You should avoid using this method if possible, as it may be removed or be changed in the future.
+</p>
+<p class="note returns_void">This method returns an undefined value.</p>
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>meta2</span>
+      
+      
+        <span class='type'>(<tt>String</tt>, <tt>nil</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+340
+341
+342
+343
+344</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File '/home/r_yaginiwa/yang_try/sheep_ast/lib/sheep_ast/file_manager.rb', line 340</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_put_meta2'>put_meta2</span><span class='lparen'>(</span><span class='id identifier rubyid_meta2'>meta2</span><span class='rparen'>)</span>
+  <span class='ivar'>@file_info</span><span class='period'>.</span><span class='id identifier rubyid_meta2_stack'>meta2_stack</span> <span class='op'>=</span> <span class='ivar'>@resume_info</span><span class='period'>.</span><span class='id identifier rubyid_last'>last</span><span class='period'>.</span><span class='id identifier rubyid_meta2_stack'>meta2_stack</span><span class='period'>.</span><span class='id identifier rubyid_dup'>dup</span>
+  <span class='ivar'>@file_info</span><span class='period'>.</span><span class='id identifier rubyid_meta2_stack'>meta2_stack</span> <span class='op'>&lt;&lt;</span> <span class='id identifier rubyid_meta2'>meta2</span>
+  <span class='id identifier rubyid_ldebug?'>ldebug?</span> <span class='kw'>and</span> <span class='id identifier rubyid_ldebug'>ldebug</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>putting meta2 = </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_meta2'>meta2</span><span class='period'>.</span><span class='id identifier rubyid_inspect'>inspect</span><span class='embexpr_end'>}</span><span class='tstring_content'>, and stack is </span><span class='embexpr_beg'>#{</span><span class='ivar'>@file_info</span><span class='period'>.</span><span class='id identifier rubyid_meta2_stack'>meta2_stack</span><span class='period'>.</span><span class='id identifier rubyid_inspect'>inspect</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="put_meta3-instance_method">
+  
+    #<strong>put_meta3</strong>(meta3)  &#x21d2; <tt>void</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p class="note private">
+  <strong>This method is part of a private API.</strong>
+  You should avoid using this method if possible, as it may be removed or be changed in the future.
+</p>
+<p class="note returns_void">This method returns an undefined value.</p>
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>meta3</span>
+      
+      
+        <span class='type'>(<tt>String</tt>, <tt>nil</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+347
+348
+349
+350
+351</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File '/home/r_yaginiwa/yang_try/sheep_ast/lib/sheep_ast/file_manager.rb', line 347</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_put_meta3'>put_meta3</span><span class='lparen'>(</span><span class='id identifier rubyid_meta3'>meta3</span><span class='rparen'>)</span>
+  <span class='ivar'>@file_info</span><span class='period'>.</span><span class='id identifier rubyid_meta3_stack'>meta3_stack</span> <span class='op'>=</span> <span class='ivar'>@resume_info</span><span class='period'>.</span><span class='id identifier rubyid_last'>last</span><span class='period'>.</span><span class='id identifier rubyid_meta3_stack'>meta3_stack</span><span class='period'>.</span><span class='id identifier rubyid_dup'>dup</span>
+  <span class='ivar'>@file_info</span><span class='period'>.</span><span class='id identifier rubyid_meta3_stack'>meta3_stack</span> <span class='op'>&lt;&lt;</span> <span class='id identifier rubyid_meta3'>meta3</span>
+  <span class='id identifier rubyid_ldebug?'>ldebug?</span> <span class='kw'>and</span> <span class='id identifier rubyid_ldebug'>ldebug</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>putting meta3 = </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_meta3'>meta3</span><span class='period'>.</span><span class='id identifier rubyid_inspect'>inspect</span><span class='embexpr_end'>}</span><span class='tstring_content'>, and stack is </span><span class='embexpr_beg'>#{</span><span class='ivar'>@file_info</span><span class='period'>.</span><span class='id identifier rubyid_meta3_stack'>meta3_stack</span><span class='period'>.</span><span class='id identifier rubyid_inspect'>inspect</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="put_namespace-instance_method">
+  
+    #<strong>put_namespace</strong>(namespace)  &#x21d2; <tt>void</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p class="note private">
+  <strong>This method is part of a private API.</strong>
+  You should avoid using this method if possible, as it may be removed or be changed in the future.
+</p>
+<p class="note returns_void">This method returns an undefined value.</p>
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>namespace</span>
+      
+      
+        <span class='type'>(<tt>String</tt>, <tt>nil</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+326
+327
+328
+329
+330</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File '/home/r_yaginiwa/yang_try/sheep_ast/lib/sheep_ast/file_manager.rb', line 326</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_put_namespace'>put_namespace</span><span class='lparen'>(</span><span class='id identifier rubyid_namespace'>namespace</span><span class='rparen'>)</span>
+  <span class='ivar'>@file_info</span><span class='period'>.</span><span class='id identifier rubyid_namespace_stack'>namespace_stack</span> <span class='op'>=</span> <span class='ivar'>@resume_info</span><span class='period'>.</span><span class='id identifier rubyid_last'>last</span><span class='period'>.</span><span class='id identifier rubyid_namespace_stack'>namespace_stack</span><span class='period'>.</span><span class='id identifier rubyid_dup'>dup</span>
+  <span class='ivar'>@file_info</span><span class='period'>.</span><span class='id identifier rubyid_namespace_stack'>namespace_stack</span> <span class='op'>&lt;&lt;</span> <span class='id identifier rubyid_namespace'>namespace</span>
+  <span class='id identifier rubyid_ldebug?'>ldebug?</span> <span class='kw'>and</span> <span class='id identifier rubyid_ldebug'>ldebug</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>putting namespace = </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_namespace'>namespace</span><span class='period'>.</span><span class='id identifier rubyid_inspect'>inspect</span><span class='embexpr_end'>}</span><span class='tstring_content'>, and stack is </span><span class='embexpr_beg'>#{</span><span class='ivar'>@file_info</span><span class='period'>.</span><span class='id identifier rubyid_namespace_stack'>namespace_stack</span><span class='period'>.</span><span class='id identifier rubyid_inspect'>inspect</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="register_files-instance_method">
+  
+    #<strong>register_files</strong>(files)  &#x21d2; <tt>void</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p class="note private">
+  <strong>This method is part of a private API.</strong>
+  You should avoid using this method if possible, as it may be removed or be changed in the future.
+</p>
+<p class="note returns_void">This method returns an undefined value.</p>
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>files</span>
+      
+      
+        <span class='type'>(<tt>Array&lt;String&gt;</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+178
+179
+180</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File '/home/r_yaginiwa/yang_try/sheep_ast/lib/sheep_ast/file_manager.rb', line 178</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_register_files'>register_files</span><span class='lparen'>(</span><span class='id identifier rubyid_files'>files</span><span class='rparen'>)</span>
+  <span class='ivar'>@reg_files</span> <span class='op'>=</span> <span class='id identifier rubyid_files'>files</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="register_next_chunk-instance_method">
+  
+    #<strong>register_next_chunk</strong>(chunk)  &#x21d2; <tt>void</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p class="note private">
+  <strong>This method is part of a private API.</strong>
+  You should avoid using this method if possible, as it may be removed or be changed in the future.
+</p>
+<p class="note returns_void">This method returns an undefined value.</p>
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>chunk</span>
+      
+      
+        <span class='type'>(<tt>Array&lt;Array&lt;String&gt;&gt;</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+228
+229
+230
+231
+232
+233
+234
+235
+236</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File '/home/r_yaginiwa/yang_try/sheep_ast/lib/sheep_ast/file_manager.rb', line 228</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_register_next_chunk'>register_next_chunk</span><span class='lparen'>(</span><span class='id identifier rubyid_chunk'>chunk</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_file'>file</span> <span class='op'>=</span> <span class='ivar'>@file_info</span><span class='period'>.</span><span class='id identifier rubyid_file'>file</span>
+  <span class='id identifier rubyid_save_info'>save_info</span>
+  <span class='ivar'>@file_info</span><span class='period'>.</span><span class='id identifier rubyid_file'>file</span> <span class='op'>=</span> <span class='id identifier rubyid_file'>file</span>
+  <span class='ivar'>@file_info</span><span class='period'>.</span><span class='id identifier rubyid_file'>file</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>no file info found</span><span class='tstring_end'>&#39;</span></span> <span class='kw'>if</span> <span class='id identifier rubyid_file'>file</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span>
+  <span class='ivar'>@file_info</span><span class='period'>.</span><span class='id identifier rubyid_tokenized'>tokenized</span> <span class='op'>=</span> <span class='id identifier rubyid_chunk'>chunk</span>
+  <span class='ivar'>@file_info</span><span class='period'>.</span><span class='id identifier rubyid_using_chunk'>using_chunk</span> <span class='op'>=</span> <span class='kw'>true</span>
+  <span class='ivar'>@file_info</span><span class='period'>.</span><span class='id identifier rubyid_max_line'>max_line</span> <span class='op'>=</span> <span class='id identifier rubyid_chunk'>chunk</span><span class='period'>.</span><span class='id identifier rubyid_size'>size</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="register_next_expr-instance_method">
+  
+    #<strong>register_next_expr</strong>(expr)  &#x21d2; <tt>void</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p class="note private">
+  <strong>This method is part of a private API.</strong>
+  You should avoid using this method if possible, as it may be removed or be changed in the future.
+</p>
+<p class="note returns_void">This method returns an undefined value.</p>
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>expr</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+239
+240
+241
+242
+243</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File '/home/r_yaginiwa/yang_try/sheep_ast/lib/sheep_ast/file_manager.rb', line 239</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_register_next_expr'>register_next_expr</span><span class='lparen'>(</span><span class='id identifier rubyid_expr'>expr</span><span class='rparen'>)</span>
+  <span class='ivar'>@file_info</span><span class='period'>.</span><span class='id identifier rubyid_init'>init</span>
+  <span class='ivar'>@tokenizer</span><span class='period'>.</span><span class='id identifier rubyid_last_word_check'>last_word_check</span> <span class='op'>=</span> <span class='ivar'>@last_word_check</span>
+  <span class='ivar'>@file_info</span><span class='period'>.</span><span class='id identifier rubyid_tokenized'>tokenized</span><span class='comma'>,</span> <span class='ivar'>@file_info</span><span class='period'>.</span><span class='id identifier rubyid_max_line'>max_line</span> <span class='op'>=</span> <span class='ivar'>@tokenizer</span> <span class='op'>&lt;&lt;</span> <span class='id identifier rubyid_expr'>expr</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="register_next_file-instance_method">
+  
+    #<strong>register_next_file</strong>(file)  &#x21d2; <tt>void</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p class="note private">
+  <strong>This method is part of a private API.</strong>
+  You should avoid using this method if possible, as it may be removed or be changed in the future.
+</p>
+<p class="note returns_void">This method returns an undefined value.</p>
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>file</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+215
+216
+217
+218
+219
+220
+221
+222
+223
+224
+225</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File '/home/r_yaginiwa/yang_try/sheep_ast/lib/sheep_ast/file_manager.rb', line 215</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_register_next_file'>register_next_file</span><span class='lparen'>(</span><span class='id identifier rubyid_file'>file</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_reinput'>reinput</span> <span class='op'>=</span> <span class='id identifier rubyid_marc_process_indirect'>marc_process_indirect</span><span class='lparen'>(</span><span class='id identifier rubyid_file'>file</span><span class='rparen'>)</span>
+  <span class='kw'>if</span> <span class='id identifier rubyid_reinput'>reinput</span>
+    <span class='id identifier rubyid_save_info'>save_info</span>
+    <span class='ivar'>@file_info</span><span class='period'>.</span><span class='id identifier rubyid_file'>file</span> <span class='op'>=</span> <span class='id identifier rubyid_file'>file</span>
+    <span class='id identifier rubyid_tokenized'>tokenized</span><span class='comma'>,</span> <span class='id identifier rubyid_line_count'>line_count</span><span class='comma'>,</span> <span class='id identifier rubyid_raw_lines'>raw_lines</span> <span class='op'>=</span> <span class='ivar'>@tokenizer</span><span class='period'>.</span><span class='id identifier rubyid_tokenize'>tokenize</span><span class='lparen'>(</span><span class='id identifier rubyid_file'>file</span><span class='rparen'>)</span>
+    <span class='ivar'>@file_info</span><span class='period'>.</span><span class='id identifier rubyid_tokenized'>tokenized</span> <span class='op'>=</span> <span class='id identifier rubyid_tokenized'>tokenized</span>
+    <span class='ivar'>@file_info</span><span class='period'>.</span><span class='id identifier rubyid_raw_lines'>raw_lines</span> <span class='op'>=</span> <span class='id identifier rubyid_raw_lines'>raw_lines</span>
+    <span class='ivar'>@file_info</span><span class='period'>.</span><span class='id identifier rubyid_max_line'>max_line</span> <span class='op'>=</span> <span class='id identifier rubyid_line_count'>line_count</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="restore_info-instance_method">
+  
+    #<strong>restore_info</strong>  &#x21d2; <tt><span class='object_link'><a href="FileInfo.html" title="SheepAst::FileInfo (class)">FileInfo</a></span></tt><sup>?</sup> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p class="note private">
+  <strong>This method is part of a private API.</strong>
+  You should avoid using this method if possible, as it may be removed or be changed in the future.
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="FileInfo.html" title="SheepAst::FileInfo (class)">FileInfo</a></span></tt>, <tt>nil</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+270
+271
+272
+273
+274
+275
+276
+277
+278
+279
+280
+281
+282
+283
+284
+285
+286
+287</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File '/home/r_yaginiwa/yang_try/sheep_ast/lib/sheep_ast/file_manager.rb', line 270</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_restore_info'>restore_info</span>
+  <span class='id identifier rubyid_invoke_cb'>invoke_cb</span><span class='lparen'>(</span><span class='ivar'>@file_info</span><span class='period'>.</span><span class='id identifier rubyid_exit_cb'>exit_cb</span><span class='comma'>,</span> <span class='ivar'>@datastore</span><span class='rparen'>)</span> <span class='kw'>unless</span> <span class='ivar'>@file_info</span><span class='period'>.</span><span class='id identifier rubyid_exit_cb'>exit_cb</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span>
+
+  <span class='id identifier rubyid_info'>info</span> <span class='op'>=</span> <span class='ivar'>@resume_info</span><span class='period'>.</span><span class='id identifier rubyid_pop'>pop</span>
+  <span class='id identifier rubyid_ldebug?'>ldebug?</span> <span class='kw'>and</span> <span class='id identifier rubyid_ldebug'>ldebug</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>restore_info, info = </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_info'>info</span><span class='period'>.</span><span class='id identifier rubyid_inspect'>inspect</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
+  <span class='comment'># ldump &#39;[RESUME ] restore info from Resume stack.&#39; unless info.nil?
+</span>
+  <span class='kw'>return</span> <span class='kw'>nil</span> <span class='kw'>if</span> <span class='id identifier rubyid_info'>info</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span>
+
+  <span class='ivar'>@stage_manager</span><span class='period'>.</span><span class='id identifier rubyid_restore_info'>restore_info</span>
+
+  <span class='comment'># analyze_data shall be init here
+</span>  <span class='ivar'>@analyze_data</span><span class='period'>.</span><span class='id identifier rubyid_init'>init</span>
+
+  <span class='id identifier rubyid_ldebug?'>ldebug?</span> <span class='kw'>and</span> <span class='id identifier rubyid_ldebug'>ldebug</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Resumed info process!! resume_stack = </span><span class='embexpr_beg'>#{</span><span class='ivar'>@resume_info</span><span class='period'>.</span><span class='id identifier rubyid_length'>length</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>\
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'> for info = </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_info'>info</span><span class='period'>.</span><span class='id identifier rubyid_inspect'>inspect</span><span class='embexpr_end'>}</span><span class='tstring_content'>, for analyze_data = </span><span class='embexpr_beg'>#{</span><span class='ivar'>@analyze_data</span><span class='period'>.</span><span class='id identifier rubyid_inspect'>inspect</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='symbol'>:indianred</span>
+  <span class='kw'>return</span> <span class='id identifier rubyid_info'>info</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="resume_data-instance_method">
+  
+    #<strong>resume_data</strong>  &#x21d2; <tt>Array&lt;<span class='object_link'><a href="FileInfo.html" title="SheepAst::FileInfo (class)">FileInfo</a></span>&gt;</tt><sup>?</sup> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p class="note private">
+  <strong>This method is part of a private API.</strong>
+  You should avoid using this method if possible, as it may be removed or be changed in the future.
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Array&lt;<span class='object_link'><a href="FileInfo.html" title="SheepAst::FileInfo (class)">FileInfo</a></span>&gt;</tt>, <tt>nil</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+383
+384
+385</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File '/home/r_yaginiwa/yang_try/sheep_ast/lib/sheep_ast/file_manager.rb', line 383</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_resume_data'>resume_data</span>
+  <span class='ivar'>@resume_info</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="save_info-instance_method">
+  
+    #<strong>save_info</strong>  &#x21d2; <tt>void</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p class="note private">
+  <strong>This method is part of a private API.</strong>
+  You should avoid using this method if possible, as it may be removed or be changed in the future.
+</p>
+<p class="note returns_void">This method returns an undefined value.</p>
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+246
+247
+248
+249
+250
+251
+252
+253
+254
+255
+256
+257
+258
+259
+260
+261
+262
+263
+264
+265
+266
+267</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File '/home/r_yaginiwa/yang_try/sheep_ast/lib/sheep_ast/file_manager.rb', line 246</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_save_info'>save_info</span>
+  <span class='id identifier rubyid_info'>info</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="FileInfo.html" title="SheepAst::FileInfo (class)">FileInfo</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="FileInfo.html#initialize-instance_method" title="SheepAst::FileInfo#initialize (method)">new</a></span></span>
+  <span class='id identifier rubyid_info'>info</span><span class='period'>.</span><span class='id identifier rubyid_init'>init</span>
+  <span class='id identifier rubyid_info'>info</span><span class='period'>.</span><span class='id identifier rubyid_copy'>copy</span><span class='lparen'>(</span><span class='ivar'>@file_info</span><span class='rparen'>)</span>
+  <span class='ivar'>@resume_info</span> <span class='op'>&lt;&lt;</span> <span class='id identifier rubyid_info'>info</span>
+
+  <span class='id identifier rubyid_ldebug?'>ldebug?</span> <span class='kw'>and</span> <span class='id identifier rubyid_ldebug'>ldebug</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Suspended info process!! resume_stack = </span><span class='embexpr_beg'>#{</span><span class='ivar'>@resume_info</span><span class='period'>.</span><span class='id identifier rubyid_length'>length</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>\
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'> at info = </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_info'>info</span><span class='period'>.</span><span class='id identifier rubyid_inspect'>inspect</span><span class='embexpr_end'>}</span><span class='tstring_content'>, copied from </span><span class='embexpr_beg'>#{</span><span class='ivar'>@file_info</span><span class='period'>.</span><span class='id identifier rubyid_inspect'>inspect</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='symbol'>:indianred</span>
+
+  <span class='comment'># ldump &quot;[REDIRCT] Pushed to Resume stack(#{@resume_info.length - 1}--&gt;#{@resume_info.length})&quot;\
+</span>  <span class='comment'>#   &quot; at line = #{info.line.inspect}, index = #{@file_info.index.inspect}&quot;, :indianred
+</span>
+  <span class='ivar'>@file_info</span><span class='period'>.</span><span class='id identifier rubyid_init'>init</span>
+  <span class='id identifier rubyid_threshold'>threshold</span> <span class='op'>=</span> <span class='const'>ENV</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>SHEEP_SAVE_STACK</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span> <span class='op'>?</span> <span class='const'><span class='object_link'><a href="../top-level-namespace.html#DEFAULT_SAVE_STACK_SIZE-constant" title="DEFAULT_SAVE_STACK_SIZE (constant)">DEFAULT_SAVE_STACK_SIZE</a></span></span> <span class='op'>:</span> <span class='const'>ENV</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>SHEEP_SAVE_STACK</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span>
+  <span class='kw'>if</span> <span class='ivar'>@resume_info</span><span class='period'>.</span><span class='id identifier rubyid_length'>length</span> <span class='op'>&gt;</span> <span class='id identifier rubyid_threshold'>threshold</span>
+    <span class='id identifier rubyid_lfatal'>lfatal</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>resume stack uses more than </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_threshold'>threshold</span><span class='embexpr_end'>}</span><span class='tstring_content'>. Check bug. Default = </span><span class='embexpr_beg'>#{</span><span class='const'><span class='object_link'><a href="../top-level-namespace.html#DEFAULT_SAVE_STACK_SIZE-constant" title="DEFAULT_SAVE_STACK_SIZE (constant)">DEFAULT_SAVE_STACK_SIZE</a></span></span><span class='embexpr_end'>}</span><span class='tstring_content'>.</span><span class='tstring_end'>&quot;</span></span>
+    <span class='id identifier rubyid_lfatal'>lfatal</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>Or you can adjust environment parameter SHEEP_SAVE_STACK</span><span class='tstring_end'>&#39;</span></span>
+    <span class='id identifier rubyid_lfatal'>lfatal</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>resume_info =&gt; </span><span class='embexpr_beg'>#{</span><span class='ivar'>@resume_info</span><span class='period'>.</span><span class='id identifier rubyid_inspect'>inspect</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
+    <span class='id identifier rubyid_application_error'>application_error</span>
+  <span class='kw'>end</span>
+  <span class='ivar'>@stage_manager</span><span class='period'>.</span><span class='id identifier rubyid_save_info'>save_info</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+
+      <div id="footer">
+  Generated on Wed Jul 14 07:22:29 2021 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.9.26 (ruby-3.0.1).
+</div>
+
+    </div>
+  </body>
+</html>

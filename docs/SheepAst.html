@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  Module: SheepAst
+  
+    &mdash; Documentation by YARD 0.9.26
+  
+</title>
+
+  <link rel="stylesheet" href="css/style.css" type="text/css" />
+
+  <link rel="stylesheet" href="css/common.css" type="text/css" />
+
+<script type="text/javascript">
+  pathId = "SheepAst";
+  relpath = '';
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div class="nav_wrap">
+      <iframe id="nav" src="class_list.html?1"></iframe>
+      <div id="resizer"></div>
+    </div>
+
+    <div id="main" tabindex="-1">
+      <div id="header">
+        <div id="menu">
+  
+    <a href="_index.html">Index (S)</a> &raquo;
+    
+    
+    <span class="title">SheepAst</span>
+  
+</div>
+
+        <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="class_list.html">
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
+    </a>
+  
+</div>
+        <div class="clear"></div>
+      </div>
+
+      <div id="content"><h1>Module: SheepAst
+  
+  
+  
+</h1>
+<div class="box_info">
+  
+
+  
+  
+  
+  
+  
+
+  
+
+  
+  <dl>
+    <dt>Defined in:</dt>
+    <dd>/home/r_yaginiwa/yang_try/sheep_ast/lib/sheep_ast/option.rb<span class="defines">,<br />
+  /home/r_yaginiwa/yang_try/sheep_ast/lib/sheep_ast/fof.rb,<br /> /home/r_yaginiwa/yang_try/sheep_ast/lib/sheep_ast/log.rb,<br /> /home/r_yaginiwa/yang_try/sheep_ast/lib/sheep_ast/node.rb,<br /> /home/r_yaginiwa/yang_try/sheep_ast/lib/sheep_ast/version.rb,<br /> /home/r_yaginiwa/yang_try/sheep_ast/lib/sheep_ast/messages.rb,<br /> /home/r_yaginiwa/yang_try/sheep_ast/lib/sheep_ast/node_buf.rb,<br /> /home/r_yaginiwa/yang_try/sheep_ast/lib/sheep_ast/exception.rb,<br /> /home/r_yaginiwa/yang_try/sheep_ast/lib/sheep_ast/sheep_obj.rb,<br /> /home/r_yaginiwa/yang_try/sheep_ast/lib/sheep_ast/tokenizer.rb,<br /> /home/r_yaginiwa/yang_try/sheep_ast/lib/sheep_ast/action/let.rb,<br /> /home/r_yaginiwa/yang_try/sheep_ast/lib/sheep_ast/ast_manager.rb,<br /> /home/r_yaginiwa/yang_try/sheep_ast/lib/sheep_ast/factory_base.rb,<br /> /home/r_yaginiwa/yang_try/sheep_ast/lib/sheep_ast/file_manager.rb,<br /> /home/r_yaginiwa/yang_try/sheep_ast/lib/sheep_ast/node_factory.rb,<br /> /home/r_yaginiwa/yang_try/sheep_ast/lib/sheep_ast/stage_manager.rb,<br /> /home/r_yaginiwa/yang_try/sheep_ast/lib/sheep_ast/syntax/syntax.rb,<br /> /home/r_yaginiwa/yang_try/sheep_ast/lib/sheep_ast/action/actions.rb,<br /> /home/r_yaginiwa/yang_try/sheep_ast/lib/sheep_ast/match/any_match.rb,<br /> /home/r_yaginiwa/yang_try/sheep_ast/lib/sheep_ast/action/no_action.rb,<br /> /home/r_yaginiwa/yang_try/sheep_ast/lib/sheep_ast/action/qualifier.rb,<br /> /home/r_yaginiwa/yang_try/sheep_ast/lib/sheep_ast/data_handle_util.rb,<br /> /home/r_yaginiwa/yang_try/sheep_ast/lib/sheep_ast/match/match_base.rb,<br /> /home/r_yaginiwa/yang_try/sheep_ast/lib/sheep_ast/match/match_util.rb,<br /> /home/r_yaginiwa/yang_try/sheep_ast/lib/sheep_ast/action/let_helper.rb,<br /> /home/r_yaginiwa/yang_try/sheep_ast/lib/sheep_ast/action/let_record.rb,<br /> /home/r_yaginiwa/yang_try/sheep_ast/lib/sheep_ast/datastore/compile.rb,<br /> /home/r_yaginiwa/yang_try/sheep_ast/lib/sheep_ast/match/exact_match.rb,<br /> /home/r_yaginiwa/yang_try/sheep_ast/lib/sheep_ast/match/regex_match.rb,<br /> /home/r_yaginiwa/yang_try/sheep_ast/lib/sheep_ast/action/action_base.rb,<br /> /home/r_yaginiwa/yang_try/sheep_ast/lib/sheep_ast/action/let_compile.rb,<br /> /home/r_yaginiwa/yang_try/sheep_ast/lib/sheep_ast/action/let_include.rb,<br /> /home/r_yaginiwa/yang_try/sheep_ast/lib/sheep_ast/action/let_inspect.rb,<br /> /home/r_yaginiwa/yang_try/sheep_ast/lib/sheep_ast/match/scoped_match.rb,<br /> /home/r_yaginiwa/yang_try/sheep_ast/lib/sheep_ast/action/let_redirect.rb,<br /> /home/r_yaginiwa/yang_try/sheep_ast/lib/sheep_ast/datastore/datastore.rb,<br /> /home/r_yaginiwa/yang_try/sheep_ast/lib/sheep_ast/match/match_factory.rb,<br /> /home/r_yaginiwa/yang_try/sheep_ast/lib/sheep_ast/syntax/syntax_alias.rb,<br /> /home/r_yaginiwa/yang_try/sheep_ast/lib/sheep_ast/match/enclosed_match.rb,<br /> /home/r_yaginiwa/yang_try/sheep_ast/lib/sheep_ast/action/action_factory.rb,<br /> /home/r_yaginiwa/yang_try/sheep_ast/lib/sheep_ast/datastore/cyclic_list.rb,<br /> /home/r_yaginiwa/yang_try/sheep_ast/lib/sheep_ast/match/condition_match.rb,<br /> /home/r_yaginiwa/yang_try/sheep_ast/lib/sheep_ast/match/index_condition.rb,<br /> /home/r_yaginiwa/yang_try/sheep_ast/lib/sheep_ast/action/let_operate_node.rb,<br /> /home/r_yaginiwa/yang_try/sheep_ast/lib/sheep_ast/datastore/store_element.rb,<br /> /home/r_yaginiwa/yang_try/sheep_ast/lib/sheep_ast/match/exact_group_match.rb,<br /> /home/r_yaginiwa/yang_try/sheep_ast/lib/sheep_ast/match/scoped_match_base.rb,<br /> /home/r_yaginiwa/yang_try/sheep_ast/lib/sheep_ast/datastore/datastore_part.rb,<br /> /home/r_yaginiwa/yang_try/sheep_ast/lib/sheep_ast/match/scoped_regex_match.rb,<br /> /home/r_yaginiwa/yang_try/sheep_ast/lib/sheep_ast/match/enclosed_regex_match.rb,<br /> /home/r_yaginiwa/yang_try/sheep_ast/lib/sheep_ast/action/let_operate_behavior.rb,<br /> /home/r_yaginiwa/yang_try/sheep_ast/lib/sheep_ast/analyzer_core/analyzer_core.rb,<br /> /home/r_yaginiwa/yang_try/sheep_ast/lib/sheep_ast/analyzer_core/node_operation.rb,<br /> /home/r_yaginiwa/yang_try/sheep_ast/lib/sheep_ast/datastore/datastore_type_base.rb,<br /> /home/r_yaginiwa/yang_try/sheep_ast/lib/sheep_ast/analyzer_core/action_operation.rb</span>
+</dd>
+  </dl>
+  
+</div>
+
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    
+<p>api public</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><h2>Defined Under Namespace</h2>
+<p class="children">
+  
+    
+      <strong class="modules">Modules:</strong> <span class='object_link'><a href="SheepAst/ActionOperation.html" title="SheepAst::ActionOperation (module)">ActionOperation</a></span>, <span class='object_link'><a href="SheepAst/AnyMatchUtil.html" title="SheepAst::AnyMatchUtil (module)">AnyMatchUtil</a></span>, <span class='object_link'><a href="SheepAst/ConditionMatchUtil.html" title="SheepAst::ConditionMatchUtil (module)">ConditionMatchUtil</a></span>, <span class='object_link'><a href="SheepAst/DataHandle.html" title="SheepAst::DataHandle (module)">DataHandle</a></span>, <span class='object_link'><a href="SheepAst/DataIndexHandle.html" title="SheepAst::DataIndexHandle (module)">DataIndexHandle</a></span>, <span class='object_link'><a href="SheepAst/DataStoreCommonUtil.html" title="SheepAst::DataStoreCommonUtil (module)">DataStoreCommonUtil</a></span>, <span class='object_link'><a href="SheepAst/DataStoreCompile.html" title="SheepAst::DataStoreCompile (module)">DataStoreCompile</a></span>, <span class='object_link'><a href="SheepAst/DataStoreTypeBase.html" title="SheepAst::DataStoreTypeBase (module)">DataStoreTypeBase</a></span>, <span class='object_link'><a href="SheepAst/ExactGroupMatchUtil.html" title="SheepAst::ExactGroupMatchUtil (module)">ExactGroupMatchUtil</a></span>, <span class='object_link'><a href="SheepAst/ExactMatchUtil.html" title="SheepAst::ExactMatchUtil (module)">ExactMatchUtil</a></span>, <span class='object_link'><a href="SheepAst/Exception.html" title="SheepAst::Exception (module)">Exception</a></span>, <span class='object_link'><a href="SheepAst/FactoryBase.html" title="SheepAst::FactoryBase (module)">FactoryBase</a></span>, <span class='object_link'><a href="SheepAst/HashHashUtil.html" title="SheepAst::HashHashUtil (module)">HashHashUtil</a></span>, <span class='object_link'><a href="SheepAst/HashUtil.html" title="SheepAst::HashUtil (module)">HashUtil</a></span>, <span class='object_link'><a href="SheepAst/LetCompile.html" title="SheepAst::LetCompile (module)">LetCompile</a></span>, <span class='object_link'><a href="SheepAst/LetHelper.html" title="SheepAst::LetHelper (module)">LetHelper</a></span>, <span class='object_link'><a href="SheepAst/LetInclude.html" title="SheepAst::LetInclude (module)">LetInclude</a></span>, <span class='object_link'><a href="SheepAst/LetInspect.html" title="SheepAst::LetInspect (module)">LetInspect</a></span>, <span class='object_link'><a href="SheepAst/LetOperateBehavior.html" title="SheepAst::LetOperateBehavior (module)">LetOperateBehavior</a></span>, <span class='object_link'><a href="SheepAst/LetOperateNode.html" title="SheepAst::LetOperateNode (module)">LetOperateNode</a></span>, <span class='object_link'><a href="SheepAst/LetRecord.html" title="SheepAst::LetRecord (module)">LetRecord</a></span>, <span class='object_link'><a href="SheepAst/LetRedirect.html" title="SheepAst::LetRedirect (module)">LetRedirect</a></span>, <span class='object_link'><a href="SheepAst/Log.html" title="SheepAst::Log (module)">Log</a></span>, <span class='object_link'><a href="SheepAst/MatchUtil.html" title="SheepAst::MatchUtil (module)">MatchUtil</a></span>, <span class='object_link'><a href="SheepAst/NodeOperation.html" title="SheepAst::NodeOperation (module)">NodeOperation</a></span>, <span class='object_link'><a href="SheepAst/Option.html" title="SheepAst::Option (module)">Option</a></span>, <span class='object_link'><a href="SheepAst/RegexMatchUtil.html" title="SheepAst::RegexMatchUtil (module)">RegexMatchUtil</a></span>, <span class='object_link'><a href="SheepAst/SyntaxAlias.html" title="SheepAst::SyntaxAlias (module)">SyntaxAlias</a></span>, <span class='object_link'><a href="SheepAst/UseActionAlias.html" title="SheepAst::UseActionAlias (module)">UseActionAlias</a></span>, <span class='object_link'><a href="SheepAst/UseMatchAlias.html" title="SheepAst::UseMatchAlias (module)">UseMatchAlias</a></span>
+    
+  
+    
+      <strong class="classes">Classes:</strong> <span class='object_link'><a href="SheepAst/ActionBase.html" title="SheepAst::ActionBase (class)">ActionBase</a></span>, <span class='object_link'><a href="SheepAst/ActionFactory.html" title="SheepAst::ActionFactory (class)">ActionFactory</a></span>, <span class='object_link'><a href="SheepAst/Actions.html" title="SheepAst::Actions (class)">Actions</a></span>, <span class='object_link'><a href="SheepAst/AnalyzeData.html" title="SheepAst::AnalyzeData (class)">AnalyzeData</a></span>, <span class='object_link'><a href="SheepAst/AnalyzerCore.html" title="SheepAst::AnalyzerCore (class)">AnalyzerCore</a></span>, <span class='object_link'><a href="SheepAst/AnalyzerCoreReturn.html" title="SheepAst::AnalyzerCoreReturn (class)">AnalyzerCoreReturn</a></span>, <span class='object_link'><a href="SheepAst/AnyMatch.html" title="SheepAst::AnyMatch (class)">AnyMatch</a></span>, <span class='object_link'><a href="SheepAst/AstManager.html" title="SheepAst::AstManager (class)">AstManager</a></span>, <span class='object_link'><a href="SheepAst/ConditionMatch.html" title="SheepAst::ConditionMatch (class)">ConditionMatch</a></span>, <span class='object_link'><a href="SheepAst/CyclicList.html" title="SheepAst::CyclicList (class)">CyclicList</a></span>, <span class='object_link'><a href="SheepAst/CyclicNode.html" title="SheepAst::CyclicNode (class)">CyclicNode</a></span>, <span class='object_link'><a href="SheepAst/DataStore.html" title="SheepAst::DataStore (class)">DataStore</a></span>, <span class='object_link'><a href="SheepAst/DataStoreArray.html" title="SheepAst::DataStoreArray (class)">DataStoreArray</a></span>, <span class='object_link'><a href="SheepAst/DataStoreHashAdd.html" title="SheepAst::DataStoreHashAdd (class)">DataStoreHashAdd</a></span>, <span class='object_link'><a href="SheepAst/DataStoreHashCat.html" title="SheepAst::DataStoreHashCat (class)">DataStoreHashCat</a></span>, <span class='object_link'><a href="SheepAst/DataStoreHashHash.html" title="SheepAst::DataStoreHashHash (class)">DataStoreHashHash</a></span>, <span class='object_link'><a href="SheepAst/DataStoreHashHashArray.html" title="SheepAst::DataStoreHashHashArray (class)">DataStoreHashHashArray</a></span>, <span class='object_link'><a href="SheepAst/DataStoreHashLast.html" title="SheepAst::DataStoreHashLast (class)">DataStoreHashLast</a></span>, <span class='object_link'><a href="SheepAst/EnclosedMatch.html" title="SheepAst::EnclosedMatch (class)">EnclosedMatch</a></span>, <span class='object_link'><a href="SheepAst/EnclosedRegexMatch.html" title="SheepAst::EnclosedRegexMatch (class)">EnclosedRegexMatch</a></span>, <span class='object_link'><a href="SheepAst/ExactGroupMatch.html" title="SheepAst::ExactGroupMatch (class)">ExactGroupMatch</a></span>, <span class='object_link'><a href="SheepAst/ExactMatch.html" title="SheepAst::ExactMatch (class)">ExactMatch</a></span>, <span class='object_link'><a href="SheepAst/FileInfo.html" title="SheepAst::FileInfo (class)">FileInfo</a></span>, <span class='object_link'><a href="SheepAst/FileManager.html" title="SheepAst::FileManager (class)">FileManager</a></span>, <span class='object_link'><a href="SheepAst/FoF.html" title="SheepAst::FoF (class)">FoF</a></span>, <span class='object_link'><a href="SheepAst/IndexCondition.html" title="SheepAst::IndexCondition (class)">IndexCondition</a></span>, <span class='object_link'><a href="SheepAst/Let.html" title="SheepAst::Let (class)">Let</a></span>, <span class='object_link'><a href="SheepAst/MatchAction.html" title="SheepAst::MatchAction (class)">MatchAction</a></span>, <span class='object_link'><a href="SheepAst/MatchBase.html" title="SheepAst::MatchBase (class)">MatchBase</a></span>, <span class='object_link'><a href="SheepAst/MatchFactory.html" title="SheepAst::MatchFactory (class)">MatchFactory</a></span>, <span class='object_link'><a href="SheepAst/MatchKind.html" title="SheepAst::MatchKind (class)">MatchKind</a></span>, <span class='object_link'><a href="SheepAst/MatchResult.html" title="SheepAst::MatchResult (class)">MatchResult</a></span>, <span class='object_link'><a href="SheepAst/MatchStatus.html" title="SheepAst::MatchStatus (class)">MatchStatus</a></span>, <span class='object_link'><a href="SheepAst/NextCommand.html" title="SheepAst::NextCommand (class)">NextCommand</a></span>, <span class='object_link'><a href="SheepAst/NoAction.html" title="SheepAst::NoAction (class)">NoAction</a></span>, <span class='object_link'><a href="SheepAst/Node.html" title="SheepAst::Node (class)">Node</a></span>, <span class='object_link'><a href="SheepAst/NodeBuf.html" title="SheepAst::NodeBuf (class)">NodeBuf</a></span>, <span class='object_link'><a href="SheepAst/NodeFactory.html" title="SheepAst::NodeFactory (class)">NodeFactory</a></span>, <span class='object_link'><a href="SheepAst/NodeInfo.html" title="SheepAst::NodeInfo (class)">NodeInfo</a></span>, <span class='object_link'><a href="SheepAst/OnOff.html" title="SheepAst::OnOff (class)">OnOff</a></span>, <span class='object_link'><a href="SheepAst/OperateNode.html" title="SheepAst::OperateNode (class)">OperateNode</a></span>, <span class='object_link'><a href="SheepAst/Qualifier.html" title="SheepAst::Qualifier (class)">Qualifier</a></span>, <span class='object_link'><a href="SheepAst/RegexMatch.html" title="SheepAst::RegexMatch (class)">RegexMatch</a></span>, <span class='object_link'><a href="SheepAst/RequestNextData.html" title="SheepAst::RequestNextData (class)">RequestNextData</a></span>, <span class='object_link'><a href="SheepAst/SaveRequest.html" title="SheepAst::SaveRequest (class)">SaveRequest</a></span>, <span class='object_link'><a href="SheepAst/ScopedMatch.html" title="SheepAst::ScopedMatch (class)">ScopedMatch</a></span>, <span class='object_link'><a href="SheepAst/ScopedMatchBase.html" title="SheepAst::ScopedMatchBase (class)">ScopedMatchBase</a></span>, <span class='object_link'><a href="SheepAst/ScopedRegexMatch.html" title="SheepAst::ScopedRegexMatch (class)">ScopedRegexMatch</a></span>, <span class='object_link'><a href="SheepAst/SheepObject.html" title="SheepAst::SheepObject (class)">SheepObject</a></span>, <span class='object_link'><a href="SheepAst/Stage.html" title="SheepAst::Stage (class)">Stage</a></span>, <span class='object_link'><a href="SheepAst/StageManager.html" title="SheepAst::StageManager (class)">StageManager</a></span>, <span class='object_link'><a href="SheepAst/StoreElement.html" title="SheepAst::StoreElement (class)">StoreElement</a></span>, <span class='object_link'><a href="SheepAst/StoreSubElement.html" title="SheepAst::StoreSubElement (class)">StoreSubElement</a></span>, <span class='object_link'><a href="SheepAst/Syntax.html" title="SheepAst::Syntax (class)">Syntax</a></span>, <span class='object_link'><a href="SheepAst/Tokenizer.html" title="SheepAst::Tokenizer (class)">Tokenizer</a></span>
+    
+  
+</p>
+
+  
+    <h2>
+      Constant Summary
+      <small><a href="#" class="constants_summary_toggle">collapse</a></small>
+    </h2>
+
+    <dl class="constants">
+      
+        <dt id="VERSION-constant" class="">VERSION =
+          
+        </dt>
+        <dd><pre class="code"><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>0.6.1</span><span class='tstring_end'>&#39;</span></span></pre></dd>
+      
+    </dl>
+  
+
+
+
+
+
+
+
+
+
+</div>
+
+      <div id="footer">
+  Generated on Wed Jul 14 07:22:02 2021 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.9.26 (ruby-3.0.1).
+</div>
+
+    </div>
+  </body>
+</html>

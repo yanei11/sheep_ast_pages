@@ -1,0 +1,3309 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  Class: SheepAst::MatchBase
+  
+    &mdash; Documentation by YARD 0.9.26
+  
+</title>
+
+  <link rel="stylesheet" href="../css/style.css" type="text/css" />
+
+  <link rel="stylesheet" href="../css/common.css" type="text/css" />
+
+<script type="text/javascript">
+  pathId = "SheepAst::MatchBase";
+  relpath = '../';
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div class="nav_wrap">
+      <iframe id="nav" src="../class_list.html?1"></iframe>
+      <div id="resizer"></div>
+    </div>
+
+    <div id="main" tabindex="-1">
+      <div id="header">
+        <div id="menu">
+  
+    <a href="../_index.html">Index (M)</a> &raquo;
+    <span class='title'><span class='object_link'><a href="../SheepAst.html" title="SheepAst (module)">SheepAst</a></span></span>
+     &raquo; 
+    <span class="title">MatchBase</span>
+  
+</div>
+
+        <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="../class_list.html">
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
+    </a>
+  
+</div>
+        <div class="clear"></div>
+      </div>
+
+      <div id="content"><h1>Class: SheepAst::MatchBase
+  <span class="abstract note title">Abstract</span>
+  
+  
+</h1>
+<div class="box_info">
+  
+  <dl>
+    <dt>Inherits:</dt>
+    <dd>
+      <span class="inheritName"><span class='object_link'><a href="SheepObject.html" title="SheepAst::SheepObject (class)">SheepObject</a></span></span>
+      
+        <ul class="fullTree">
+          <li>Object</li>
+          
+            <li class="next"><span class='object_link'><a href="SheepObject.html" title="SheepAst::SheepObject (class)">SheepObject</a></span></li>
+          
+            <li class="next">SheepAst::MatchBase</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+    </dd>
+  </dl>
+  
+
+  
+  
+  <dl>
+      <dt>Extended by:</dt>
+      <dd>T::Helpers, T::Sig</dd>
+  </dl>
+  
+  
+  
+  <dl>
+      <dt>Includes:</dt>
+      <dd><span class='object_link'><a href="Exception.html" title="SheepAst::Exception (module)">Exception</a></span>, <span class='object_link'><a href="Log.html" title="SheepAst::Log (module)">Log</a></span></dd>
+  </dl>
+  
+  
+
+  
+
+  
+  <dl>
+    <dt>Defined in:</dt>
+    <dd>/home/r_yaginiwa/yang_try/sheep_ast/lib/sheep_ast/match/match_base.rb</dd>
+  </dl>
+  
+</div>
+
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    <div class="note abstract">
+  <strong>This class is abstract.</strong>
+  <div class='inline'>
+<p>It cannont be directly instantiated. Subclasses must implement the <code>abstract</code> methods below.</p>
+</div>
+</div>
+
+<p>Matcher base class</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><div id="subclasses">
+  <h2>Direct Known Subclasses</h2>
+  <p class="children"><span class='object_link'><a href="AnyMatch.html" title="SheepAst::AnyMatch (class)">AnyMatch</a></span>, <span class='object_link'><a href="ConditionMatch.html" title="SheepAst::ConditionMatch (class)">ConditionMatch</a></span>, <span class='object_link'><a href="ExactGroupMatch.html" title="SheepAst::ExactGroupMatch (class)">ExactGroupMatch</a></span>, <span class='object_link'><a href="ExactMatch.html" title="SheepAst::ExactMatch (class)">ExactMatch</a></span>, <span class='object_link'><a href="RegexMatch.html" title="SheepAst::RegexMatch (class)">RegexMatch</a></span></p>
+</div>
+
+
+
+
+  <h2>Instance Attribute Summary <small><a href="#" class="summary_toggle">collapse</a></small></h2>
+  <ul class="summary">
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#ast_exclude-instance_method" title="#ast_exclude (instance method)">#<strong>ast_exclude</strong>  &#x21d2; Array&lt;String&gt;<sup>?</sup> </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#ast_include-instance_method" title="#ast_include (instance method)">#<strong>ast_include</strong>  &#x21d2; Array&lt;String&gt;<sup>?</sup> </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#at_cond_scope-instance_method" title="#at_cond_scope (instance method)">#<strong>at_cond_scope</strong>  &#x21d2; Boolean<sup>?</sup> </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#at_end_cond-instance_method" title="#at_end_cond (instance method)">#<strong>at_end_cond</strong>  &#x21d2; Boolean<sup>?</sup> </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#command-instance_method" title="#command (instance method)">#<strong>command</strong>  &#x21d2; String<sup>?</sup> </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#description-instance_method" title="#description (instance method)">#<strong>description</strong>  &#x21d2; String<sup>?</sup> </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#end_index-instance_method" title="#end_index (instance method)">#<strong>end_index</strong>  &#x21d2; Integer </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#end_line-instance_method" title="#end_line (instance method)">#<strong>end_line</strong>  &#x21d2; Integer </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#key-instance_method" title="#key (instance method)">#<strong>key</strong>  &#x21d2; String </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#kind_name-instance_method" title="#kind_name (instance method)">#<strong>kind_name</strong>  &#x21d2; String </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#matched_expr-instance_method" title="#matched_expr (instance method)">#<strong>matched_expr</strong>  &#x21d2; Array&lt;String, nil&gt;, ... </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#my_chain_num-instance_method" title="#my_chain_num (instance method)">#<strong>my_chain_num</strong>  &#x21d2; Integer </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#my_tag-instance_method" title="#my_tag (instance method)">#<strong>my_tag</strong>  &#x21d2; Symbol<sup>?</sup> </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#node_id-instance_method" title="#node_id (instance method)">#<strong>node_id</strong>  &#x21d2; Integer </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#node_tag-instance_method" title="#node_tag (instance method)">#<strong>node_tag</strong>  &#x21d2; Symbol<sup>?</sup> </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#parent_tag-instance_method" title="#parent_tag (instance method)">#<strong>parent_tag</strong>  &#x21d2; Symbol<sup>?</sup> </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#start_index-instance_method" title="#start_index (instance method)">#<strong>start_index</strong>  &#x21d2; Integer </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#start_line-instance_method" title="#start_line (instance method)">#<strong>start_line</strong>  &#x21d2; Integer </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#store_sym-instance_method" title="#store_sym (instance method)">#<strong>store_sym</strong>  &#x21d2; Symbol<sup>?</sup> </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+    
+  </ul>
+
+
+
+  
+  
+  <h3 class="inherited">Attributes included from <span class='object_link'><a href="Log.html" title="SheepAst::Log (module)">Log</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="Log.html#logger-instance_method" title="SheepAst::Log#logger (method)">#logger</a></span></p>
+
+  
+  
+  <h3 class="inherited">Attributes inherited from <span class='object_link'><a href="SheepObject.html" title="SheepAst::SheepObject (class)">SheepObject</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="SheepObject.html#domain-instance_method" title="SheepAst::SheepObject#domain (method)">#domain</a></span>, <span class='object_link'><a href="SheepObject.html#full_name-instance_method" title="SheepAst::SheepObject#full_name (method)">#full_name</a></span>, <span class='object_link'><a href="SheepObject.html#my_factory-instance_method" title="SheepAst::SheepObject#my_factory (method)">#my_factory</a></span>, <span class='object_link'><a href="SheepObject.html#my_id-instance_method" title="SheepAst::SheepObject#my_id (method)">#my_id</a></span>, <span class='object_link'><a href="SheepObject.html#name-instance_method" title="SheepAst::SheepObject#name (method)">#name</a></span></p>
+
+
+  
+    <h2>
+      Class Method Summary
+      <small><a href="#" class="summary_toggle">collapse</a></small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#check_any_condition-class_method" title="check_any_condition (class method)">.<strong>check_any_condition</strong>(match, data)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#check_exact_condition-class_method" title="check_exact_condition (class method)">.<strong>check_exact_condition</strong>(map, key, data)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#check_exact_group_condition-class_method" title="check_exact_group_condition (class method)">.<strong>check_exact_group_condition</strong>(match, data)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#check_regex_condition-class_method" title="check_regex_condition (class method)">.<strong>check_regex_condition</strong>(match, data)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+    </ul>
+  
+    <h2>
+      Instance Method Summary
+      <small><a href="#" class="summary_toggle">collapse</a></small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#additional_cond-instance_method" title="#additional_cond (instance method)">#<strong>additional_cond</strong>(data)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>rubocop:disable all.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#additional_end_cond-instance_method" title="#additional_end_cond (instance method)">#<strong>additional_end_cond</strong>(data)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#dump-instance_method" title="#dump (instance method)">#<strong>dump</strong>  &#x21d2; void </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#end_info_set-instance_method" title="#end_info_set (instance method)">#<strong>end_info_set</strong>(line, index)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#init-instance_method" title="#init (instance method)">#<strong>init</strong>  &#x21d2; void </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  <span class="abstract note title">abstract</span>
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#initialize-instance_method" title="#initialize (instance method)">#<strong>initialize</strong>(key = &#39;&#39;, sym = nil, **options)  &#x21d2; void </a>
+    
+
+    
+  </span>
+  
+  
+    <span class="note title constructor">constructor</span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#inspect-instance_method" title="#inspect (instance method)">#<strong>inspect</strong>  &#x21d2; String </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#iterate_cond-instance_method" title="#iterate_cond (instance method)">#<strong>iterate_cond</strong>(data, cond)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#kind%3F-instance_method" title="#kind? (instance method)">#<strong>kind?</strong>  &#x21d2; MatchKind </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  <span class="abstract note title">abstract</span>
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#kind_name_set-instance_method" title="#kind_name_set (instance method)">#<strong>kind_name_set</strong>(name)  &#x21d2; void </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#match-instance_method" title="#match (instance method)">#<strong>match</strong>(data)  &#x21d2; Boolean<sup>?</sup> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#matched-instance_method" title="#matched (instance method)">#<strong>matched</strong>(data)  &#x21d2; void </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#node_info-instance_method" title="#node_info (instance method)">#<strong>node_info</strong>  &#x21d2; NodeInfo </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#reg_match-instance_method" title="#reg_match (instance method)">#<strong>reg_match</strong>(expr_, target_)  &#x21d2; Boolean<sup>?</sup> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#start_info_set-instance_method" title="#start_info_set (instance method)">#<strong>start_info_set</strong>(line, index)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#validate-instance_method" title="#validate (instance method)">#<strong>validate</strong>(kind)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods included from <span class='object_link'><a href="Log.html" title="SheepAst::Log (module)">Log</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="Log.html#ldebug-instance_method" title="SheepAst::Log#ldebug (method)">#ldebug</a></span>, <span class='object_link'><a href="Log.html#ldebug2-instance_method" title="SheepAst::Log#ldebug2 (method)">#ldebug2</a></span>, <span class='object_link'><a href="Log.html#ldebug%3F-instance_method" title="SheepAst::Log#ldebug? (method)">#ldebug?</a></span>, <span class='object_link'><a href="Log.html#ldump-instance_method" title="SheepAst::Log#ldump (method)">#ldump</a></span>, <span class='object_link'><a href="Log.html#lerror-instance_method" title="SheepAst::Log#lerror (method)">#lerror</a></span>, <span class='object_link'><a href="Log.html#lfatal-instance_method" title="SheepAst::Log#lfatal (method)">#lfatal</a></span>, <span class='object_link'><a href="Log.html#linfo-instance_method" title="SheepAst::Log#linfo (method)">#linfo</a></span>, <span class='object_link'><a href="Log.html#lprint-instance_method" title="SheepAst::Log#lprint (method)">#lprint</a></span>, <span class='object_link'><a href="Log.html#lprint%3F-instance_method" title="SheepAst::Log#lprint? (method)">#lprint?</a></span>, <span class='object_link'><a href="Log.html#lwarn-instance_method" title="SheepAst::Log#lwarn (method)">#lwarn</a></span>, <span class='object_link'><a href="Log.html#once-instance_method" title="SheepAst::Log#once (method)">#once</a></span>, <span class='object_link'><a href="Log.html#pdebug-instance_method" title="SheepAst::Log#pdebug (method)">#pdebug</a></span>, <span class='object_link'><a href="Log.html#pfatal-instance_method" title="SheepAst::Log#pfatal (method)">#pfatal</a></span>, <span class='object_link'><a href="Log.html#pinfo-instance_method" title="SheepAst::Log#pinfo (method)">#pinfo</a></span>, <span class='object_link'><a href="Log.html#pwarn-instance_method" title="SheepAst::Log#pwarn (method)">#pwarn</a></span>, <span class='object_link'><a href="Log.html#set_logger-instance_method" title="SheepAst::Log#set_logger (method)">#set_logger</a></span></p>
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods included from <span class='object_link'><a href="Exception.html" title="SheepAst::Exception (module)">Exception</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="Exception.html#application_error-instance_method" title="SheepAst::Exception#application_error (method)">#application_error</a></span>, <span class='object_link'><a href="Exception.html#expression_not_found-instance_method" title="SheepAst::Exception#expression_not_found (method)">#expression_not_found</a></span>, <span class='object_link'><a href="Exception.html#missing_impl-instance_method" title="SheepAst::Exception#missing_impl (method)">#missing_impl</a></span></p>
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods inherited from <span class='object_link'><a href="SheepObject.html" title="SheepAst::SheepObject (class)">SheepObject</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="SheepObject.html#within-instance_method" title="SheepAst::SheepObject#within (method)">#within</a></span></p>
+
+  <div id="constructor_details" class="method_details_list">
+  <h2>Constructor Details</h2>
+  
+    <div class="method_details first">
+  <h3 class="signature first" id="initialize-instance_method">
+  
+    #<strong>initialize</strong>(key = &#39;&#39;, sym = nil, **options)  &#x21d2; <tt>void</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>key</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>&#39;&#39;</tt>)</em>
+      
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>sym</span>
+      
+      
+        <span class='type'>(<tt>Symbol</tt>, <tt>nil</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>nil</tt>)</em>
+      
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>options</span>
+      
+      
+        <span class='type'>(<tt>T.untyped</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File '/home/r_yaginiwa/yang_try/sheep_ast/lib/sheep_ast/match/match_base.rb', line 91</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_key'>key</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_sym'>sym</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='op'>**</span><span class='id identifier rubyid_options'>options</span><span class='rparen'>)</span>
+  <span class='ivar'>@key</span> <span class='op'>=</span> <span class='id identifier rubyid_key'>key</span>
+  <span class='ivar'>@regex_key</span> <span class='op'>=</span> <span class='id identifier rubyid_key'>key</span><span class='period'>.</span><span class='id identifier rubyid_dup'>dup</span>
+  <span class='ivar'>@store_sym</span> <span class='op'>=</span> <span class='id identifier rubyid_sym'>sym</span>
+  <span class='ivar'>@options</span> <span class='op'>=</span> <span class='id identifier rubyid_options'>options</span>
+  <span class='ivar'>@debug</span> <span class='op'>=</span> <span class='id identifier rubyid_options'>options</span><span class='lbracket'>[</span><span class='symbol'>:debug</span><span class='rbracket'>]</span>
+  <span class='ivar'>@extract</span> <span class='op'>=</span> <span class='id identifier rubyid_options'>options</span><span class='lbracket'>[</span><span class='symbol'>:extract</span><span class='rbracket'>]</span>
+  <span class='ivar'>@start_add_cond</span> <span class='op'>=</span> <span class='id identifier rubyid_options'>options</span><span class='lbracket'>[</span><span class='symbol'>:index_cond</span><span class='rbracket'>]</span>
+  <span class='ivar'>@end_add_cond</span> <span class='op'>=</span> <span class='id identifier rubyid_options'>options</span><span class='lbracket'>[</span><span class='symbol'>:end_cond</span><span class='rbracket'>]</span>
+  <span class='ivar'>@command</span> <span class='op'>=</span> <span class='id identifier rubyid_options'>options</span><span class='lbracket'>[</span><span class='symbol'>:command</span><span class='rbracket'>]</span> <span class='op'>||</span> <span class='id identifier rubyid_key'>key</span>
+  <span class='ivar'>@description</span> <span class='op'>=</span> <span class='id identifier rubyid_options'>options</span><span class='lbracket'>[</span><span class='symbol'>:description</span><span class='rbracket'>]</span>
+  <span class='ivar'>@my_tag</span> <span class='op'>=</span> <span class='id identifier rubyid_options'>options</span><span class='lbracket'>[</span><span class='symbol'>:tag</span><span class='rbracket'>]</span>
+  <span class='ivar'>@regex_end</span> <span class='op'>=</span> <span class='id identifier rubyid_options'>options</span><span class='lbracket'>[</span><span class='symbol'>:regex_end</span><span class='rbracket'>]</span>
+  <span class='ivar'>@end_match_index</span> <span class='op'>=</span> <span class='id identifier rubyid_options'>options</span><span class='lbracket'>[</span><span class='symbol'>:end_match_index</span><span class='rbracket'>]</span>
+  <span class='ivar'>@start_match_index</span> <span class='op'>=</span> <span class='id identifier rubyid_options'>options</span><span class='lbracket'>[</span><span class='symbol'>:start_match_index</span><span class='rbracket'>]</span>
+  <span class='ivar'>@at_head</span> <span class='op'>=</span> <span class='ivar'>@options</span><span class='lbracket'>[</span><span class='symbol'>:at_head</span><span class='rbracket'>]</span>
+  <span class='ivar'>@include</span> <span class='op'>=</span> <span class='ivar'>@options</span><span class='lbracket'>[</span><span class='symbol'>:include</span><span class='rbracket'>]</span>
+  <span class='ivar'>@not_include</span> <span class='op'>=</span> <span class='ivar'>@options</span><span class='lbracket'>[</span><span class='symbol'>:not_include</span><span class='rbracket'>]</span>
+  <span class='ivar'>@ast_include</span> <span class='op'>=</span> <span class='ivar'>@options</span><span class='lbracket'>[</span><span class='symbol'>:ast_include</span><span class='rbracket'>]</span>
+  <span class='ivar'>@ast_exclude</span> <span class='op'>=</span> <span class='ivar'>@options</span><span class='lbracket'>[</span><span class='symbol'>:ast_exclude</span><span class='rbracket'>]</span>
+  <span class='ivar'>@neq</span> <span class='op'>=</span> <span class='ivar'>@options</span><span class='lbracket'>[</span><span class='symbol'>:neq</span><span class='rbracket'>]</span>
+  <span class='ivar'>@neq</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='ivar'>@neq</span><span class='rbracket'>]</span> <span class='kw'>if</span> <span class='ivar'>@neq</span><span class='period'>.</span><span class='id identifier rubyid_is_a?'>is_a?</span> <span class='const'>String</span>
+  <span class='ivar'>@at_end_cond</span> <span class='op'>=</span> <span class='kw'>false</span>
+  <span class='kw'>super</span><span class='lparen'>(</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+  
+</div>
+
+  <div id="instance_attr_details" class="attr_details">
+    <h2>Instance Attribute Details</h2>
+    
+      
+      <span id="ast_exclude=-instance_method"></span>
+      <div class="method_details first">
+  <h3 class="signature first" id="ast_exclude-instance_method">
+  
+    #<strong>ast_exclude</strong>  &#x21d2; <tt>Array&lt;String&gt;</tt><sup>?</sup> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Array&lt;String&gt;</tt>, <tt>nil</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+76
+77
+78</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File '/home/r_yaginiwa/yang_try/sheep_ast/lib/sheep_ast/match/match_base.rb', line 76</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_ast_exclude'>ast_exclude</span>
+  <span class='ivar'>@ast_exclude</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id="ast_include=-instance_method"></span>
+      <div class="method_details ">
+  <h3 class="signature " id="ast_include-instance_method">
+  
+    #<strong>ast_include</strong>  &#x21d2; <tt>Array&lt;String&gt;</tt><sup>?</sup> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Array&lt;String&gt;</tt>, <tt>nil</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+73
+74
+75</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File '/home/r_yaginiwa/yang_try/sheep_ast/lib/sheep_ast/match/match_base.rb', line 73</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_ast_include'>ast_include</span>
+  <span class='ivar'>@ast_include</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id="at_cond_scope=-instance_method"></span>
+      <div class="method_details ">
+  <h3 class="signature " id="at_cond_scope-instance_method">
+  
+    #<strong>at_cond_scope</strong>  &#x21d2; <tt>Boolean</tt><sup>?</sup> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>, <tt>nil</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+82
+83
+84</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File '/home/r_yaginiwa/yang_try/sheep_ast/lib/sheep_ast/match/match_base.rb', line 82</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_at_cond_scope'>at_cond_scope</span>
+  <span class='ivar'>@at_cond_scope</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id="at_end_cond=-instance_method"></span>
+      <div class="method_details ">
+  <h3 class="signature " id="at_end_cond-instance_method">
+  
+    #<strong>at_end_cond</strong>  &#x21d2; <tt>Boolean</tt><sup>?</sup> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>, <tt>nil</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+79
+80
+81</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File '/home/r_yaginiwa/yang_try/sheep_ast/lib/sheep_ast/match/match_base.rb', line 79</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_at_end_cond'>at_end_cond</span>
+  <span class='ivar'>@at_end_cond</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id="command=-instance_method"></span>
+      <div class="method_details ">
+  <h3 class="signature " id="command-instance_method">
+  
+    #<strong>command</strong>  &#x21d2; <tt>String</tt><sup>?</sup> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>String</tt>, <tt>nil</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+62
+63
+64</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File '/home/r_yaginiwa/yang_try/sheep_ast/lib/sheep_ast/match/match_base.rb', line 62</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_command'>command</span>
+  <span class='ivar'>@command</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id="description=-instance_method"></span>
+      <div class="method_details ">
+  <h3 class="signature " id="description-instance_method">
+  
+    #<strong>description</strong>  &#x21d2; <tt>String</tt><sup>?</sup> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>String</tt>, <tt>nil</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+59
+60
+61</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File '/home/r_yaginiwa/yang_try/sheep_ast/lib/sheep_ast/match/match_base.rb', line 59</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_description'>description</span>
+  <span class='ivar'>@description</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id="end_index=-instance_method"></span>
+      <div class="method_details ">
+  <h3 class="signature " id="end_index-instance_method">
+  
+    #<strong>end_index</strong>  &#x21d2; <tt>Integer</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+38
+39
+40</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File '/home/r_yaginiwa/yang_try/sheep_ast/lib/sheep_ast/match/match_base.rb', line 38</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_end_index'>end_index</span>
+  <span class='ivar'>@end_index</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id="end_line=-instance_method"></span>
+      <div class="method_details ">
+  <h3 class="signature " id="end_line-instance_method">
+  
+    #<strong>end_line</strong>  &#x21d2; <tt>Integer</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+35
+36
+37</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File '/home/r_yaginiwa/yang_try/sheep_ast/lib/sheep_ast/match/match_base.rb', line 35</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_end_line'>end_line</span>
+  <span class='ivar'>@end_line</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id="key=-instance_method"></span>
+      <div class="method_details ">
+  <h3 class="signature " id="key-instance_method">
+  
+    #<strong>key</strong>  &#x21d2; <tt>String</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+23
+24
+25</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File '/home/r_yaginiwa/yang_try/sheep_ast/lib/sheep_ast/match/match_base.rb', line 23</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_key'>key</span>
+  <span class='ivar'>@key</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="kind_name-instance_method">
+  
+    #<strong>kind_name</strong>  &#x21d2; <tt>String</tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+47
+48
+49</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File '/home/r_yaginiwa/yang_try/sheep_ast/lib/sheep_ast/match/match_base.rb', line 47</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_kind_name'>kind_name</span>
+  <span class='ivar'>@kind_name</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id="matched_expr=-instance_method"></span>
+      <div class="method_details ">
+  <h3 class="signature " id="matched_expr-instance_method">
+  
+    #<strong>matched_expr</strong>  &#x21d2; <tt>Array&lt;String, nil&gt;</tt>, ... 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Array&lt;String, nil&gt;</tt>, <tt>String</tt>, <tt>nil</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+26
+27
+28</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File '/home/r_yaginiwa/yang_try/sheep_ast/lib/sheep_ast/match/match_base.rb', line 26</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_matched_expr'>matched_expr</span>
+  <span class='ivar'>@matched_expr</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id="my_chain_num=-instance_method"></span>
+      <div class="method_details ">
+  <h3 class="signature " id="my_chain_num-instance_method">
+  
+    #<strong>my_chain_num</strong>  &#x21d2; <tt>Integer</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+50
+51
+52</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File '/home/r_yaginiwa/yang_try/sheep_ast/lib/sheep_ast/match/match_base.rb', line 50</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_my_chain_num'>my_chain_num</span>
+  <span class='ivar'>@my_chain_num</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id="my_tag=-instance_method"></span>
+      <div class="method_details ">
+  <h3 class="signature " id="my_tag-instance_method">
+  
+    #<strong>my_tag</strong>  &#x21d2; <tt>Symbol</tt><sup>?</sup> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Symbol</tt>, <tt>nil</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+65
+66
+67</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File '/home/r_yaginiwa/yang_try/sheep_ast/lib/sheep_ast/match/match_base.rb', line 65</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_my_tag'>my_tag</span>
+  <span class='ivar'>@my_tag</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id="node_id=-instance_method"></span>
+      <div class="method_details ">
+  <h3 class="signature " id="node_id-instance_method">
+  
+    #<strong>node_id</strong>  &#x21d2; <tt>Integer</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+41
+42
+43</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File '/home/r_yaginiwa/yang_try/sheep_ast/lib/sheep_ast/match/match_base.rb', line 41</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_node_id'>node_id</span>
+  <span class='ivar'>@node_id</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id="node_tag=-instance_method"></span>
+      <div class="method_details ">
+  <h3 class="signature " id="node_tag-instance_method">
+  
+    #<strong>node_tag</strong>  &#x21d2; <tt>Symbol</tt><sup>?</sup> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Symbol</tt>, <tt>nil</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+53
+54
+55</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File '/home/r_yaginiwa/yang_try/sheep_ast/lib/sheep_ast/match/match_base.rb', line 53</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_node_tag'>node_tag</span>
+  <span class='ivar'>@node_tag</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id="parent_tag=-instance_method"></span>
+      <div class="method_details ">
+  <h3 class="signature " id="parent_tag-instance_method">
+  
+    #<strong>parent_tag</strong>  &#x21d2; <tt>Symbol</tt><sup>?</sup> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Symbol</tt>, <tt>nil</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+56
+57
+58</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File '/home/r_yaginiwa/yang_try/sheep_ast/lib/sheep_ast/match/match_base.rb', line 56</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_parent_tag'>parent_tag</span>
+  <span class='ivar'>@parent_tag</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id="start_index=-instance_method"></span>
+      <div class="method_details ">
+  <h3 class="signature " id="start_index-instance_method">
+  
+    #<strong>start_index</strong>  &#x21d2; <tt>Integer</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+32
+33
+34</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File '/home/r_yaginiwa/yang_try/sheep_ast/lib/sheep_ast/match/match_base.rb', line 32</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_start_index'>start_index</span>
+  <span class='ivar'>@start_index</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id="start_line=-instance_method"></span>
+      <div class="method_details ">
+  <h3 class="signature " id="start_line-instance_method">
+  
+    #<strong>start_line</strong>  &#x21d2; <tt>Integer</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+29
+30
+31</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File '/home/r_yaginiwa/yang_try/sheep_ast/lib/sheep_ast/match/match_base.rb', line 29</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_start_line'>start_line</span>
+  <span class='ivar'>@start_line</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id="store_sym=-instance_method"></span>
+      <div class="method_details ">
+  <h3 class="signature " id="store_sym-instance_method">
+  
+    #<strong>store_sym</strong>  &#x21d2; <tt>Symbol</tt><sup>?</sup> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Symbol</tt>, <tt>nil</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+44
+45
+46</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File '/home/r_yaginiwa/yang_try/sheep_ast/lib/sheep_ast/match/match_base.rb', line 44</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_store_sym'>store_sym</span>
+  <span class='ivar'>@store_sym</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+
+  <div id="class_method_details" class="method_details_list">
+    <h2>Class Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="check_any_condition-class_method">
+  
+    .<strong>check_any_condition</strong>(match, data)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File '/home/r_yaginiwa/yang_try/sheep_ast/lib/sheep_ast/match/match_base.rb', line 188</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_check_any_condition'>check_any_condition</span><span class='lparen'>(</span><span class='id identifier rubyid_match'>match</span><span class='comma'>,</span> <span class='id identifier rubyid_data'>data</span><span class='rparen'>)</span>
+  <span class='kw'>if</span> <span class='op'>!</span><span class='id identifier rubyid_match'>match</span><span class='op'>&amp;.</span><span class='id identifier rubyid_additional_cond'>additional_cond</span><span class='lparen'>(</span><span class='id identifier rubyid_data'>data</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_match'>match</span><span class='period'>.</span><span class='id identifier rubyid_ldebug?'>ldebug?</span> <span class='kw'>and</span> <span class='id identifier rubyid_match'>match</span><span class='period'>.</span><span class='id identifier rubyid_ldebug'>ldebug</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>additional condition id not good</span><span class='tstring_end'>&#39;</span></span>
+    <span class='id identifier rubyid_res'>res</span> <span class='op'>=</span> <span class='kw'>nil</span>
+  <span class='kw'>else</span>
+    <span class='id identifier rubyid_match'>match</span><span class='period'>.</span><span class='id identifier rubyid_ldebug?'>ldebug?</span> <span class='kw'>and</span> <span class='id identifier rubyid_match'>match</span><span class='period'>.</span><span class='id identifier rubyid_ldebug'>ldebug</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>additional condition is good</span><span class='tstring_end'>&#39;</span></span>
+    <span class='id identifier rubyid_res'>res</span> <span class='op'>=</span> <span class='kw'>true</span>
+  <span class='kw'>end</span>
+  <span class='kw'>return</span> <span class='id identifier rubyid_res'>res</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="check_exact_condition-class_method">
+  
+    .<strong>check_exact_condition</strong>(map, key, data)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+154
+155
+156
+157
+158</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File '/home/r_yaginiwa/yang_try/sheep_ast/lib/sheep_ast/match/match_base.rb', line 154</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_check_exact_condition'>check_exact_condition</span><span class='lparen'>(</span><span class='id identifier rubyid_map'>map</span><span class='comma'>,</span> <span class='id identifier rubyid_key'>key</span><span class='comma'>,</span> <span class='id identifier rubyid_data'>data</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_m'>m</span> <span class='op'>=</span> <span class='id identifier rubyid_map'>map</span><span class='lbracket'>[</span><span class='id identifier rubyid_key'>key</span><span class='rbracket'>]</span>
+  <span class='id identifier rubyid_m'>m</span> <span class='op'>=</span> <span class='kw'>nil</span> <span class='kw'>if</span> <span class='op'>!</span><span class='id identifier rubyid_m'>m</span><span class='op'>&amp;.</span><span class='id identifier rubyid_additional_cond'>additional_cond</span><span class='lparen'>(</span><span class='id identifier rubyid_data'>data</span><span class='rparen'>)</span>
+  <span class='kw'>return</span> <span class='id identifier rubyid_m'>m</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="check_exact_group_condition-class_method">
+  
+    .<strong>check_exact_group_condition</strong>(match, data)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File '/home/r_yaginiwa/yang_try/sheep_ast/lib/sheep_ast/match/match_base.rb', line 160</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_check_exact_group_condition'>check_exact_group_condition</span><span class='lparen'>(</span><span class='id identifier rubyid_match'>match</span><span class='comma'>,</span> <span class='id identifier rubyid_data'>data</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_key'>key</span> <span class='op'>=</span> <span class='id identifier rubyid_data'>data</span><span class='period'>.</span><span class='id identifier rubyid_expr'>expr</span>
+  <span class='id identifier rubyid_match'>match</span><span class='period'>.</span><span class='id identifier rubyid_ldebug?'>ldebug?</span> <span class='kw'>and</span> <span class='id identifier rubyid_match'>match</span><span class='period'>.</span><span class='id identifier rubyid_ldebug'>ldebug</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>check_exact_group_condition for </span><span class='embexpr_beg'>#{</span><span class='const'>T</span><span class='period'>.</span><span class='id identifier rubyid_must'>must</span><span class='lparen'>(</span><span class='id identifier rubyid_key'>key</span><span class='rparen'>)</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
+  <span class='id identifier rubyid_match'>match</span><span class='period'>.</span><span class='id identifier rubyid_keys'>keys</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_item'>item</span><span class='op'>|</span> <span class='comment'>#rubocop: disable all
+</span>    <span class='kw'>if</span> <span class='id identifier rubyid_key'>key</span> <span class='op'>==</span> <span class='id identifier rubyid_item'>item</span>
+      <span class='id identifier rubyid_match'>match</span><span class='period'>.</span><span class='id identifier rubyid_ldebug?'>ldebug?</span> <span class='kw'>and</span> <span class='id identifier rubyid_match'>match</span><span class='period'>.</span><span class='id identifier rubyid_ldebug'>ldebug</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>Found</span><span class='tstring_end'>&#39;</span></span>
+      <span class='kw'>return</span> <span class='kw'>true</span>
+    <span class='kw'>end</span>
+  <span class='kw'>end</span>
+  <span class='id identifier rubyid_match'>match</span><span class='period'>.</span><span class='id identifier rubyid_ldebug?'>ldebug?</span> <span class='kw'>and</span> <span class='id identifier rubyid_match'>match</span><span class='period'>.</span><span class='id identifier rubyid_ldebug'>ldebug</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Not Found =&gt; group keys: </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_match'>match</span><span class='period'>.</span><span class='id identifier rubyid_keys'>keys</span><span class='period'>.</span><span class='id identifier rubyid_inspect'>inspect</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
+  <span class='kw'>return</span> <span class='kw'>false</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="check_regex_condition-class_method">
+  
+    .<strong>check_regex_condition</strong>(match, data)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File '/home/r_yaginiwa/yang_try/sheep_ast/lib/sheep_ast/match/match_base.rb', line 173</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_check_regex_condition'>check_regex_condition</span><span class='lparen'>(</span><span class='id identifier rubyid_match'>match</span><span class='comma'>,</span> <span class='id identifier rubyid_data'>data</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_res'>res</span> <span class='op'>=</span> <span class='id identifier rubyid_match'>match</span><span class='period'>.</span><span class='id identifier rubyid_match'>match</span><span class='lparen'>(</span><span class='id identifier rubyid_data'>data</span><span class='rparen'>)</span>
+  <span class='kw'>if</span> <span class='id identifier rubyid_res'>res</span>
+    <span class='id identifier rubyid_match'>match</span><span class='period'>.</span><span class='id identifier rubyid_ldebug?'>ldebug?</span> <span class='kw'>and</span> <span class='id identifier rubyid_match'>match</span><span class='period'>.</span><span class='id identifier rubyid_ldebug'>ldebug</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>check_regex_condition passed primary cond. Examin additional condition</span><span class='tstring_end'>&#39;</span></span>
+    <span class='kw'>if</span> <span class='op'>!</span><span class='id identifier rubyid_match'>match</span><span class='op'>&amp;.</span><span class='id identifier rubyid_additional_cond'>additional_cond</span><span class='lparen'>(</span><span class='id identifier rubyid_data'>data</span><span class='rparen'>)</span>
+      <span class='id identifier rubyid_match'>match</span><span class='period'>.</span><span class='id identifier rubyid_ldebug?'>ldebug?</span> <span class='kw'>and</span> <span class='id identifier rubyid_match'>match</span><span class='period'>.</span><span class='id identifier rubyid_ldebug'>ldebug</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>additional condition id not good</span><span class='tstring_end'>&#39;</span></span>
+      <span class='id identifier rubyid_res'>res</span> <span class='op'>=</span> <span class='kw'>nil</span>
+    <span class='kw'>else</span>
+      <span class='id identifier rubyid_match'>match</span><span class='period'>.</span><span class='id identifier rubyid_ldebug?'>ldebug?</span> <span class='kw'>and</span> <span class='id identifier rubyid_match'>match</span><span class='period'>.</span><span class='id identifier rubyid_ldebug'>ldebug</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>additional condition is good</span><span class='tstring_end'>&#39;</span></span>
+      <span class='id identifier rubyid_res'>res</span> <span class='op'>=</span> <span class='kw'>true</span>
+    <span class='kw'>end</span>
+  <span class='kw'>end</span>
+  <span class='kw'>return</span> <span class='id identifier rubyid_res'>res</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="additional_cond-instance_method">
+  
+    #<strong>additional_cond</strong>(data)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>rubocop:disable all</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+220
+221
+222
+223
+224
+225
+226
+227
+228
+229
+230
+231
+232
+233
+234
+235
+236
+237
+238
+239
+240
+241
+242
+243
+244
+245
+246</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File '/home/r_yaginiwa/yang_try/sheep_ast/lib/sheep_ast/match/match_base.rb', line 220</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_additional_cond'>additional_cond</span><span class='lparen'>(</span><span class='id identifier rubyid_data'>data</span><span class='rparen'>)</span> <span class='comment'>#rubocop:disable all
+</span>  <span class='kw'>if</span> <span class='ivar'>@at_head</span>
+    <span class='kw'>if</span> <span class='id identifier rubyid_data'>data</span><span class='period'>.</span><span class='id identifier rubyid_file_info'>file_info</span><span class='period'>.</span><span class='id identifier rubyid_index'>index</span> <span class='op'>!=</span> <span class='int'>1</span>
+      <span class='id identifier rubyid_ldebug?'>ldebug?</span> <span class='kw'>and</span> <span class='id identifier rubyid_ldebug'>ldebug</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>at head : false</span><span class='tstring_end'>&#39;</span></span>
+      <span class='kw'>return</span> <span class='kw'>false</span>
+    <span class='kw'>end</span>
+    <span class='id identifier rubyid_ldebug?'>ldebug?</span> <span class='kw'>and</span> <span class='id identifier rubyid_ldebug'>ldebug</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>at head : true</span><span class='tstring_end'>&#39;</span></span>
+  <span class='kw'>end</span>
+
+  <span class='kw'>if</span> <span class='ivar'>@include</span> <span class='op'>&amp;&amp;</span> <span class='op'>!</span><span class='id identifier rubyid_data'>data</span><span class='period'>.</span><span class='id identifier rubyid_tokenized_line'>tokenized_line</span><span class='op'>&amp;.</span><span class='id identifier rubyid_include?'>include?</span><span class='lparen'>(</span><span class='ivar'>@include</span><span class='rparen'>)</span>
+    <span class='kw'>return</span> <span class='kw'>false</span>
+  <span class='kw'>end</span>
+
+  <span class='kw'>if</span> <span class='ivar'>@not_include</span> <span class='op'>&amp;&amp;</span> <span class='id identifier rubyid_data'>data</span><span class='period'>.</span><span class='id identifier rubyid_tokenized_line'>tokenized_line</span><span class='op'>&amp;.</span><span class='id identifier rubyid_include?'>include?</span><span class='lparen'>(</span><span class='ivar'>@not_include</span><span class='rparen'>)</span>
+    <span class='kw'>return</span> <span class='kw'>false</span>
+  <span class='kw'>end</span>
+
+  <span class='ivar'>@neq</span><span class='op'>&amp;.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_a_word'>a_word</span><span class='op'>|</span>
+    <span class='kw'>if</span> <span class='id identifier rubyid_data'>data</span><span class='period'>.</span><span class='id identifier rubyid_expr'>expr</span> <span class='op'>==</span> <span class='id identifier rubyid_a_word'>a_word</span>
+      <span class='kw'>return</span> <span class='kw'>false</span>
+    <span class='kw'>end</span>
+  <span class='kw'>end</span>
+
+  <span class='id identifier rubyid_ret'>ret</span> <span class='op'>=</span> <span class='id identifier rubyid_iterate_cond'>iterate_cond</span><span class='lparen'>(</span><span class='id identifier rubyid_data'>data</span><span class='comma'>,</span> <span class='ivar'>@start_add_cond</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_ldebug?'>ldebug?</span> <span class='kw'>and</span> <span class='id identifier rubyid_ldebug'>ldebug</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>additional_cond : </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_ret'>ret</span><span class='period'>.</span><span class='id identifier rubyid_inspect'>inspect</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
+  <span class='kw'>return</span> <span class='id identifier rubyid_ret'>ret</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="additional_end_cond-instance_method">
+  
+    #<strong>additional_end_cond</strong>(data)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+248
+249
+250
+251
+252</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File '/home/r_yaginiwa/yang_try/sheep_ast/lib/sheep_ast/match/match_base.rb', line 248</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_additional_end_cond'>additional_end_cond</span><span class='lparen'>(</span><span class='id identifier rubyid_data'>data</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_ret'>ret</span> <span class='op'>=</span> <span class='id identifier rubyid_iterate_cond'>iterate_cond</span><span class='lparen'>(</span><span class='id identifier rubyid_data'>data</span><span class='comma'>,</span> <span class='ivar'>@end_add_cond</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_ldebug?'>ldebug?</span> <span class='kw'>and</span> <span class='id identifier rubyid_ldebug'>ldebug</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>additional_end_cond : </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_ret'>ret</span><span class='period'>.</span><span class='id identifier rubyid_inspect'>inspect</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
+  <span class='kw'>return</span> <span class='id identifier rubyid_ret'>ret</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="dump-instance_method">
+  
+    #<strong>dump</strong>  &#x21d2; <tt>void</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p class="note returns_void">This method returns an undefined value.</p>
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+282
+283
+284</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File '/home/r_yaginiwa/yang_try/sheep_ast/lib/sheep_ast/match/match_base.rb', line 282</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_dump'>dump</span>
+  <span class='id identifier rubyid_ldebug?'>ldebug?</span> <span class='kw'>and</span> <span class='id identifier rubyid_ldebug'>ldebug</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>matched_expr =&gt; </span><span class='embexpr_beg'>#{</span><span class='ivar'>@matched_expr</span><span class='period'>.</span><span class='id identifier rubyid_inspect'>inspect</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="end_info_set-instance_method">
+  
+    #<strong>end_info_set</strong>(line, index)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+149
+150
+151
+152</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File '/home/r_yaginiwa/yang_try/sheep_ast/lib/sheep_ast/match/match_base.rb', line 149</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_end_info_set'>end_info_set</span><span class='lparen'>(</span><span class='id identifier rubyid_line'>line</span><span class='comma'>,</span> <span class='id identifier rubyid_index'>index</span><span class='rparen'>)</span>
+  <span class='ivar'>@end_line</span> <span class='op'>=</span> <span class='id identifier rubyid_line'>line</span>
+  <span class='ivar'>@end_index</span> <span class='op'>=</span> <span class='id identifier rubyid_index'>index</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="init-instance_method">
+  
+    #<strong>init</strong>  &#x21d2; <tt>void</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <div class="note abstract">
+  <strong>This method is abstract.</strong>
+  <div class='inline'></div>
+</div>
+<p class="note returns_void">This method returns an undefined value.</p>
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+271</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File '/home/r_yaginiwa/yang_try/sheep_ast/lib/sheep_ast/match/match_base.rb', line 271</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_init'>init</span><span class='semicolon'>;</span> <span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="inspect-instance_method">
+  
+    #<strong>inspect</strong>  &#x21d2; <tt>String</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+118
+119
+120
+121
+122</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File '/home/r_yaginiwa/yang_try/sheep_ast/lib/sheep_ast/match/match_base.rb', line 118</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_inspect'>inspect</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>custom inspect: &lt;</span><span class='embexpr_beg'>#{</span><span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_class'>class</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span><span class='embexpr_end'>}</span><span class='tstring_content'> object_id = </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_object_id'>object_id</span><span class='embexpr_end'>}</span><span class='tstring_content'>, kind_name = </span><span class='embexpr_beg'>#{</span><span class='ivar'>@kind_name</span><span class='embexpr_end'>}</span><span class='tstring_content'>,</span><span class='tstring_end'>&quot;</span></span>\
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'> key = </span><span class='embexpr_beg'>#{</span><span class='ivar'>@key</span><span class='embexpr_end'>}</span><span class='tstring_content'>, start_line = </span><span class='embexpr_beg'>#{</span><span class='ivar'>@start_line</span><span class='embexpr_end'>}</span><span class='tstring_content'>, end_line = </span><span class='embexpr_beg'>#{</span><span class='ivar'>@end_line</span><span class='embexpr_end'>}</span><span class='tstring_content'>,</span><span class='tstring_end'>&quot;</span></span>\
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'> matched_expr = </span><span class='embexpr_beg'>#{</span><span class='ivar'>@matched_expr</span><span class='period'>.</span><span class='id identifier rubyid_inspect'>inspect</span><span class='embexpr_end'>}</span><span class='tstring_content'> &gt;</span><span class='tstring_end'>&quot;</span></span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="iterate_cond-instance_method">
+  
+    #<strong>iterate_cond</strong>(data, cond)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+254
+255
+256
+257
+258
+259
+260
+261
+262
+263
+264
+265
+266
+267
+268</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File '/home/r_yaginiwa/yang_try/sheep_ast/lib/sheep_ast/match/match_base.rb', line 254</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_iterate_cond'>iterate_cond</span><span class='lparen'>(</span><span class='id identifier rubyid_data'>data</span><span class='comma'>,</span> <span class='id identifier rubyid_cond'>cond</span><span class='rparen'>)</span>
+  <span class='kw'>return</span> <span class='kw'>true</span> <span class='kw'>if</span> <span class='id identifier rubyid_cond'>cond</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span>
+
+  <span class='kw'>if</span> <span class='id identifier rubyid_cond'>cond</span><span class='period'>.</span><span class='id identifier rubyid_is_a?'>is_a?</span> <span class='const'>Enumerable</span>
+    <span class='id identifier rubyid_cond'>cond</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_c'>c</span><span class='op'>|</span>
+      <span class='id identifier rubyid_ret'>ret</span> <span class='op'>=</span> <span class='id identifier rubyid_c'>c</span><span class='period'>.</span><span class='id identifier rubyid_validate'>validate</span><span class='lparen'>(</span><span class='id identifier rubyid_data'>data</span><span class='rparen'>)</span>
+      <span class='kw'>return</span> <span class='kw'>false</span> <span class='kw'>if</span> <span class='op'>!</span><span class='id identifier rubyid_ret'>ret</span>
+    <span class='kw'>end</span>
+  <span class='kw'>else</span>
+    <span class='id identifier rubyid_ret'>ret</span> <span class='op'>=</span> <span class='id identifier rubyid_cond'>cond</span><span class='period'>.</span><span class='id identifier rubyid_validate'>validate</span><span class='lparen'>(</span><span class='id identifier rubyid_data'>data</span><span class='rparen'>)</span>
+    <span class='kw'>return</span> <span class='kw'>false</span> <span class='kw'>if</span> <span class='op'>!</span><span class='id identifier rubyid_ret'>ret</span>
+  <span class='kw'>end</span>
+
+  <span class='kw'>return</span> <span class='kw'>true</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="kind?-instance_method">
+  
+    #<strong>kind?</strong>  &#x21d2; <tt><span class='object_link'><a href="MatchKind.html" title="SheepAst::MatchKind (class)">MatchKind</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <div class="note abstract">
+  <strong>This method is abstract.</strong>
+  <div class='inline'></div>
+</div>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="MatchKind.html" title="SheepAst::MatchKind (class)">MatchKind</a></span></tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+274</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File '/home/r_yaginiwa/yang_try/sheep_ast/lib/sheep_ast/match/match_base.rb', line 274</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_kind?'>kind?</span><span class='semicolon'>;</span> <span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="kind_name_set-instance_method">
+  
+    #<strong>kind_name_set</strong>(name)  &#x21d2; <tt>void</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p class="note returns_void">This method returns an undefined value.</p>
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>name</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+68
+69
+70</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File '/home/r_yaginiwa/yang_try/sheep_ast/lib/sheep_ast/match/match_base.rb', line 68</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_kind_name_set'>kind_name_set</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span>
+  <span class='ivar'>@kind_name</span> <span class='op'>=</span> <span class='id identifier rubyid_name'>name</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="match-instance_method">
+  
+    #<strong>match</strong>(data)  &#x21d2; <tt>Boolean</tt><sup>?</sup> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>data</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="AnalyzeData.html" title="SheepAst::AnalyzeData (class)">AnalyzeData</a></span></tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>, <tt>nil</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+200
+201
+202</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File '/home/r_yaginiwa/yang_try/sheep_ast/lib/sheep_ast/match/match_base.rb', line 200</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_match'>match</span><span class='lparen'>(</span><span class='id identifier rubyid_data'>data</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_reg_match'>reg_match</span><span class='lparen'>(</span><span class='ivar'>@regex_key</span><span class='comma'>,</span> <span class='const'>T</span><span class='period'>.</span><span class='id identifier rubyid_must'>must</span><span class='lparen'>(</span><span class='id identifier rubyid_data'>data</span><span class='period'>.</span><span class='id identifier rubyid_expr'>expr</span><span class='rparen'>)</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="matched-instance_method">
+  
+    #<strong>matched</strong>(data)  &#x21d2; <tt>void</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p class="note returns_void">This method returns an undefined value.</p>
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>data</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="AnalyzeData.html" title="SheepAst::AnalyzeData (class)">AnalyzeData</a></span></tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File '/home/r_yaginiwa/yang_try/sheep_ast/lib/sheep_ast/match/match_base.rb', line 125</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_matched'>matched</span><span class='lparen'>(</span><span class='id identifier rubyid_data'>data</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_expr_'>expr_</span> <span class='op'>=</span> <span class='id identifier rubyid_data'>data</span><span class='period'>.</span><span class='id identifier rubyid_expr'>expr</span>
+  <span class='kw'>if</span> <span class='ivar'>@extract</span>
+    <span class='id identifier rubyid_expr_'>expr_</span> <span class='op'>=</span> <span class='const'>T</span><span class='period'>.</span><span class='id identifier rubyid_must'>must</span><span class='lparen'>(</span><span class='id identifier rubyid_expr_'>expr_</span><span class='rparen'>)</span><span class='lbracket'>[</span><span class='ivar'>@extract</span><span class='rbracket'>]</span>
+  <span class='kw'>end</span>
+
+  <span class='kw'>if</span> <span class='ivar'>@store_sym</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span>
+    <span class='ivar'>@store_sym</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>_</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_my_chain_num'>my_chain_num</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='period'>.</span><span class='id identifier rubyid_to_sym'>to_sym</span>
+  <span class='kw'>end</span>
+
+  <span class='kw'>if</span> <span class='ivar'>@matched_expr</span><span class='period'>.</span><span class='id identifier rubyid_instance_of?'>instance_of?</span><span class='lparen'>(</span><span class='const'>Array</span><span class='rparen'>)</span>
+    <span class='ivar'>@matched_expr</span><span class='period'>.</span><span class='id identifier rubyid_push'>push</span><span class='lparen'>(</span><span class='id identifier rubyid_expr_'>expr_</span><span class='rparen'>)</span>
+  <span class='kw'>else</span>
+    <span class='ivar'>@matched_expr</span> <span class='op'>=</span> <span class='id identifier rubyid_expr_'>expr_</span>
+  <span class='kw'>end</span>
+  <span class='id identifier rubyid_start_info_set'>start_info_set</span><span class='lparen'>(</span><span class='id identifier rubyid_data'>data</span><span class='period'>.</span><span class='id identifier rubyid_file_info'>file_info</span><span class='op'>&amp;.</span><span class='id identifier rubyid_line'>line</span><span class='comma'>,</span> <span class='id identifier rubyid_data'>data</span><span class='period'>.</span><span class='id identifier rubyid_file_info'>file_info</span><span class='op'>&amp;.</span><span class='id identifier rubyid_index'>index</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_end_info_set'>end_info_set</span><span class='lparen'>(</span><span class='id identifier rubyid_data'>data</span><span class='period'>.</span><span class='id identifier rubyid_file_info'>file_info</span><span class='op'>&amp;.</span><span class='id identifier rubyid_line'>line</span><span class='comma'>,</span> <span class='id identifier rubyid_data'>data</span><span class='period'>.</span><span class='id identifier rubyid_file_info'>file_info</span><span class='op'>&amp;.</span><span class='id identifier rubyid_index'>index</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="node_info-instance_method">
+  
+    #<strong>node_info</strong>  &#x21d2; <tt><span class='object_link'><a href="NodeInfo.html" title="SheepAst::NodeInfo (class)">NodeInfo</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="NodeInfo.html" title="SheepAst::NodeInfo (class)">NodeInfo</a></span></tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+277
+278
+279</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File '/home/r_yaginiwa/yang_try/sheep_ast/lib/sheep_ast/match/match_base.rb', line 277</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_node_info'>node_info</span>
+  <span class='kw'>return</span> <span class='const'><span class='object_link'><a href="NodeInfo.html" title="SheepAst::NodeInfo (class)">NodeInfo</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="NodeInfo.html#initialize-instance_method" title="SheepAst::NodeInfo#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='label'>node_id:</span> <span class='id identifier rubyid_node_id'>node_id</span><span class='comma'>,</span> <span class='label'>match_id:</span> <span class='id identifier rubyid_my_id'>my_id</span><span class='comma'>,</span> <span class='label'>kind:</span> <span class='id identifier rubyid_kind?'>kind?</span><span class='comma'>,</span> <span class='label'>store_symbol:</span> <span class='id identifier rubyid_store_sym'>store_sym</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="reg_match-instance_method">
+  
+    #<strong>reg_match</strong>(expr_, target_)  &#x21d2; <tt>Boolean</tt><sup>?</sup> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>expr_</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>target_</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>, <tt>nil</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+205
+206
+207
+208
+209
+210
+211
+212
+213
+214
+215
+216
+217
+218</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File '/home/r_yaginiwa/yang_try/sheep_ast/lib/sheep_ast/match/match_base.rb', line 205</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_reg_match'>reg_match</span><span class='lparen'>(</span><span class='id identifier rubyid_expr_'>expr_</span><span class='comma'>,</span> <span class='id identifier rubyid_target_'>target_</span><span class='rparen'>)</span>
+  <span class='comment'># expr = expr_.gsub(/\||\?|\*|\(|\)|\{|\}|\[|\]|\+|\./) { |word| &quot;\\#{word}&quot; }
+</span>  <span class='comment'># target = target_.gsub(/\||\?|\*|\(|\)|\{|\}|\[|\]|\+|\./) { |word| &quot;\\#{word}&quot; }
+</span>  <span class='id identifier rubyid_rg'>rg</span> <span class='op'>=</span> <span class='const'>Regexp</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span> <span class='id identifier rubyid_expr_'>expr_</span>
+  <span class='ivar'>@md</span> <span class='op'>=</span> <span class='id identifier rubyid_rg'>rg</span><span class='period'>.</span><span class='id identifier rubyid_match'>match</span><span class='lparen'>(</span><span class='id identifier rubyid_target_'>target_</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_ldebug?'>ldebug?</span> <span class='kw'>and</span> <span class='id identifier rubyid_ldebug'>ldebug</span> <span class='ivar'>@md</span><span class='period'>.</span><span class='id identifier rubyid_inspect'>inspect</span>
+  <span class='kw'>if</span> <span class='op'>!</span><span class='ivar'>@md</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span>
+    <span class='id identifier rubyid_ldebug?'>ldebug?</span> <span class='kw'>and</span> <span class='id identifier rubyid_ldebug'>ldebug</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>Found</span><span class='tstring_end'>&#39;</span></span>
+    <span class='kw'>return</span> <span class='kw'>true</span>
+  <span class='kw'>else</span>
+    <span class='id identifier rubyid_ldebug?'>ldebug?</span> <span class='kw'>and</span> <span class='id identifier rubyid_ldebug'>ldebug</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>Not Found</span><span class='tstring_end'>&#39;</span></span>
+    <span class='kw'>return</span> <span class='kw'>nil</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="start_info_set-instance_method">
+  
+    #<strong>start_info_set</strong>(line, index)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+144
+145
+146
+147</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File '/home/r_yaginiwa/yang_try/sheep_ast/lib/sheep_ast/match/match_base.rb', line 144</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_start_info_set'>start_info_set</span><span class='lparen'>(</span><span class='id identifier rubyid_line'>line</span><span class='comma'>,</span> <span class='id identifier rubyid_index'>index</span><span class='rparen'>)</span>
+  <span class='ivar'>@start_line</span> <span class='op'>=</span> <span class='id identifier rubyid_line'>line</span>
+  <span class='ivar'>@start_index</span> <span class='op'>=</span> <span class='id identifier rubyid_index'>index</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="validate-instance_method">
+  
+    #<strong>validate</strong>(kind)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+286</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File '/home/r_yaginiwa/yang_try/sheep_ast/lib/sheep_ast/match/match_base.rb', line 286</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_validate'>validate</span><span class='lparen'>(</span><span class='id identifier rubyid_kind'>kind</span><span class='rparen'>)</span><span class='semicolon'>;</span> <span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+
+      <div id="footer">
+  Generated on Wed Jul 14 07:22:41 2021 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.9.26 (ruby-3.0.1).
+</div>
+
+    </div>
+  </body>
+</html>

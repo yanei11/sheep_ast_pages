@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  Module: SheepAst::DataHandle
+  
+    &mdash; Documentation by YARD 0.9.26
+  
+</title>
+
+  <link rel="stylesheet" href="../css/style.css" type="text/css" />
+
+  <link rel="stylesheet" href="../css/common.css" type="text/css" />
+
+<script type="text/javascript">
+  pathId = "SheepAst::DataHandle";
+  relpath = '../';
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div class="nav_wrap">
+      <iframe id="nav" src="../class_list.html?1"></iframe>
+      <div id="resizer"></div>
+    </div>
+
+    <div id="main" tabindex="-1">
+      <div id="header">
+        <div id="menu">
+  
+    <a href="../_index.html">Index (D)</a> &raquo;
+    <span class='title'><span class='object_link'><a href="../SheepAst.html" title="SheepAst (module)">SheepAst</a></span></span>
+     &raquo; 
+    <span class="title">DataHandle</span>
+  
+</div>
+
+        <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="../class_list.html">
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
+    </a>
+  
+</div>
+        <div class="clear"></div>
+      </div>
+
+      <div id="content"><h1>Module: SheepAst::DataHandle
+  
+  
+  
+</h1>
+<div class="box_info">
+  
+
+  
+  
+  <dl>
+      <dt>Extended by:</dt>
+      <dd>T::Sig</dd>
+  </dl>
+  
+  
+  
+  <dl>
+      <dt>Includes:</dt>
+      <dd><span class='object_link'><a href="DataIndexHandle.html" title="SheepAst::DataIndexHandle (module)">DataIndexHandle</a></span>, <span class='object_link'><a href="Exception.html" title="SheepAst::Exception (module)">Exception</a></span>, <span class='object_link'><a href="Log.html" title="SheepAst::Log (module)">Log</a></span></dd>
+  </dl>
+  
+  
+
+  
+  <dl>
+    <dt>Included in:</dt>
+    <dd><span class='object_link'><a href="IndexCondition.html" title="SheepAst::IndexCondition (class)">IndexCondition</a></span>, <span class='object_link'><a href="Qualifier.html" title="SheepAst::Qualifier (class)">Qualifier</a></span></dd>
+  </dl>
+  
+
+  
+  <dl>
+    <dt>Defined in:</dt>
+    <dd>/home/r_yaginiwa/yang_try/sheep_ast/lib/sheep_ast/data_handle_util.rb</dd>
+  </dl>
+  
+</div>
+
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    
+<p>This module is used to handle AnalyzeData bject</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+
+
+
+
+
+  <h2>Instance Attribute Summary</h2>
+  
+  <h3 class="inherited">Attributes included from <span class='object_link'><a href="Log.html" title="SheepAst::Log (module)">Log</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="Log.html#logger-instance_method" title="SheepAst::Log#logger (method)">#logger</a></span></p>
+
+
+  
+    <h2>
+      Instance Method Summary
+      <small><a href="#" class="summary_toggle">collapse</a></small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#data_handle_init-instance_method" title="#data_handle_init (instance method)">#<strong>data_handle_init</strong>(exprs, **options)  &#x21d2; void </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#validate-instance_method" title="#validate (instance method)">#<strong>validate</strong>(data)  &#x21d2; Boolean </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods included from <span class='object_link'><a href="Exception.html" title="SheepAst::Exception (module)">Exception</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="Exception.html#application_error-instance_method" title="SheepAst::Exception#application_error (method)">#application_error</a></span>, <span class='object_link'><a href="Exception.html#expression_not_found-instance_method" title="SheepAst::Exception#expression_not_found (method)">#expression_not_found</a></span>, <span class='object_link'><a href="Exception.html#missing_impl-instance_method" title="SheepAst::Exception#missing_impl (method)">#missing_impl</a></span></p>
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods included from <span class='object_link'><a href="Log.html" title="SheepAst::Log (module)">Log</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="Log.html#initialize-instance_method" title="SheepAst::Log#initialize (method)">#initialize</a></span>, <span class='object_link'><a href="Log.html#ldebug-instance_method" title="SheepAst::Log#ldebug (method)">#ldebug</a></span>, <span class='object_link'><a href="Log.html#ldebug2-instance_method" title="SheepAst::Log#ldebug2 (method)">#ldebug2</a></span>, <span class='object_link'><a href="Log.html#ldebug%3F-instance_method" title="SheepAst::Log#ldebug? (method)">#ldebug?</a></span>, <span class='object_link'><a href="Log.html#ldump-instance_method" title="SheepAst::Log#ldump (method)">#ldump</a></span>, <span class='object_link'><a href="Log.html#lerror-instance_method" title="SheepAst::Log#lerror (method)">#lerror</a></span>, <span class='object_link'><a href="Log.html#lfatal-instance_method" title="SheepAst::Log#lfatal (method)">#lfatal</a></span>, <span class='object_link'><a href="Log.html#linfo-instance_method" title="SheepAst::Log#linfo (method)">#linfo</a></span>, <span class='object_link'><a href="Log.html#lprint-instance_method" title="SheepAst::Log#lprint (method)">#lprint</a></span>, <span class='object_link'><a href="Log.html#lprint%3F-instance_method" title="SheepAst::Log#lprint? (method)">#lprint?</a></span>, <span class='object_link'><a href="Log.html#lwarn-instance_method" title="SheepAst::Log#lwarn (method)">#lwarn</a></span>, <span class='object_link'><a href="Log.html#once-instance_method" title="SheepAst::Log#once (method)">#once</a></span>, <span class='object_link'><a href="Log.html#pdebug-instance_method" title="SheepAst::Log#pdebug (method)">#pdebug</a></span>, <span class='object_link'><a href="Log.html#pfatal-instance_method" title="SheepAst::Log#pfatal (method)">#pfatal</a></span>, <span class='object_link'><a href="Log.html#pinfo-instance_method" title="SheepAst::Log#pinfo (method)">#pinfo</a></span>, <span class='object_link'><a href="Log.html#pwarn-instance_method" title="SheepAst::Log#pwarn (method)">#pwarn</a></span>, <span class='object_link'><a href="Log.html#set_logger-instance_method" title="SheepAst::Log#set_logger (method)">#set_logger</a></span></p>
+
+  
+  
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="data_handle_init-instance_method">
+  
+    #<strong>data_handle_init</strong>(exprs, **options)  &#x21d2; <tt>void</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p class="note returns_void">This method returns an undefined value.</p>
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>exprs</span>
+      
+      
+        <span class='type'>(<tt>nil</tt>, <tt>String</tt>, <tt>Regexp</tt>, <tt>Array&lt;String, Regexp&gt;</tt>)</span>
+      
+      
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>options</span>
+      
+      
+        <span class='type'>(<tt>T.untyped</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+159
+160
+161
+162
+163
+164
+165
+166</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File '/home/r_yaginiwa/yang_try/sheep_ast/lib/sheep_ast/data_handle_util.rb', line 159</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_data_handle_init'>data_handle_init</span><span class='lparen'>(</span><span class='id identifier rubyid_exprs'>exprs</span><span class='comma'>,</span> <span class='op'>**</span><span class='id identifier rubyid_options'>options</span><span class='rparen'>)</span>
+  <span class='ivar'>@exprs</span> <span class='op'>=</span> <span class='id identifier rubyid_exprs'>exprs</span><span class='period'>.</span><span class='id identifier rubyid_is_a?'>is_a?</span><span class='lparen'>(</span><span class='const'>Enumerable</span><span class='rparen'>)</span> <span class='op'>?</span> <span class='id identifier rubyid_exprs'>exprs</span> <span class='op'>:</span> <span class='lbracket'>[</span><span class='id identifier rubyid_exprs'>exprs</span><span class='rbracket'>]</span>
+  <span class='id identifier rubyid_offset'>offset</span> <span class='op'>=</span> <span class='id identifier rubyid_options'>options</span><span class='lbracket'>[</span><span class='symbol'>:offset</span><span class='rbracket'>]</span>
+  <span class='id identifier rubyid_offset_line'>offset_line</span> <span class='op'>=</span> <span class='id identifier rubyid_options'>options</span><span class='lbracket'>[</span><span class='symbol'>:line_offset</span><span class='rbracket'>]</span>
+  <span class='ivar'>@include_newline</span> <span class='op'>=</span> <span class='id identifier rubyid_options'>options</span><span class='lbracket'>[</span><span class='symbol'>:includ_newline</span><span class='rbracket'>]</span>
+  <span class='ivar'>@offset</span> <span class='op'>=</span> <span class='id identifier rubyid_offset'>offset</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span> <span class='op'>?</span> <span class='int'>1</span> <span class='op'>:</span> <span class='id identifier rubyid_offset'>offset</span>
+  <span class='ivar'>@offset_line</span> <span class='op'>=</span> <span class='id identifier rubyid_offset_line'>offset_line</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span> <span class='op'>?</span> <span class='int'>0</span> <span class='op'>:</span> <span class='id identifier rubyid_offset_line'>offset_line</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="validate-instance_method">
+  
+    #<strong>validate</strong>(data)  &#x21d2; <tt>Boolean</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>data</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="AnalyzeData.html" title="SheepAst::AnalyzeData (class)">AnalyzeData</a></span></tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File '/home/r_yaginiwa/yang_try/sheep_ast/lib/sheep_ast/data_handle_util.rb', line 169</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_validate'>validate</span><span class='lparen'>(</span><span class='id identifier rubyid_data'>data</span><span class='rparen'>)</span>
+  <span class='ivar'>@exprs</span><span class='period'>.</span><span class='id identifier rubyid_each_with_index'>each_with_index</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_expr'>expr</span><span class='comma'>,</span> <span class='id identifier rubyid_idx'>idx</span><span class='op'>|</span>
+    <span class='id identifier rubyid_idata'>idata</span> <span class='op'>=</span> <span class='id identifier rubyid_index_data'>index_data</span><span class='lparen'>(</span><span class='id identifier rubyid_data'>data</span><span class='comma'>,</span> <span class='ivar'>@offset_line</span><span class='comma'>,</span> <span class='ivar'>@offset</span> <span class='op'>+</span> <span class='id identifier rubyid_idx'>idx</span><span class='comma'>,</span> <span class='ivar'>@include_newline</span><span class='rparen'>)</span>
+    <span class='kw'>if</span> <span class='op'>!</span><span class='id identifier rubyid_match_dh'>match_dh</span><span class='lparen'>(</span><span class='id identifier rubyid_expr'>expr</span><span class='comma'>,</span> <span class='const'>T</span><span class='period'>.</span><span class='id identifier rubyid_must'>must</span><span class='lparen'>(</span><span class='id identifier rubyid_idata'>idata</span><span class='rparen'>)</span><span class='rparen'>)</span>
+      <span class='id identifier rubyid_ldebug?'>ldebug?</span> <span class='kw'>and</span> <span class='id identifier rubyid_ldebug'>ldebug</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>validate fail: </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_expr'>expr</span><span class='embexpr_end'>}</span><span class='tstring_content'> is not hit for </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_idata'>idata</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
+      <span class='kw'>return</span> <span class='kw'>false</span>
+    <span class='kw'>else</span>
+      <span class='id identifier rubyid_ldebug?'>ldebug?</span> <span class='kw'>and</span> <span class='id identifier rubyid_ldebug'>ldebug</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>validte ok: </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_expr'>expr</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
+    <span class='kw'>end</span>
+  <span class='kw'>end</span>
+  <span class='kw'>return</span> <span class='kw'>true</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+
+      <div id="footer">
+  Generated on Wed Jul 14 07:22:02 2021 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.9.26 (ruby-3.0.1).
+</div>
+
+    </div>
+  </body>
+</html>
